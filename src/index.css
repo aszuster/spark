@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@theme{
+  --breakpoint-*: initial;
+  --breakpoint-sm: 320px;
+  --breakpoint-smd: 481px;
+  --breakpoint-md: 769px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-xxl: 1920px;
+
+  --color-black-00: #000000;
+  --color-white-00: #ffffff;
+  --color-grey-10: #CC4422;
+  --color-grey-20: #999999;
+  --color-grey-30: #808080;
+  --color-grey-40: #4D4D4D;
+  --default-font-family: 'Times New Roman', Times, serif;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
