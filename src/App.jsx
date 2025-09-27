@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import './App.css'
+import Hero from "./components/Hero/Hero";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -39,6 +40,7 @@ function App() {
 
   return (
     <div>
+      <Hero />
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
       <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}

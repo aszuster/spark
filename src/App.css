@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 
 /* CSS necesario para Lenis smooth scroll */
 html.lenis {
@@ -63,4 +58,50 @@ html.lenis {
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+.buttonBorder::before{
+  content: "";
+  position: absolute;
+  /*   z-index: -1; */
+  pointer-events: none;
+  inset: 0px;
+
+  border-radius: inherit;
+  /* padding is the border width */
+  padding: 2px;
+  background: linear-gradient(
+    to bottom right,
+    #dddddd 0%,
+    #333333 33%,
+    #555555 62%,
+    #333333 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
+}
+
+.buttonBorder:hover::before{
+  background: linear-gradient(
+    to bottom right,
+    #525252 0%,
+    #414141 33%,
+    #878787 62%,
+    #414141 100%
+  );
+}
+
+.buttonBorder:active::before{
+  background: linear-gradient(
+    to bottom right,
+    #525252 0%,
+    #414141 33%,
+    #414141 62%,
+    #414141 100%
+  );
 }
