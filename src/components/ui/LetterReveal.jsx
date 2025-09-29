@@ -1,54 +1,53 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export const LetterReveal = ({text, className}) => {
+  // Dividir por palabras pero mantener los espacios
+  const words = text.split(/(\s+)/);
+  
   return (
-    <div>
-      <FlipText className={className}>{text}</FlipText>
+    <div className={`relative block ${className}`}>
+      {words.map((word, wordIndex) => {
+        if (word.match(/\s+/)) {
+          // Si es un espacio, renderizarlo directamente
+          return <span key={wordIndex}>{word}</span>;
+        }
+        
+        // Si es una palabra, dividir en letras
+        return (
+          <span key={wordIndex} className="inline-block">
+            {word.split("").map((letter, letterIndex) => {
+              const globalIndex = words.slice(0, wordIndex).join('').length + letterIndex;
+              return (
+                <span
+                  key={`${wordIndex}-${letterIndex}`}
+                  className="inline-block overflow-hidden"
+                  style={{
+                    height: '1.2em',
+                    lineHeight: '1em',
+                    verticalAlign: 'top',
+                    paddingRight: '2px'
+                  }}
+                >
+                  <motion.span
+                    className="block"
+                    initial={{ y: "100%" }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ margin: "-100px", once: true }}
+                    transition={{
+                      duration: 0.35,
+                      ease: "easeInOut",
+                      delay: 0.05 * globalIndex,
+                    }}
+                  >
+                    {letter}
+                  </motion.span>
+                </span>
+              );
+            })}
+          </span>
+        );
+      })}
     </div>
-  );
-};
-
-const DURATION = 0.35;
-const STAGGER = 0.05;
-
-const FlipText = ({ children, className }) => {
-  return (
-    <motion.div
-      initial="initial"
-      whileInView="inView"
-      viewport={{
-        margin: "-100px",
-        once: true,
-      }}
-      className="relative block overflow-hidden whitespace-nowrap"
-    //   style={{
-    //     lineHeight: 0.75,
-    //   }}
-    >
-      <div>
-        {children.split("").map((l, i) => (
-          <motion.span
-            variants={{
-              initial: {
-                y: "105%",
-              },
-              inView: {
-                y: 0,
-              },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: STAGGER * i,
-            }}
-            className={`inline-block ${className}`}
-            key={i}
-          >
-            {l}
-          </motion.span>
-        ))}
-      </div>
-    </motion.div>
   );
 };

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Logo from "../../svg/logo";
 import ArrowButton from "../ui/ArrowButton";
 import RevealByLine from "../ui/RevealByLine";
+import FadeInAnimation from "../ui/FadeInAnimation";
 // import RevealByLine from "../ui/RevealByLine";
 
 const Hero = () => {
@@ -58,7 +59,7 @@ const Hero = () => {
   return (
     <>
       <motion.div
-        className="sticky top-0 p-[16px] h-screen overflow-hidden"
+        className="top-0 p-[16px] h-screen overflow-hidden"
         //   style={{
         //     scale,
         //     y,
@@ -95,10 +96,12 @@ const Hero = () => {
               backgroundBlendMode: "soft-light",
             }}
           />
+          <FadeInAnimation>
           <Logo
             color="var(--color-secondary-000)"
             className="absolute top-[20px] left-[16px] lg:top-[32px] lg:left-[28px] z-30 w-[97px] lg:w-[137px]"
           />
+          </FadeInAnimation>
           <div className="absolute px-[12px] py-[40px] lg:px-[20px] top-0 left-0 w-full h-full flex flex-col justify-end gap-[32px] md:justify-center lg:gap-auto lg:flex-row lg:items-center lg:justify-between z-30">
             <h2 className="font-muli text-[34px] md:text-[60px] lg:text-[86px] font-semibold leading-[40px] md:leading-[68px] lg:leading-[101px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-[920px]">
               <RevealByLine
@@ -146,6 +149,7 @@ const Hero = () => {
               <ArrowButton text="Nuestras soluciones" />
             </div>
           </div>
+          <FadeInAnimation delay={2.2}>
           <div className="hidden md:block md:absolute bottom-[32px] left-[28px] z-30">
             <ul className="text-secondary-000 font-inter text-[14px] font-normal leading-[24px] tracking-[-0.56px] list-disc list-inside">
               <li>PETRÓLEO Y GAS (Uptream / Midstream / Downstream)</li>
@@ -154,6 +158,7 @@ const Hero = () => {
               <li>MINERÍA</li>
             </ul>
           </div>
+          </FadeInAnimation>
           <img
             src="/img/hero/misc.png"
             alt=""
