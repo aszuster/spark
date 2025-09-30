@@ -105,3 +105,42 @@ html.lenis {
     #414141 100%
   );
 }
+
+
+.glassBorder::before{
+  content: "";
+  position: absolute;
+  /*   z-index: -1; */
+  pointer-events: none;
+  inset: 0px;
+
+  border-radius: inherit;
+  /* padding is the border width */
+  padding: 1px;
+  background: linear-gradient(
+    to bottom right,
+    #B5B5B0 0%,
+    transparent 33%,
+    #B5B5B0 75%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
+}
+
+/* Animación para gradiente móvil diagonal */
+@keyframes gradient-diagonal {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-gradient-diagonal {
+  animation: gradient-diagonal 4s ease infinite;
+}

@@ -1,4 +1,4 @@
-import { LetterRevealTest } from "../ui/LetterRevealTest";
+// import { LetterRevealTest } from "../ui/LetterRevealTest";
 import SectionLabel from "../ui/SectionLabel";
 import { motion } from "framer-motion";
 import ArrowDown from "../../svg/ArrowDown";
@@ -24,7 +24,7 @@ const QuienesSomos = () => {
       </div>
       <section className="h-[756px] md:h-[655px] lg:h-screen overflow-hidden w-full relative">
         <img src="/img/quienes-somos/s-grey.png" alt="bg" className="md:hidden absolute top-[19px] right-0 h-[423px] w-auto" />
-        <SectionLabel text="Quiénes somos" />
+        <SectionLabel className="absolute lg:top-[55px] left-[20px] lg:left-[35px] " text="Quiénes somos" />
 
         <div className="flex h-full">
           {/* Contenedor del texto a la izquierda */}
@@ -36,23 +36,47 @@ const QuienesSomos = () => {
             />
           </div>
         </div> */}
-          <div className="hidden flex-1 md:flex items-center justify-start md:pl-[122px] lg:pl-[146px] xxl:pl-[185px] pr-4 z-10">
-            <div className="md:w-[434px] lg:w-[677px] xxl:w-[878px] ">
-              <LetterRevealTest
+          <div className="md:flex-1 md:flex items-center justify-start md:pl-[122px] lg:pl-[146px] xxl:pl-[185px] md:pr-4 z-10">
+            <div className="px-[20px] mt-[80px] z-30 md:px-0 md:mt-0 md:w-[434px] lg:w-[677px] xxl:w-[878px] ">
+              <motion.p 
+               initial="initial"
+               whileInView="inView"
+               variants={{
+                 initial: {
+                   y: 30,
+                   opacity: 0,
+                 },
+                 inView: {
+                   y: 0,
+                   opacity: 1,
+                 },
+               }}
+               viewport={{ margin: "-50px", once: true }}
+               transition={{
+                 duration: 0.8,
+                 ease: "easeInOut",
+                 delay:  0.025,
+               }}
+              className="font-muli text-[28px] font-semibold leading-[36px] tracking-[-1.4px] md:text-[32px] md:leading-[38px] md:tracking-[-1.6px] lg:text-[40px] xxl:text-[48px] lg:leading-[52px] xxl:leading-[60px] text-transparent bg-clip-text bg-gradient-to-br from-p-blue-500 via-p-orange-500 to-p-blue-500 bg-[length:200%_200%] animate-gradient-diagonal">
+              Spark es una organización liderada y conformada por profesionales
+              de amplia experiencia y compromiso, que desempeña roles clave en
+              Proyectos destacados a nivel global.
+              </motion.p>
+              {/* <LetterRevealTest
                 text="Spark es una organización liderada y conformada por profesionales de amplia experiencia y compromiso, que desempeña roles clave en Proyectos destacados a nivel global."
                 className="font-muli md:text-[32px] md:leading-[38px] md:tracking-[-1.6px] lg:text-[40px] xxl:text-[48px] font-semibold lg:leading-[52px] xxl:leading-[60px] tracking-[-2.4px] text-p-blue-500"
-              />
+              /> */}
             </div>
           </div>
 
           {/* con gradiente */}
-          <div className="md:hidden  px-[20px] mt-[80px] z-30">
+          {/* <div className="md:hidden  px-[20px] mt-[80px] z-30">
             <p className="font-muli text-[28px] font-semibold leading-[36px] tracking-[-1.4px] text-transparent bg-clip-text bg-gradient-to-br from-p-blue-500 to-p-orange-500">
               Spark es una organización liderada y conformada por profesionales
               de amplia experiencia y compromiso, que desempeña roles clave en
               Proyectos destacados a nivel global.
             </p>
-          </div>
+          </div> */}
 
           {/* Contenedor del video a la derecha */}
           <div className="hidden md:block relative bg-secondary-000 h-full flex-shrink-0">
@@ -65,13 +89,13 @@ const QuienesSomos = () => {
               >
                 <source src="/video/quienes-somos.mp4" type="video/mp4" />
               </video>
-              {/* <div 
-                      className="absolute inset-0 pointer-events-none"
-                      style={{
-                          background: 'linear-gradient(180deg, rgba(9, 8, 26, 0.00) -11.95%, rgba(9, 8, 26, 0.50) 52.99%), rgba(237, 238, 240, 0.80)',
-                          backgroundBlendMode: 'normal, soft-light, hue, plus-darker'
-                      }}
-                  ></div> */}
+              <div 
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background: 'linear-gradient(180deg, rgba(18, 16, 51, 0.00) -11.95%, rgba(51, 18, 35, 0.35) 52.99%), linear-gradient(45deg, rgba(59, 7, 100, 0.15) 0%, rgba(18, 16, 51, 0.20) 100%)',
+                  backgroundBlendMode: 'soft-light, overlay'
+                }}
+              ></div>
             </div>
             <motion.div
               className="hidden md:block absolute md:bottom-[95px] md:right-[170px] lg:bottom-[110px] xxl:bottom-[150px] lg:right-[381px] xxl:right-[483px] z-30"

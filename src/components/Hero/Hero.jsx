@@ -100,7 +100,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
           >
             <Logo
               color="var(--color-secondary-000)"
@@ -113,16 +113,16 @@ const Hero = () => {
               <RevealByLine
                 text="Soluciones de Ingeniería"
                 className="text-secondary-000"
-                delay={1.5}
+                delay={1.7}
               />{" "}
               <RevealByLine
                 text="y&nbsp;Proyectos para"
-                delay={1.6}
+                delay={1.8}
                 className="text-secondary-000"
               />{" "}
               <RevealByLine
                 text="la Industria"
-                delay={1.7}
+                delay={1.9}
                 className="text-secondary-000"
               />
             </h2>
