@@ -18,4 +18,6 @@ export const useFeatureStore = create((set) => ({
   setCurrentImageIndex: (index) => set({ currentImageIndex: index }),
   currentTextIndex: 0,
   setCurrentTextIndex: (index) => set({ currentTextIndex: index }),
+  currentContentIndex: 0,
+  setCurrentContentIndex: (index) => set({ currentContentIndex: index }),
 }));
