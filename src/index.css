@@ -1,13 +1,132 @@
 @import "tailwindcss";
 
+/* Configurar fuente descargada */
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliExtralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliExtraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/Muli.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliSemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliSemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/MuliBoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme{
+  --font-family-muli: 'Muli', sans-serif;
+  --font-family-inter: 'Inter', sans-serif;
+  
+  --font-muli: 'Muli', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --breakpoint-*: initial;
+  --breakpoint-sm: 320px;
+  --breakpoint-smd: 481px;
+  --breakpoint-md: 769px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-xl: 1440px;
+  --breakpoint-xxl: 1920px;
+
+  --color-p-orange-500: #EE4C01;
+  --color-p-orange-600: #CC4F14;
+  --color-p-blue-500: #121035;
+  --color-p-blue-600: #09081A;
+
+  --color-secondary-000: #FFFFFF;
+  --color-secondary-100: #F7F9FC;   
+  --color-secondary-200: #EDF0F7;
+  --color-secondary-300: #E2E7F0;
+  --color-secondary-400: #CBD2E0;
+  --color-secondary-500: #A0ABC0;
+  --color-secondary-600: #717D96;
+  --color-secondary-700: #4A5468;
+  --color-secondary-800: #2D3648;
+  --color-secondary-900: #1A202C;
+
+  --color-bg-01:#FFFFFF;
+  --color-bg-02:#F3F4F6;
+  --color-bg-03:#EDF0F7;
+
+
+
+  --default-font-family: 'Inter', system-ui, sans-serif;
+  --heading-font-family: 'Inter', system-ui, sans-serif;
+  --custom-font-family: 'Muli', system-ui, sans-serif;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--default-font-family);
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,56 +134,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+
 }
 
 h1 {
+  font-family: var(--heading-font-family);
   font-size: 3.2em;
   line-height: 1.1;
+  font-weight: 600;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-family);
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+/* Estilos para fuente Muli */
+.font-muli {
+  font-family: 'Muli', sans-serif !important;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif !important;
 }

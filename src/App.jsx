@@ -1,5 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import Lenis from "lenis";
 import './App.css'
+import Hero from "./components/Hero/Hero";
+import QuienesSomos from "./components/quienes-somos/QuienesSomos";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -7,14 +11,42 @@ function App() {
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
-  return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>{t("welcome")}</h1>
-      <p>{t("about")}</p>
 
-      <h3>{t("change_language")}:</h3>
+  // Configurar Lenis para smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    // Cleanup
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  return (
+    <div>
+      <Hero />
+      <QuienesSomos />
+            {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
-      <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button>
+      <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}
+  
     </div>
   );
 }
