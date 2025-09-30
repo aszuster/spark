@@ -196,7 +196,7 @@ const QueHacemos = () => {
   ]);
 
   return (
-    <section ref={sectionRef} className="min-h-[600vh] w-full relative">
+    <section ref={sectionRef} className="hidden lg:block min-h-[600vh] w-full relative">
       <div className="sticky top-0 h-screen w-full flex">
         <motion.div 
                   initial="initial"

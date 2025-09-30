@@ -50,7 +50,7 @@ function App() {
       <Hero />
       <QuienesSomos />
       <QueHacemos />
-      <div className="h-[100vh]"></div>
+      <div className="h-[100vh] hidden lg:block"></div>
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
       <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}
