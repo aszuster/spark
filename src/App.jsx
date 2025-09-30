@@ -4,6 +4,7 @@ import Lenis from "lenis";
 import './App.css'
 import Hero from "./components/Hero/Hero";
 import QuienesSomos from "./components/quienes-somos/QuienesSomos";
+// import QueHacemos from "./components/que-hacemos/QueHacemos";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -24,6 +25,11 @@ function App() {
       smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
+      // Configuración mejorada para compatibilidad con sticky
+      // syncTouch: true,
+      // touchInertiaMultiplier: 35,
+      // Deshabilitar Lenis en elementos sticky
+      // prevent: (node) => node.classList.contains('sticky'),
     });
 
     function raf(time) {
@@ -43,6 +49,7 @@ function App() {
     <div>
       <Hero />
       <QuienesSomos />
+      {/* <QueHacemos /> */}
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
       <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}
