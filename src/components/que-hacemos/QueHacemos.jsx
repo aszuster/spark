@@ -18,12 +18,12 @@ const QueHacemos = () => {
 
   // Array de imágenes (6 imágenes como mencionaste)
   const images = [
-    "/img/que-hacemos/01.webp",
-    "/img/que-hacemos/02.webp",
-    "/img/que-hacemos/03.webp",
-    "/img/que-hacemos/04.webp",
-    "/img/que-hacemos/05.webp",
-    "/img/que-hacemos/06.webp",
+    "/img/que-hacemos/01.jpg",
+    "/img/que-hacemos/01.jpg",
+    "/img/que-hacemos/01.jpg",
+    "/img/que-hacemos/01.jpg",
+    "/img/que-hacemos/01.jpg",
+    "/img/que-hacemos/01.jpg",
   ];
 
   // Array de textos que cambiarán con el scroll
@@ -267,27 +267,11 @@ const QueHacemos = () => {
           >
             <div className="relative w-[446px] h-[336px] xxl:w-[554px] xxl:h-[400px]">
               <div className="w-[446px] h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
-                <AnimatePresence mode="sync">
-                  <motion.img
-                    key={currentImageIndex}
-                    src={images[currentImageIndex]}
-                    s
-                    alt="bg"
-                    className="absolute inset-0 object-cover h-full w-full"
-                    style={{ willChange: "transform, opacity" }}
-                    variants={imageVariants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{
-                      duration: 0.5,
-                      ease: [0.25, 0.46, 0.45, 0.94],
-                      opacity: { duration: 0.4 },
-                      scale: { duration: 0.5 },
-                      y: { duration: 0.4 },
-                    }}
-                  />
-                </AnimatePresence>
+                <img
+                  src="/img/que-hacemos/01.jpg"
+                  alt="bg"
+                  className="absolute inset-0 object-cover h-full w-full"
+                />
               </div>
               <div className="z-30 absolute top-[261px] xxl:top-[345px] left-[50%] translate-x-[-50%] w-[249px] h-[93px] bg-[#6a6a6a]/20 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center py-[10px]">
                 <div className="py-[4px] px-[8px] w-fit border-[1px] border-secondary-000 rounded-[8px] text-secondary-000 text-[14px] font-normal tracking-[-0.56px]">
