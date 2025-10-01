@@ -44,15 +44,15 @@ const QueHacemos = () => {
       title:
         "Participamos en todas las etapas del ciclo de vida de los Proyectos.",
       elements: [
-        { icon: "/img/que-hacemos/icon.svg", content: "Ingeniería" },
-        { icon: "/img/que-hacemos/icon.svg", content: "Plantas Modulares" },
-        { icon: "/img/que-hacemos/icon.svg", content: "Gestión de Proyectos" },
+        { icon: "/img/que-hacemos/bullet.svg", content: "Ingeniería" },
+        { icon: "/img/que-hacemos/bullet.svg", content: "Plantas Modulares" },
+        { icon: "/img/que-hacemos/bullet.svg", content: "Gestión de Proyectos" },
         {
-          icon: "/img/que-hacemos/icon.svg",
+          icon: "/img/que-hacemos/bullet.svg",
           content: "Operación y Mantenimiento",
         },
         {
-          icon: "/img/que-hacemos/icon.svg",
+          icon: "/img/que-hacemos/bullet.svg",
           content: "Servicios de Procesamiento de Gas y Petróleo",
         },
       ],
@@ -60,35 +60,35 @@ const QueHacemos = () => {
     {
       id: 1,
       type: "card",
-      icon: "/img/que-hacemos/icon.svg",
+      icon: "/img/que-hacemos/ingenieria.svg",
       title: "Ingeniería",
       text: "Desarrollamos Ingeniería en todas sus fases. Ingeniería Conceptual, Básica, y de Detalle. Incluyendo Estudios Especiales, Estimación de Costos, y Evaluación de Proyectos.",
     },
     {
       id: 2,
       type: "card",
-      icon: "/img/que-hacemos/icon.svg",
+      icon: "/img/que-hacemos/plantas-modulares.svg",
       title: "Plantas Modulares",
       text: "Fabricamos Plantas de Procesos y Equipos Modulares para la Industria.",
     },
     {
       id: 3,
       type: "card",
-      icon: "/img/que-hacemos/icon.svg",
+      icon: "/img/que-hacemos/gestion-proyectos.svg",
       title: "Gestión de Proyectos",
       text: "Realizamos la Gestión Integral de Proyectos. Ingeniería de Propiedad, gestión de suministros, gestión de calidad, oficina técnica y supervisión.",
     },
     {
       id: 4,
       type: "card",
-      icon: "/img/que-hacemos/icon.svg",
+      icon: "/img/que-hacemos/operacion-mantenimiento.svg",
       title: "Operación y Mantenimiento",
       text: "Realizamos Precomisionado, Comisionado, y Puesta en Marcha. Operación de Plantas de Proceso. Soporte Técnico a Operaciones.",
     },
     {
       id: 5,
       type: "card",
-      icon: "/img/que-hacemos/icon.svg",
+      icon: "/img/que-hacemos/servicios-gas-petroleo.svg",
       title: "Servicios de Procesamiento de Gas y Petróleo",
       text: "Realizamos Servicios de Procesamientos de Gas y Petróleo para el Upstream y el Midstream con equipos propios.",
     },
@@ -196,28 +196,32 @@ const QueHacemos = () => {
   ]);
 
   return (
-    <section ref={sectionRef} className="hidden lg:block min-h-[600vh] w-full relative">
+    <section
+      ref={sectionRef}
+      className="hidden lg:block min-h-[600vh] w-full relative"
+    >
       <div className="sticky top-0 h-screen w-full flex">
-        <motion.div 
-                  initial="initial"
-                  whileInView="inView"
-                  variants={{
-                    initial: {
-                      y: 20,
-                      opacity: 0,
-                    },
-                    inView: {
-                      y: 0,
-                      opacity: 1,
-                    },
-                  }}
-                  viewport={{ margin: "-50px", once: true }}
-                  transition={{
-                    duration: 0.8,
-                    ease: "easeInOut",
-                    delay:  1,
-                  }}
-        className="absolute bg-[#F7F7F7] p-[8px] rounded-[6px] w-fit flex flex-col gap-[8px] top-[50%] translate-y-[-50%] right-[32px]">
+        <motion.div
+          initial="initial"
+          whileInView="inView"
+          variants={{
+            initial: {
+              y: 20,
+              opacity: 0,
+            },
+            inView: {
+              y: 0,
+              opacity: 1,
+            },
+          }}
+          viewport={{ margin: "-50px", once: true }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bg-[#F7F7F7] p-[8px] rounded-[6px] w-fit flex flex-col gap-[8px] top-[50%] translate-y-[-50%] right-[32px]"
+        >
           {Array.from({ length: 6 }, (_, index) => (
             <div
               key={index}
@@ -360,26 +364,27 @@ const QueHacemos = () => {
                   Proyectos.
                 </motion.p>
               </div>
-              <motion.div 
-                        initial="initial"
-                        whileInView="inView"
-                        variants={{
-                          initial: {
-                            y: 30,
-                            opacity: 0,
-                          },
-                          inView: {
-                            y: 0,
-                            opacity: 1,
-                          },
-                        }}
-                        viewport={{ margin: "-50px", once: true }}
-                        transition={{
-                          duration: 0.8,
-                          ease: "easeInOut",
-                          delay:  0.9,
-                        }}
-              className="relative min-h-[400px]">
+              <motion.div
+                initial="initial"
+                whileInView="inView"
+                variants={{
+                  initial: {
+                    y: 30,
+                    opacity: 0,
+                  },
+                  inView: {
+                    y: 0,
+                    opacity: 1,
+                  },
+                }}
+                viewport={{ margin: "-50px", once: true }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeInOut",
+                  delay: 0.9,
+                }}
+                className="relative min-h-[400px]"
+              >
                 <AnimatePresence mode="sync">
                   <motion.div
                     key={currentImageIndex}

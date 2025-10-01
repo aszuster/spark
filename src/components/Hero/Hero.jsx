@@ -89,13 +89,13 @@ const Hero = () => {
           </motion.video>
 
           {/* Gradiente overlay */}
-          <div
+          {/* <div
             className="absolute inset-0 z-20 rounded-[48px]"
             style={{
               background: `linear-gradient(180deg, rgba(18, 16, 51, 0.00) -11.95%, rgba(51, 18, 35, 0.45) 52.99%)`,
               backgroundBlendMode: "soft-light",
             }}
-          />
+          /> */}
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
