@@ -5,6 +5,7 @@ import './App.css'
 import Hero from "./components/Hero/Hero";
 import QuienesSomos from "./components/quienes-somos/QuienesSomos";
 import QueHacemos from "./components/que-hacemos/QueHacemos";
+import ComoTrabajamos from "./components/como-trabajamos/ComoTrabajamos";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -50,7 +51,7 @@ function App() {
       <Hero />
       <QuienesSomos />
       <QueHacemos />
-      <div className="h-[100vh] hidden lg:block"></div>
+      <ComoTrabajamos />
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
       <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}
