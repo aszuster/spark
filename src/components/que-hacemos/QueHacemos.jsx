@@ -44,15 +44,15 @@ const QueHacemos = () => {
       title:
         "Participamos en todas las etapas del ciclo de vida de los Proyectos.",
       elements: [
-        { icon: "/img/que-hacemos/bullet.svg", content: "Ingeniería" },
-        { icon: "/img/que-hacemos/bullet.svg", content: "Plantas Modulares" },
-        { icon: "/img/que-hacemos/bullet.svg", content: "Gestión de Proyectos" },
+        { icon: "/img/que-hacemos/ingenieria.svg", content: "Ingeniería" },
+        { icon: "/img/que-hacemos/plantas-modulares.svg", content: "Plantas Modulares" },
+        { icon: "/img/que-hacemos/gestion-proyectos.svg", content: "Gestión de Proyectos" },
         {
-          icon: "/img/que-hacemos/bullet.svg",
+          icon: "/img/que-hacemos/operacion-mantenimiento.svg",
           content: "Operación y Mantenimiento",
         },
         {
-          icon: "/img/que-hacemos/bullet.svg",
+          icon: "/img/que-hacemos/servicios-gas-petroleo.svg",
           content: "Servicios de Procesamiento de Gas y Petróleo",
         },
       ],
