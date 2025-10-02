@@ -162,3 +162,53 @@ h2, h3, h4, h5, h6 {
 .font-inter {
   font-family: 'Inter', sans-serif !important;
 }
+
+/* Clase base para números con transición suave */
+.number-base {
+  position: relative;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: background, color, opacity;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estado pequeño - color blanco */
+.number-small {
+  color: #FFFFFF;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+  opacity: 1;
+}
+
+/* Estado grande - gradiente */
+.number-large {
+  background: linear-gradient(128deg, #CC4F14 0%, #CC4F14 20%, #FFFFFF 70%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  opacity: 1;
+}
+
+/* Capa de gradiente superpuesta para fade */
+.number-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(128deg, #CC4F14 0%, #CC4F14 20%, #FFFFFF 70%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.number-large .number-gradient-overlay {
+  opacity: 1;
+}
