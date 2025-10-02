@@ -273,7 +273,7 @@ const QueHacemos = () => {
                   className="absolute inset-0 object-cover h-full w-full"
                 />
               </div>
-              <div className="z-30 absolute top-[261px] xxl:top-[345px] left-[50%] translate-x-[-50%] w-[249px] h-[93px] bg-[#6a6a6a]/20 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center py-[10px]">
+              {/* <div className="z-30 absolute top-[261px] xxl:top-[345px] left-[50%] translate-x-[-50%] w-[249px] h-[93px] bg-[#6a6a6a]/20 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center py-[10px]">
                 <div className="py-[4px] px-[8px] w-fit border-[1px] border-secondary-000 rounded-[8px] text-secondary-000 text-[14px] font-normal tracking-[-0.56px]">
                   <span>[E]</span>
                 </div>
@@ -294,6 +294,41 @@ const QueHacemos = () => {
                 </div>
                 <div className="py-[4px] px-[8px] w-fit border-[1px] border-secondary-000 rounded-[8px] text-secondary-000 text-[14px] font-normal tracking-[-0.56px]">
                   <span>[BOOT]</span>
+                </div>
+              </div> */}
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[320px] xxl:top-[380px] left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 lg:text-[22px] xxl:text-[26px]  font-normal tracking-[1px]">
+                  <span>[EPCm]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] left-0 translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[E]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[BOOT]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[EP]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[BOT]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[EPC]</span>
+                </div>
+              </div>
+              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+                  <span>[O&M]</span>
                 </div>
               </div>
             </div>
