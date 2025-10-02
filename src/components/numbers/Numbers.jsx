@@ -233,19 +233,25 @@ const Numbers = () => {
           src="/img/r.png"
           className="absolute top-0 right-0 h-full w-auto z-0"
         />
-        <div className="my-[90px] px-[32px] z-30 relative w-full">
+        <div className="my-[90px] px-[32px] z-30 relative w-full xxl:max-w-[1544px]">
           <div className="w-full h-[1px] bg-secondary-600 relative">
             <div className="w-[8px] h-[8px] bg-p-orange-600 rounded-[2px] absolute top-[-3.6px] right-0"></div>
           </div>
 
           {/* Primer elemento */}
+          
           <motion.div
-            className={`flex items-center justify-center relative`}
+            className={`flex justify-start items-center relative`}
             animate={{
               height: currentState.first.height,
               gap: currentState.first.gap,
+              marginLeft: shouldAnimate('first') ? '30px' : '193px'
             }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeInOut",
+              marginLeft: { duration: 0.1, ease: "easeOut" }
+            }}
           >
             <div className={`absolute ${currentState.first.iconClass} right-[10px] transition-all duration-600 ease-in-out`}>
               <svg
@@ -260,9 +266,9 @@ const Numbers = () => {
                 />
               </svg>
             </div>
-            <div className="flex items-end justify-center relative transition-all duration-600 ease-in-out" style={{ gap: `${currentState.first.gap}px` }}>
+            <div className="flex items-end relative transition-all duration-600 ease-in-out " style={{ gap: `${currentState.first.gap}px` }}>
               <p
-                className={`font-muli font-normal transition-all duration-600 ease-in-out ${currentState.first.numberClass} flex items-end ${currentState.first.paddingNumber}`}
+                className={`font-muli font-normal transition-all duration-600 ease-in-out ${activeState === 0 ? "ml-[39px]!" : "ml-[10px]"} ${currentState.first.numberClass} flex items-end ${currentState.first.paddingNumber}`}
               >
                 {renderNumber('first')}
               </p>
@@ -280,12 +286,17 @@ const Numbers = () => {
 
           {/* Segundo elemento */}
           <motion.div
-            className={`flex items-center justify-center relative `}
+            className={`flex justify-start items-center relative`}
             animate={{
               height: currentState.second.height,
               gap: currentState.second.gap,
+              marginLeft: shouldAnimate('second') ? '200px' : '341px'
             }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeInOut",
+              marginLeft: { duration: 0.3, ease: "easeOut" }
+            }}
           >
             <div className={`absolute ${currentState.second.iconClass} right-[10px] transition-all duration-600 ease-in-out`}>
               <svg
@@ -300,7 +311,7 @@ const Numbers = () => {
                 />
               </svg>
             </div>
-            <div className="flex items-end justify-center relative transition-all duration-600 ease-in-out" style={{ gap: `${currentState.second.gap}px` }}>
+            <div className="flex items-end relative transition-all duration-600 ease-in-out" style={{ gap: `${currentState.second.gap}px` }}>
               <p
                 className={`font-muli font-normal transition-all duration-600 ease-in-out ${currentState.second.numberClass} flex items-end ${currentState.second.paddingNumber}`}
               >
@@ -320,12 +331,17 @@ const Numbers = () => {
 
           {/* Tercer elemento */}
           <motion.div
-            className={`flex items-center justify-center relative`}
+            className={`flex justify-start items-center relative`}
             animate={{
               height: currentState.third.height,
               gap: currentState.third.gap,
+              marginLeft: shouldAnimate('third') ? '90px' : '570px'
             }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ 
+              duration: 0.6, 
+              ease: "easeInOut",
+              marginLeft: { duration: 0.3, ease: "easeOut" }
+            }}
           >
             <div className={`absolute ${currentState.third.iconClass} right-[10px] transition-all duration-600 ease-in-out`}>
               <svg
@@ -340,7 +356,7 @@ const Numbers = () => {
                 />
               </svg>
             </div>
-            <div className="flex items-end justify-center relative transition-all duration-600 ease-in-out" style={{ gap: `${currentState.third.gap}px` }}>
+            <div className="flex items-end relative transition-all duration-600 ease-in-out" style={{ gap: `${currentState.third.gap}px` }}>
               <p
                 className={`font-muli font-normal transition-all duration-600 ease-in-out ${currentState.third.numberClass} flex items-end ${currentState.third.paddingNumber}`}
               >
