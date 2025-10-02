@@ -226,7 +226,7 @@ const Numbers = () => {
   return (
     <section
       ref={containerRef}
-      className="h-[300vh] w-full relative bg-p-blue-600"
+      className="hidden lg:block h-[300vh] w-full relative bg-p-blue-600"
     >
       <div className="sticky top-0 h-screen flex items-center justify-center">
         <img
