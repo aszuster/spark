@@ -212,7 +212,7 @@ const Card = ({ card, index }) => {
         className="absolute inset-0 z-10 transition-transform duration-300  "
       ></div>
       <div className="absolute inset-0 z-20 flex items-end justify-center pb-[24px] px-[16px] pt-[16px]">
-        <div className="bg-secondary-000 text-p-blue-500 pb-[24px] px-[16px] pt-[16px]">
+        <div className="bg-secondary-000 text-p-blue-500 pb-[24px] px-[16px] pt-[16px] rounded-[12px]">
           <p className="text-inter font-semibold text-[18px] leading-[20px] tracking-[-0.9px] mb-[16px]">
             {card.title}
           </p>
@@ -239,7 +239,7 @@ const cards = [
     url: "/img/como-trabajamos/02.webp",
     title: "Tratamiento de Gas y Condensados",
     description:
-      "Ajuste de Punto de Rocío | Remoción de Gases Acidos | Remoción de Mercurio | Recuperación y Fraccionamiento de NGL, LPG y Gasolinas | Licuefacción LNG",
+      "Ajuste de Punto de Rocío | Remoción de Gases Acidos | Remoción de Mercurio | Recuperación y Fraccionamiento de NGL, LPG y Gasolinas | Licuefacción LNGs",
     id: 2,
   },
   {
