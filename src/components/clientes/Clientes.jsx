@@ -29,7 +29,7 @@ const Clientes = () => {
               onLogoHover={setHoveredLogoId}
             />
           </div>
-          <div className="w-[558px] h-[143px] xxl:h-[112px] xxl:w-[810px] flex flex-wrap gap-x-[24px] gap-y-[12px] ml-[600px] xxl:ml-[796px]">
+          <div className="w-[558px] h-[143px] xxl:h-[112px] xxl:w-[820px] flex flex-wrap gap-x-[24px] gap-y-[12px] ml-[600px] xxl:ml-[796px]">
             {Logos.map((logo, i) => {
               const isHovered = hoveredLogoId === logo.id;
               return (
