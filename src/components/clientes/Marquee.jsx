@@ -31,7 +31,7 @@ export default function Marquee({ hoveredLogoId, onLogoHover }) {
               <motion.div
                 key={i}
                 layout
-                className="flex-shrink-0 flex items-center justify-center bg-gray-100 rounded-xl overflow-hidden group"
+                className="flex-shrink-0 flex items-center justify-center bg-secondary-000 rounded-xl overflow-hidden group"
                 initial={{ height: 100, width: 160 }}
                 animate={isHovered ? { 
                   height: 200, 
