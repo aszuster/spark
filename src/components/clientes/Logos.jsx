@@ -15,7 +15,7 @@ export const Logos = [
       name: "TGS",
     },
     {
-      url: "/img/clientes/ypf.svg",
+      url: "/img/clientes/ypf.png",
       id: 4,
       name: "YPF",
     },
