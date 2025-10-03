@@ -2,7 +2,7 @@ export const Logos = [
     {
       url: "/img/clientes/pan-american.svg",
       id: 1,
-      name: "Pan American",
+      name: "Pan American Energy",
     },
     {
       url: "/img/clientes/pluspetrol.png",
@@ -27,7 +27,7 @@ export const Logos = [
     {
       url: "/img/clientes/vista.svg",
       id: 6,
-      name: "Vista",
+      name: "VISTA",
     },
     {
       url: "/img/clientes/cgc.png",
@@ -42,7 +42,7 @@ export const Logos = [
     {
       url: "/img/clientes/pampa.png",
       id: 9,
-      name: "Pampa",
+      name: "Pampa Energía",
     },
     {
       url: "/img/clientes/shell.svg",
@@ -62,7 +62,7 @@ export const Logos = [
     {
       url: "/img/clientes/wintershall.png",
       id: 13,
-      name: "Wintershall",
+      name: "Wintershall Dea",
     },
     {
       url: "/img/clientes/tgn.png",
@@ -72,17 +72,17 @@ export const Logos = [
     {
       url: "/img/clientes/mega.png",
       id: 15,
-      name: "Mega",
+      name: "MEGA",
     },
     {
       url: "/img/clientes/axion.png",
       id: 16,
-      name: "Axion",
+      name: "AXION energy",
     },
     {
       url: "/img/clientes/refipampa.png",
       id: 17,
-      name: "Refipampa",
+      name: "RefiPampa",
     },
     {
       url: "/img/clientes/air-liquide.svg",
@@ -102,7 +102,7 @@ export const Logos = [
     {
       url: "/img/clientes/saesa.png",
       id: 21,
-      name: "Saesa",
+      name: "SAESA",
     },
     {
       url: "/img/clientes/ypf-luz.png",
@@ -112,12 +112,12 @@ export const Logos = [
     {
       url: "/img/clientes/albanesi.png",
       id: 23,
-      name: "Albanesi",
+      name: "Grupo Albanesi",
     },
     {
       url: "/img/clientes/galaxy.png",
       id: 24,
-      name: "Galaxy",
+      name: "Galaxy Resources",
     },
     {
       url: "/img/clientes/allkem.png",
@@ -127,16 +127,16 @@ export const Logos = [
     {
       url: "/img/clientes/exar.png",
       id: 26,
-      name: "Exar",
+      name: "EXAR",
     },
     {
       url: "/img/clientes/litica.png",
       id: 27,
-      name: "Litica",
+      name: "Litica Resources",
     },
     {
       url: "/img/clientes/lithium.png",
       id: 28,
-      name: "Lithium",
+      name: "Lithium Americas",
     },
   ];

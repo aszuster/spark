@@ -2,12 +2,13 @@
 import SectionLabel from "../ui/SectionLabel";
 import { motion } from "framer-motion";
 import ArrowDown from "../../svg/ArrowDown";
-import { Marquee } from "./Marquee";
+import Marquee from "./Marquee";
 import { Logos } from "./Logos";
-import { div } from "motion/react-client";
-import InfiniteMarquee from "./marqueeTest";
+import { useState } from "react";
 
 const Clientes = () => {
+  const [hoveredLogoId, setHoveredLogoId] = useState(null);
+
   return (
     <section className="lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
       <div className="m-[16px] h-full lg:rounded-[80px] bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge">
@@ -22,28 +23,35 @@ const Clientes = () => {
               que confían en Spark
             </h3>
           </div>
-          <InfiniteMarquee />
-          {/* <div className="flex items-end overflow-x-hidden h-[200px]">
-            <Marquee>
-              {Logos.map((logo, index) => {
-                const isFirstLogo = index === 0;
-                const isLastLogo = index === Logos.length - 1;
-                
-                return (
-                  <div 
-                    key={logo.id} 
-                    className={`w-[178px] h-[100px] bg-secondary-000 rounded-[12px] flex items-center justify-center relative transition-all duration-300 ease-out hover:h-[200px] hover:w-[445px] origin-bottom ${
-                      isFirstLogo ? 'ml-[]' : isLastLogo ? 'mr-0' : ''
-                    }`}
-                    style={{ transformOrigin: 'bottom' }}
-                  >
-                    <img src={logo.url} alt={logo.name} className="h-[60px] w-auto" />
-                  </div>
-                );
-              })}
-            </Marquee>
-          </div> */}
-          <div></div>
+          <div className="mb-[80px] xxl:mb-[120px]">
+            <Marquee 
+              hoveredLogoId={hoveredLogoId} 
+              onLogoHover={setHoveredLogoId}
+            />
+          </div>
+          <div className="w-[558px] h-[143px] xxl:h-[112px] xxl:w-[810px] flex flex-wrap gap-x-[24px] gap-y-[12px] ml-[600px] xxl:ml-[796px]">
+            {Logos.map((logo, i) => {
+              const isHovered = hoveredLogoId === logo.id;
+              return (
+                <div 
+                  key={i} 
+                  className="hover:cursor-pointer"
+                  onMouseEnter={() => setHoveredLogoId(logo.id)}
+                  onMouseLeave={() => setHoveredLogoId(null)}
+                >
+                  <p className={`font-inter text-[16px] tracking-[-0.8px] relative after:content-[''] after:absolute after:left-[-7px] after:top-[50%] 
+                  after:translate-y-[-50%] after:w-[7px] after:h-[7px] after:rounded-[2px] after:bg-p-orange-600 after:opacity-0 after:transition-all after:duration-300
+                  transition-all duration-300 ${
+                    isHovered 
+                      ? 'text-secondary-000 pl-[10px] after:opacity-100' 
+                      : 'text-secondary-700 hover:text-secondary-000 hover:pl-[10px] hover:after:opacity-100'
+                  }`}>
+                    {logo.name}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

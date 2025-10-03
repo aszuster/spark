@@ -8,7 +8,6 @@ import QueHacemos from "./components/que-hacemos/QueHacemos";
 import ComoTrabajamos from "./components/como-trabajamos/ComoTrabajamos";
 import Numbers from "./components/numbers/Numbers";
 import Clientes from "./components/clientes/Clientes";
-import InfiniteMarquee from "./components/clientes/marqueeTest";
 
 function App() {
   const { t, i18n } = useTranslation();
