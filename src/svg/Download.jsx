@@ -5,7 +5,6 @@ export default function Logo({
   className = "",
 }) {
   return (
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
@@ -15,11 +14,11 @@ export default function Logo({
       className={className}
     >
       <path
-        d="M1 7H13M13 7L7.33333 1M13 7L7.33333 13"
-        stroke={stroke}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M7 10.577L3.461 7.039L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.539 7.039L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z"
+        fill={stroke}
       />
     </svg>
+
+
   );
 }
