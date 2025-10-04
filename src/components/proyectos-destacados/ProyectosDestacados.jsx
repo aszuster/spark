@@ -35,9 +35,30 @@ const ProyectosDestacados = () => {
       </div>
       <div className="h-[462px] w-full relative">
         <Swiper
-          slidesPerView={1.5}
-          spaceBetween={150}
-          centeredSlides={true}
+        breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1025: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+            1440: {
+              slidesPerView: 1.5,
+              spaceBetween: 150,
+              centeredSlides: true,
+            },
+            1920: {
+              slidesPerView: 'auto',
+              spaceBetween: 150,
+              centeredSlides: true,
+            },
+          }}
           modules={[Navigation]}
           className="mySwiper"
           navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
