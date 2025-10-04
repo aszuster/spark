@@ -107,6 +107,51 @@ html.lenis {
 }
 
 
+.buttonBorderWhite::before{
+  content: "";
+  position: absolute;
+  /*   z-index: -1; */
+  pointer-events: none;
+  inset: 0px;
+
+  border-radius: inherit;
+  /* padding is the border width */
+  padding: 2px;
+  background: linear-gradient(
+    to bottom right,
+    #dddddd 0%,
+    #F9FAFA 33%,
+    transparent 62%,
+    #F9FAFA 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
+}
+
+.buttonBorderWhite:hover::before{
+  background: linear-gradient(
+    to bottom right,
+    #525252 0%,
+    #414141 33%,
+    #878787 62%,
+    #414141 100%
+  );
+}
+
+.buttonBorderWhite:active::before{
+  background: linear-gradient(
+    to bottom right,
+    #525252 0%,
+    #414141 33%,
+    #414141 62%,
+    #414141 100%
+  );
+}
+
+
 .glassBorder::before{
   content: "";
   position: absolute;
@@ -143,4 +188,54 @@ html.lenis {
 
 .animate-gradient-diagonal {
   animation: gradient-diagonal 4s ease infinite;
+}
+
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  height: 50px;
+  width: 50px;
+  border-radius: 16px;
+  background-color: #CC4F14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow:disabled{
+  background-color: #C7C7C7;
+}
+.arrow:disabled svg{
+  stroke: #717D96;
+}
+
+.arrow-right{
+ left:150px;
+}
+
+.arrow-left{
+ right:150px;
+}
+
+/* Estilos específicos para el swiper de proyectos destacados */
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Solución para centrado en 1920px */
+@media (min-width: 1920px) {
+  .mySwiper .swiper-slide {
+    width: 918px !important;
+    flex-shrink: 0 !important;
+  }
 }

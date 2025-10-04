@@ -1,11 +1,10 @@
-export default function Logo({
-  width = "14",
-  height = "14",
+export default function Chevron({
+  width = "6",
+  height = "10",
   stroke = "#FFFFFF",
   className = "",
 }) {
   return (
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={width}
@@ -15,10 +14,8 @@ export default function Logo({
       className={className}
     >
       <path
-        d="M1 7H13M13 7L7.33333 1M13 7L7.33333 13"
-        stroke={stroke}
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        d="M4.41697 5.00002L0.322632 0.905685L0.952803 0.275513L5.67731 5.00002L0.952803 9.72454L0.322632 9.09436L4.41697 5.00002Z"
+        fill={stroke}
       />
     </svg>
   );
