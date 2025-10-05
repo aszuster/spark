@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* CSS necesario para Lenis smooth scroll */
 html.lenis {
@@ -60,9 +57,7 @@ html.lenis {
   color: #888;
 }
 
-
-
-.buttonBorder::before{
+.buttonBorder::before {
   content: "";
   position: absolute;
   /*   z-index: -1; */
@@ -86,7 +81,7 @@ html.lenis {
   transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
 }
 
-.buttonBorder:hover::before{
+.buttonBorder:hover::before {
   background: linear-gradient(
     to bottom right,
     #525252 0%,
@@ -96,7 +91,7 @@ html.lenis {
   );
 }
 
-.buttonBorder:active::before{
+.buttonBorder:active::before {
   background: linear-gradient(
     to bottom right,
     #525252 0%,
@@ -106,8 +101,7 @@ html.lenis {
   );
 }
 
-
-.buttonBorderWhite::before{
+.buttonBorderWhite::before {
   content: "";
   position: absolute;
   /*   z-index: -1; */
@@ -120,9 +114,9 @@ html.lenis {
   background: linear-gradient(
     to bottom right,
     #dddddd 0%,
-    #F9FAFA 33%,
+    #f9fafa 33%,
     transparent 62%,
-    #F9FAFA 100%
+    #f9fafa 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -131,7 +125,7 @@ html.lenis {
   transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
 }
 
-.buttonBorderWhite:hover::before{
+.buttonBorderWhite:hover::before {
   background: linear-gradient(
     to bottom right,
     #525252 0%,
@@ -141,7 +135,7 @@ html.lenis {
   );
 }
 
-.buttonBorderWhite:active::before{
+.buttonBorderWhite:active::before {
   background: linear-gradient(
     to bottom right,
     #525252 0%,
@@ -151,8 +145,7 @@ html.lenis {
   );
 }
 
-
-.glassBorder::before{
+.glassBorder::before {
   content: "";
   position: absolute;
   /*   z-index: -1; */
@@ -164,9 +157,9 @@ html.lenis {
   padding: 1px;
   background: linear-gradient(
     to bottom right,
-    #B5B5B0 0%,
+    #b5b5b0 0%,
     transparent 33%,
-    #B5B5B0 75%,
+    #b5b5b0 75%,
     transparent 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -178,7 +171,8 @@ html.lenis {
 
 /* Animación para gradiente móvil diagonal */
 @keyframes gradient-diagonal {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 0%;
   }
   50% {
@@ -190,34 +184,48 @@ html.lenis {
   animation: gradient-diagonal 4s ease infinite;
 }
 
-
-.arrow{
+.arrow {
   position: absolute;
   top: 50%;
   margin-top: -5px;
   height: 50px;
   width: 50px;
   border-radius: 16px;
-  background-color: #CC4F14;
+  background-color: #cc4f14;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.arrow:disabled{
-  background-color: #C7C7C7;
+.arrow:disabled {
+  background-color: #c7c7c7;
 }
-.arrow:disabled svg{
-  stroke: #717D96;
-}
-
-.arrow-right{
- left:150px;
+.arrow:disabled svg {
+  stroke: #717d96;
 }
 
-.arrow-left{
- right:150px;
+.arrow-left {
+  left: 150px;
+
+}
+
+@media screen and (min-width: 1920px) {
+  .arrow-left {
+    left: calc(50% - 527px);
+    translate: -50% 0;
+  } 
+}
+
+.arrow-right {
+  right: 150px;
+}
+
+@media screen and (min-width: 1920px) {
+  .arrow-right {
+    right: calc(50% - 577px);
+    translate: -50% 0;
+  } 
 }
 
 /* Estilos específicos para el swiper de proyectos destacados */
