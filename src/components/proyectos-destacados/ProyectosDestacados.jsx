@@ -45,8 +45,9 @@ const ProyectosDestacados = () => {
               spaceBetween: 40,
             },
             1025: {
-              slidesPerView: 5,
-              spaceBetween: 50,
+              slidesPerView: 1.5,
+              spaceBetween: 150,
+              centeredSlides: true,
             },
             1440: {
               slidesPerView: 1.5,
@@ -61,7 +62,7 @@ const ProyectosDestacados = () => {
           }}
           modules={[Navigation]}
           className="mySwiper"
-          navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+          navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
         >
           <SwiperSlide>
             <div className="w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/01.webp')] bg-cover bg-center rounded-[40px] px-[30px] py-[40px] flex items-end justify-end">
@@ -219,10 +220,10 @@ const ProyectosDestacados = () => {
           </SwiperSlide>
         </Swiper>
         <button className="z-20 arrow-left arrow">
-          <Chevron stroke="#fff" />
+          <Chevron stroke="#fff" className="rotate-180"/>
         </button>
         <button className="z-20 arrow-right arrow">
-          <Chevron stroke="#fff" className="rotate-180" />
+          <Chevron stroke="#fff"  />
         </button>
       </div>
     </section>
