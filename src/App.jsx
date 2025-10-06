@@ -10,6 +10,8 @@ import Numbers from "./components/numbers/Numbers";
 import Clientes from "./components/clientes/Clientes";
 import ProyectosDestacados from "./components/proyectos-destacados/ProyectosDestacados";
 import Cultura from "./components/cultura/Cultura";
+import Banner from "./components/banner/Banner";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -60,6 +62,8 @@ function App() {
       <Clientes />
       <ProyectosDestacados />
       <Cultura />
+      <Banner />
+      <Footer />
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
       <button onClick={() => switchLanguage("es")}>🇪🇸 Español</button> */}
