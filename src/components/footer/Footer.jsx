@@ -8,7 +8,7 @@ import Twitter from "../../svg/twitter";
 
 const Footer = () => {
   return (
-    <footer className="lg:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
+    <footer className="hidden lg:block lg:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
       <div className="flex justify-between items-start pb-[162px] pr-[321px]">
         <Logo color="var(--color-p-orange-600)" className="lg:w-[138px]" />
         <div className="flex justify-between items-center w-[750px]">
