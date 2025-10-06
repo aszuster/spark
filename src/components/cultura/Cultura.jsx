@@ -3,7 +3,7 @@ import ArrowButton from "../ui/ArrowButton";
 
 const Cultura = () => {
   return (
-    <section className="overflow-hidden w-full h-full relative bg-p-blue-600 py-[78px] px-[32px] xxl:py-[99px] ">
+    <section className="hidden lg:block overflow-hidden w-full h-full relative bg-p-blue-600 py-[78px] px-[32px] xxl:py-[99px] ">
       <div
         className={`w-fit p-[8px]  bg-[#E3E4E5]/20 backdrop-blur-sm  rounded-[6px] flex items-center justify-center font-inter uppercase text-[14px] font-normal tracking-[-0.7px] text-p-blue-500 buttonBorder`}
       >
