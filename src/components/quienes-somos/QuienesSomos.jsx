@@ -5,7 +5,7 @@ import ArrowDown from "../../svg/ArrowDown";
 
 const QuienesSomos = () => {
   return (
-    <div id="quienes-somos" className="h-[756px] md:h-[655px] lg:h-screen overflow-hidden">
+    <div id="quienes-somos" className="h-[725px] md:h-[655px] lg:h-screen overflow-hidden">
       <div>
         {" "}
         <motion.div

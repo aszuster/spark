@@ -4,6 +4,12 @@ import ArrowDown from "../../svg/ArrowDown";
 import SectionLabel from "../ui/SectionLabel";
 import { useFeatureStore } from "../quienes-somos/store";
 import { useEffect, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+import Chevron from "../../svg/Chevron";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const QueHacemos = () => {
   const {
@@ -205,9 +211,9 @@ const QueHacemos = () => {
     <section
       id="que-hacemos"
       ref={sectionRef}
-      className="hidden lg:block min-h-[600vh] w-full relative"
+      className="block h-auto lg:h-[600vh] w-full relative "
     >
-      <div className="sticky top-0 h-screen w-full flex">
+      <div className="sticky top-0 h-auto lg:h-screen w-full flex">
         <motion.div
           initial="initial"
           whileInView="inView"
@@ -227,7 +233,7 @@ const QueHacemos = () => {
             ease: "easeInOut",
             delay: 1,
           }}
-          className="absolute bg-[#F7F7F7] p-[8px] rounded-[6px] w-fit flex flex-col gap-[8px] top-[50%] translate-y-[-50%] right-[32px]"
+          className="hidden absolute bg-[#F7F7F7] p-[8px] rounded-[6px] w-fit lg:flex flex-col gap-[8px] top-[50%] translate-y-[-50%] right-[32px]"
         >
           {Array.from({ length: 6 }, (_, index) => (
             <div
@@ -241,16 +247,21 @@ const QueHacemos = () => {
           ))}
         </motion.div>
         <img
+          src="/img/que-hacemos/misc800.svg"
+          alt="bg"
+          className="absolute top-0 left-0 w-full lg:hidden"
+        />
+        <img
           src="/img/que-hacemos/misc.svg"
           alt="bg"
-          className="absolute top-0 left-0 w-[90%] xxl:hidden"
+          className="absolute top-0 right-0 w-[90%] hidden lg:block xxl:hidden"
         />
         <img
           src="/img/que-hacemos/misc2.svg"
           alt="bg"
           className="absolute top-0 left-0 w-[90%] hidden xxl:block"
         />
-        <div className="flex w-full">
+        <div className="lg:flex w-full px-[20px] lg:px-0">
           <motion.div
             initial="initial"
             whileInView="inView"
@@ -270,10 +281,10 @@ const QueHacemos = () => {
               ease: "easeInOut",
               delay: 0.5,
             }}
-            className="flex-1 flex flex-col items-center"
+            className="flex-1 flex flex-col lg:items-center"
           >
-            <div className="relative w-[446px] h-[336px] xxl:w-[554px] xxl:h-[400px]">
-              <div className="w-[446px] h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
+            <div className="relative w-[186px] h-[128px] lg:w-[446px] lg:h-[336px] xxl:w-[554px] xxl:h-[400px]">
+              <div className="ml-[8px] lg:ml-0 w-[186px] h-[128px] lg:w-[446px] lg:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
                 <img
                   src="/img/que-hacemos/01.jpg"
                   alt="bg"
@@ -303,44 +314,44 @@ const QueHacemos = () => {
                   <span>[BOOT]</span>
                 </div>
               </div> */}
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[320px] xxl:top-[380px] left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 lg:text-[22px] xxl:text-[26px]  font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[320px] xxl:top-[380px] lg:left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] xxl:text-[26px]  font-normal lg:tracking-[1px]">
                   <span>[EPCm]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] left-0 translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:left-0 lg:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
                   <span>[E]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] lg:right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px]  font-normal lg:tracking-[1px]">
                   <span>[BOOT]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] lg:left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
                   <span>[EP]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] lg:right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
                   <span>[BOT]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] lg:left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
                   <span>[EPC]</span>
                 </div>
               </div>
-              <div className="z-30 lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[22px] font-normal tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] lg:right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
                   <span>[O&M]</span>
                 </div>
               </div>
             </div>
           </motion.div>
-          <div className="flex flex-col flex-1 justify-center h-full items-center">
+          <div className="hidden lg:flex flex-col flex-1 justify-center h-full items-center">
             <div className="flex flex-col gap-[100px] h-[550px] w-[491px]">
               <div className="flex flex-col gap-[28px] relative">
                 <motion.div
@@ -503,6 +514,85 @@ const QueHacemos = () => {
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
+            </div>
+          </div>
+          <div className="lg:hidden mt-[83px] py-[60px]">
+            <div className="flex flex-col gap-[28px] relative">
+              <SectionLabel text="Qué hacemos" />
+              <p className="text-[20px] font-muli font-normal leading-[24px] tracking-[-0.8px] text-p-blue-500 w-full">
+                Participamos en todas las etapas del ciclo de vida de los Proyectos.
+              </p>
+            </div>
+            <div className="relative">
+              <Swiper
+                modules={[Pagination, Navigation]}
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{ 
+                  clickable: true,
+                  el: '.custom-pagination',
+                  renderBullet: function (index, className) {
+                    return '<div class="' + className + '"></div>';
+                  },
+                }}
+                navigation={{ 
+                  nextEl: ".arrow-right-mobile", 
+                  prevEl: ".arrow-left-mobile" 
+                }}
+                className="mySwiper mt-[54px]"
+              >
+                {contentStates.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    {item.type === "list" ? (
+                      <div className="space-y-[24px]">
+                        {item.elements.map((element, index) => (
+                          <div key={`${index}-${index}`} className="flex items-center gap-3">
+                            <div className="w-[24px] h-[24px] p-[2.5px] flex items-center justify-center bg-secondary-200 rounded-[8px]">
+                              <img
+                                className="w-[16px] h-[16px]"
+                                src={element.icon}
+                                alt={element.content}
+                              />
+                            </div>
+                            <span className="font-muli text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-p-blue-500">
+                              {element.content}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col items-start">
+                        <div className="w-[67px] h-[67px] bg-secondary-200 rounded-[13px] flex items-center justify-center mb-[31px]">
+                          <img
+                            className="w-[47px] h-[47px]"
+                            src={item.icon}
+                            alt={item.title}
+                          />
+                        </div>
+                        <h2 className="text-[24px] font-muli font-semibold leading-[38px] text-p-blue-500 w-full text-left mb-[24px]">
+                          {item.title}
+                        </h2>
+                        <p className="text-[16px] font-inter font-normal leading-[24px] tracking-[-0.64px] text-p-blue-500 w-full text-left">
+                          {item.text}
+                        </p>
+                      </div>
+                    )}
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              
+              {/* Custom Navigation and Pagination */}
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <button className="arrow-left-mobile arrow-mobile">
+                  <Chevron stroke="#fff" className="rotate-180"/>
+                </button>
+                
+              <div className="custom-pagination bg-[#F7F7F7] p-[8px] rounded-[6px] flex gap-[8px] w-fit"></div>
+                
+                <button className="arrow-right-mobile arrow-mobile">
+                  <Chevron stroke="#fff" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
