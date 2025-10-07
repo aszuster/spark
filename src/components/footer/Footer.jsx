@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
       <div className="w-full flex gap-[86px] items-center">
         <a href="" className="font-inter text-[14px] text-secondary-700">Términos y condiciones</a>
-        <p className="font-inter text-[14px] text-secondary-700">Política de privacidad</p>
+        <p className="font-inter text-[14px] text-secondary-700">2025 Spark Todos los derechos reservados</p>
       </div>
     </footer>
   );

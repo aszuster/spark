@@ -45,8 +45,14 @@ const QueHacemos = () => {
         "Participamos en todas las etapas del ciclo de vida de los Proyectos.",
       elements: [
         { icon: "/img/que-hacemos/ingenieria.svg", content: "Ingeniería" },
-        { icon: "/img/que-hacemos/plantas-modulares.svg", content: "Plantas Modulares" },
-        { icon: "/img/que-hacemos/gestion-proyectos.svg", content: "Gestión de Proyectos" },
+        {
+          icon: "/img/que-hacemos/plantas-modulares.svg",
+          content: "Plantas Modulares",
+        },
+        {
+          icon: "/img/que-hacemos/gestion-proyectos.svg",
+          content: "Gestión de Proyectos",
+        },
         {
           icon: "/img/que-hacemos/operacion-mantenimiento.svg",
           content: "Operación y Mantenimiento",
@@ -197,6 +203,7 @@ const QueHacemos = () => {
 
   return (
     <section
+      id="que-hacemos"
       ref={sectionRef}
       className="hidden lg:block min-h-[600vh] w-full relative"
     >
