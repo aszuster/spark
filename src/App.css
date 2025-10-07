@@ -110,7 +110,7 @@ html.lenis {
 
   border-radius: inherit;
   /* padding is the border width */
-  padding: 2px;
+  padding: 1px;
   background: linear-gradient(
     to bottom right,
     #dddddd 0%,
@@ -124,6 +124,13 @@ html.lenis {
   mask-composite: exclude;
   transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
 }
+
+@media screen and (min-width: 1025px) {
+  .buttonBorderWhite::before {
+    padding: 2px;
+  }
+}
+
 
 .buttonBorderWhite:hover::before {
   background: linear-gradient(
@@ -276,13 +283,15 @@ html.lenis {
 }
 
 /* Custom pagination container */
-.custom-pagination {
+.custom-pagination,
+.custom-pagination-como {
   width: fit-content !important;
   display: flex !important;
 }
 
 /* Custom pagination bullets */
-.custom-pagination .swiper-pagination-bullet {
+.custom-pagination .swiper-pagination-bullet,
+.custom-pagination-como .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   border-radius: 2px;
@@ -293,6 +302,7 @@ html.lenis {
   cursor: pointer;
 }
 
-.custom-pagination .swiper-pagination-bullet-active {
+.custom-pagination .swiper-pagination-bullet-active,
+.custom-pagination-como .swiper-pagination-bullet-active {
   background-color: #cc4f14;
 }

@@ -3,139 +3,11 @@ import { useRef } from "react";
 import SectionLabel from "../ui/SectionLabel";
 import ArrowDown from "../../svg/ArrowDown";
 
-const Example = () => {
-  return (
-    <div className="bg-secondary-000 relative">
-      <div className="flex h-[535px] items-center justify-center ">
-        <div className="w-[90%] h-full bg-bg-02 rounded-tl-[100px] mr-0 ml-auto pl-[233px] xxl:pl-[307px] pt-[167px] z-10 relative">
-          <motion.div
-            className="hidden md:block absolute lg:top-[132px]  lg:left-[-15px]  z-30"
-            initial="initial"
-            whileInView="inView"
-            variants={{
-              initial: {
-                y: 20,
-                opacity: 0,
-              },
-              inView: {
-                y: 0,
-                opacity: 1,
-              },
-            }}
-            viewport={{ margin: "-50px", once: true }}
-            transition={{
-              duration: 0.5,
-              ease: "easeInOut",
-              delay: 0.4,
-            }}
-          >
-            <motion.div
-              animate={{ translateY: ["0px", "10px", "10px", "0px", "0px"] }}
-              transition={{ duration: 2, delay: 0.5, repeat: Infinity }}
-              className="h-[102px] w-[32px] bg-p-orange-500 flex items-center justify-center rounded-[20px] "
-            >
-              <ArrowDown />
-            </motion.div>
-          </motion.div>
-          <div className="f w-[679px]">
-            <motion.div
-              initial="initial"
-              whileInView="inView"
-              variants={{
-                initial: {
-                  y: 20,
-                  opacity: 0,
-                },
-                inView: {
-                  y: 0,
-                  opacity: 1,
-                },
-              }}
-              viewport={{ margin: "-50px", once: true }}
-              transition={{
-                duration: 0.5,
-                ease: "easeInOut",
-                delay: 0.1,
-              }}
-            >
-              <SectionLabel
-                text="Cómo trabajamos"
-                className={"bg-secondary-000"}
-              />
-            </motion.div>
-            <motion.p
-              initial="initial"
-              whileInView="inView"
-              variants={{
-                initial: {
-                  y: 20,
-                  opacity: 0,
-                },
-                inView: {
-                  y: 0,
-                  opacity: 1,
-                },
-              }}
-              viewport={{ margin: "-50px", once: true }}
-              transition={{
-                duration: 0.6,
-                ease: "easeInOut",
-                delay: 0.2,
-              }}
-              className="font-muli text-[32px] font-semibold leading-[40px] tracking-[-1.6px] mb-[48px] mt-[32px]"
-            >
-              Nos comprometemos con los objetivos de cada Proyecto haciendo
-              propia la mirada del negocio (Engineering for Bussines).
-            </motion.p>
-            <motion.div
-              initial="initial"
-              whileInView="inView"
-              variants={{
-                initial: {
-                  y: 20,
-                  opacity: 0,
-                },
-                inView: {
-                  y: 0,
-                  opacity: 1,
-                },
-              }}
-              viewport={{ margin: "-50px", once: true }}
-              transition={{
-                duration: 0.8,
-                ease: "easeInOut",
-                delay: 0.3,
-              }}
-              className="flex gap-[20px]"
-            >
-              <div className="flex flex-col gap-[20px] font-inter text-[16px] font-normal leading-[24px] tracking-[-0.64px]">
-                <p>
-                  Desarrollamos e integramos tecnologías de procesos complejos
-                  garantizando la solución más adecuada para cada Proyecto.
-                </p>
-                <p>
-                  Aplicamos el conocimiento y la capacidad de análisis para la
-                  solución de cada desafío.
-                </p>
-              </div>
-              <div>
-                <p>
-                  Mantenemos un alto grado de independencia de proveedores
-                  (agnósticos tecnológicos).
-                </p>
-                <p>
-                  Trabajamos conforme a los estándares de cada industria y cada
-                  operador. Nos adaptamos al contexto de cada Proyecto.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-      <HorizontalScrollCarousel />
-    </div>
-  );
-};
+// const Example = () => {
+//   return (
+
+//   );
+// };
 
 const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
@@ -146,11 +18,14 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-secondary-000">
+    <section ref={targetRef} className="hidden lg:block relative h-[300vh] bg-secondary-000">
       {/* Imagen de fondo que se mantiene fija como "piso" */}
 
       <div className="sticky top-0 left-[846px] flex h-screen items-center overflow-hidden z-0">
-        <motion.div style={{ x }} className="flex gap-4 ml-[846px] xxl:ml-[814px] z-20">
+        <motion.div
+          style={{ x }}
+          className="flex gap-4 ml-[846px] xxl:ml-[814px] z-20"
+        >
           {cards.map((card, index) => {
             return <Card card={card} index={index} key={card.id} />;
           })}
@@ -173,9 +48,9 @@ const Card = ({ card, index }) => {
     // En otras pantallas, solo las primeras 2
     const isXxl = window.innerWidth >= 1536; // xxl breakpoint
     const staggerCount = isXxl ? 4 : 2;
-    
+
     if (index < staggerCount) {
-      return 0.4 + (index * 0.2);
+      return 0.4 + index * 0.2;
     }
     return 0;
   };
@@ -225,9 +100,7 @@ const Card = ({ card, index }) => {
   );
 };
 
-export default Example;
-
-const cards = [
+export const cards = [
   {
     url: "/img/como-trabajamos/01.webp",
     title: "Instalaciones de Superficie",
@@ -292,3 +165,5 @@ const cards = [
     id: 7,
   },
 ];
+
+export default HorizontalScrollCarousel;
