@@ -9,7 +9,7 @@ import Chevron from "../../svg/Chevron";
 
 const ProyectosDestacados = () => {
   return (
-    <section className="hidden lg:block lg:h-screen w-full relative bg-secondary-200">
+    <section id="proyectos-destacados" className="hidden lg:block lg:h-screen w-full relative bg-secondary-200">
       <img
         src="/img/proyectos-destacados/k.svg"
         alt=""

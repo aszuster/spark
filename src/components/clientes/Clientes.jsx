@@ -10,7 +10,7 @@ const Clientes = () => {
   const [hoveredLogoId, setHoveredLogoId] = useState(null);
 
   return (
-    <section className="hidden lg:block lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
+    <section id="clientes" className="hidden lg:block lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
       <div className="m-[16px] h-full lg:rounded-[80px] bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge">
         <div className="pt-[80px] pb-[115px]">
           <div className="flex flex-col gap-[22px] pl-[28px]">
