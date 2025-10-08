@@ -46,7 +46,7 @@ const Cultura = () => {
             alt=""
           />
         </div>
-        <div className="py-[52px] md:py-[0px] px-[23px] md:px-[0px] z-0 h-[375px] md:h-[485px] w-full md:w-[710px] xxl:h-[485px] xxl:w-[1019px] absolute left-[50%] translate-x-[-50%] bottom-[20px] md:top-[50%] md:right-[-32px] md:translate-y-[-50%] rounded-[40px] md:rounded-l-[80px] bg-[url('/img/cultura/background.png')] bg-cover bg-center flex items-center md:justify-center justify-start overflow-hidden xxl:justify-start">
+        <div className="py-[52px] md:py-[0px] px-[23px] md:px-[0px] z-0 h-[375px] md:h-[485px] w-full md:w-[710px] xxl:h-[485px] xxl:w-[1019px] absolute left-[50%] translate-x-[-50%] bottom-[20px] md:top-[50%] md:translate-x-0 md:left-auto md:right-[-32px] md:translate-y-[-50%] rounded-[40px] md:rounded-l-[80px] md:rounded-r-none bg-[url('/img/cultura/background.png')] bg-cover bg-center flex items-center md:justify-center justify-start overflow-hidden xxl:justify-start">
           <div className="relative xxl:pl-[232px]">
           <p className="font-muli text-[24px] md:text-[38px] leading-[24px] md:leading-[24px] tracking-[-1.52px] text-secondary-000 mb-[58px] md:mb-[59px] font-semibold">
             Nuestros valores
