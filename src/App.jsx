@@ -61,6 +61,9 @@ function App() {
       <QueHacemos />
       <ComoTrabajamos />
       <Numbers />
+      <div className="h-[300vh] lg:hidden">
+
+      </div>
       <Clientes />
       <ProyectosDestacados />
       <Cultura />

@@ -213,6 +213,15 @@ h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+/* Mobile gradient wrapper - applies gradient to numbers */
+.number-mobile-wrapper {
+  background: linear-gradient(128deg, #CC4F14 0%, #CC4F14 20%, #FFFFFF 70%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* .swiper-wrapper{
   padding-left:25%
 } */
