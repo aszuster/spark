@@ -492,7 +492,7 @@ const MobileNumbers = () => {
   ];
 
   return (
-    <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] px-[22px]">
+    <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] px-[22px] overflow-hidden">
       <img
         src="/img/r.png"
         alt=""

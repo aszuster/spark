@@ -5,11 +5,19 @@ import ArrowDown from "../../svg/ArrowDown";
 import Marquee from "./Marquee";
 import { Logos } from "./Logos";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import Chevron from "../../svg/Chevron";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const Clientes = () => {
   const [hoveredLogoId, setHoveredLogoId] = useState(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   return (
+    <>
+    {/* Desktop Version */}
     <section id="clientes" className="hidden lg:block lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
       <div className="m-[16px] h-full lg:rounded-[80px] bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge">
         <div className="pt-[80px] pb-[115px]">
@@ -55,6 +63,103 @@ const Clientes = () => {
         </div>
       </div>
     </section>
+
+    {/* Mobile Version */}
+    <section id="clientes-mobile" className="lg:hidden w-full relative bg-p-blue-600 py-[60px] overflow-hidden">
+      <div className="bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge rounded-[40px] mx-[16px] pt-[60px] pb-[60px]">
+        {/* Header */}
+        <div className="flex flex-col gap-[22px] px-[24px] mb-[40px]">
+          <SectionLabel
+            text="Clientes"
+            className="bg-[#dddddd]/24! backdrop-blur-sm! text-secondary-000! glassBorder"
+          />
+          <h3 className="font-muli text-[24px] leading-[28px] tracking-[-1.2px] text-secondary-500 w-full">
+            Empresas líderes <br />
+            que confían en Spark
+          </h3>
+        </div>
+
+        {/* Swiper Logos */}
+        <div className="relative mb-[40px] overflow-hidden">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={-30}
+            slidesPerView="auto"
+            centeredSlides={true}
+            centeredSlidesBounds={false}
+            loop={true}
+            loopedSlides={Logos.length}
+            speed={300}
+            allowTouchMove={false}
+            simulateTouch={false}
+            touchRatio={0}
+            watchSlidesProgress={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            navigation={{ 
+              nextEl: ".arrow-right-clientes", 
+              prevEl: ".arrow-left-clientes" 
+            }}
+            onSlideChange={(swiper) => {
+              setActiveSlideIndex(swiper.realIndex);
+            }}
+            className="clientes-swiper"
+          >
+            {Logos.map((logo, index) => (
+              <SwiperSlide key={`${logo.id}-${index}`}>
+                <div className="flex items-center justify-center bg-secondary-000 rounded-xl overflow-hidden">
+                  <img
+                    src={logo.url}
+                    alt={logo.name}
+                    className="object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <button className="arrow-left-clientes arrow-mobile">
+              <Chevron stroke="#fff" className="rotate-180"/>
+            </button>
+            
+            <button className="arrow-right-clientes arrow-mobile">
+              <Chevron stroke="#fff" />
+            </button>
+          </div>
+        </div>
+
+        {/* Logo Names List */}
+        <div className="px-[24px]">
+          <div className="flex flex-wrap gap-x-[24px] gap-y-[12px]">
+            {Logos.map((logo) => {
+              const isActive = activeSlideIndex === Logos.findIndex(l => l.id === logo.id);
+              return (
+                <div 
+                  key={logo.id} 
+                  className="cursor-pointer"
+                >
+                  <p className={`font-inter text-[14px] tracking-[-0.7px] relative after:content-[''] after:absolute after:left-[-7px] after:top-[50%] 
+                  after:translate-y-[-50%] after:w-[7px] after:h-[7px] after:rounded-[2px] after:bg-p-orange-600 after:opacity-0 after:transition-all after:duration-300
+                  transition-all duration-300 ${
+                    isActive 
+                      ? 'text-secondary-000 pl-[10px] after:opacity-100' 
+                      : 'text-secondary-700'
+                  }`}>
+                    {logo.name}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+    </>
   );
 };
 
