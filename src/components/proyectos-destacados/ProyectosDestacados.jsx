@@ -193,7 +193,7 @@ const ProyectosDestacados = () => {
                   </div>
                   <div className="w-[106px] h-auto">
                     <img
-                      src="/img/clientes/pan-american.svg"
+                      src="/img/clientes/tgs.svg"
                       alt=""
                       className="w-[106px] h-auto"
                     />
@@ -206,7 +206,7 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
+                PTG TRATAYEN
                 </p>
                 <div className="flex items-center gap-[8px]">
                   {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
@@ -215,7 +215,7 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
+                Ingeniería Básica Extendida
                 </p>
               </div>
             </div>
@@ -259,7 +259,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
             <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mb-[8px]">
                   <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
                     <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
                       Cliente
@@ -267,7 +267,7 @@ const ProyectosDestacados = () => {
                   </div>
                   <div className="w-[106px] h-auto">
                     <img
-                      src="/img/clientes/pan-american.svg"
+                     src="/img/clientes/phoenix.png"
                       alt=""
                       className="w-[106px] h-auto"
                     />
@@ -280,7 +280,7 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
+                CPF Mata Mora
                 </p>
                 <div className="flex items-center gap-[8px]">
                   {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
@@ -289,7 +289,7 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
+                EPC
                 </p>
               </div>
             </div>
@@ -343,7 +343,7 @@ const ProyectosDestacados = () => {
                   </div>
                   <div className="w-[106px] h-auto">
                     <img
-                      src="/img/clientes/pan-american.svg"
+                      src="/img/clientes/mega.png"
                       alt=""
                       className="w-[106px] h-auto"
                     />
@@ -356,7 +356,9 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
+                Ampliación Planta de Fraccionamiento
+                  <br />
+                  Bahía Blanca
                 </p>
                 <div className="flex items-center gap-[8px]">
                   {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
@@ -365,7 +367,7 @@ const ProyectosDestacados = () => {
                   </p>
                 </div>
                 <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
+                Owner Engineering
                 </p>
               </div>
             </div>
