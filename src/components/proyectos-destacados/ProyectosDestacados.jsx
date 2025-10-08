@@ -1,29 +1,30 @@
 import SectionLabel from "../ui/SectionLabel";
 import ArrowButton from "../ui/ArrowButton";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Chevron from "../../svg/Chevron";
 
 const ProyectosDestacados = () => {
   return (
-    <section id="proyectos-destacados" className="hidden lg:block lg:h-screen w-full relative bg-secondary-200">
+    <section id="proyectos-destacados" className=" lg:h-screen w-full relative bg-secondary-200">
       <img
         src="/img/proyectos-destacados/k.svg"
         alt=""
         className="absolute top-0 right-0 h-full w-auto object-cover"
       />
-      <div className="z-10 relative mb-[120px]">
+      <div className="z-10 relative mb-[60px] lg:mb-[120px] px-[20px] lg:px-0">
         <div>
           <SectionLabel
             text="Proyectos Destacados"
-            className="absolute top-[120px] lg:left-[32px] bg-gradient-to-br from-[#E2E5EA] to-[#EFF1F6] border-[1px] border-secondary-000"
+            className="absolute top-[60px] lg:top-[120px] lg:left-[32px] bg-gradient-to-br from-[#E2E5EA] to-[#EFF1F6] border-[1px] border-secondary-000"
           />
         </div>
-        <div className="flex flex-col gap-[32px] items-start mx-auto w-[493px] pt-[120px]">
-          <h3 className="text-p-blue-500 font-muli text-[32px] font-semibold! leadig-[40pxs] tracking-[-1.6px]">
+        <div className="flex flex-col gap-[32px] items-start mx-auto w-full lg:w-[493px] pt-[120px]">
+          <h3 className="text-p-blue-500 font-muli text-[20px] lg:text-[32px] font-semibold leadig-[24px] lg:leading-[40px] tracking-[-0.8px] lg:tracking-[-1.6px]">
             Proyectos que generan valor
           </h3>
           <ArrowButton
@@ -33,17 +34,11 @@ const ProyectosDestacados = () => {
           />
         </div>
       </div>
-      <div className="h-[462px] w-full relative">
+      <div className="h-auto lg:h-[462px] w-full relative">
         <Swiper
-        breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 4,
-              spaceBetween: 40,
-            },
+          slidesPerView={1}
+          spaceBetween={20}
+          breakpoints={{
             1025: {
               slidesPerView: 1.5,
               spaceBetween: 150,
@@ -60,13 +55,23 @@ const ProyectosDestacados = () => {
               centeredSlides: true,
             },
           }}
-          modules={[Navigation]}
-          className="mySwiper"
-          navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
+          modules={[Navigation, Pagination]}
+          className="mySwiper mb-8 lg:mb-0"
+          navigation={{ 
+            nextEl: ".arrow-right, .arrow-right-mobile", 
+            prevEl: ".arrow-left, .arrow-left-mobile" 
+          }}
+          pagination={{ 
+            clickable: true,
+            el: '.custom-pagination-proyectos',
+            renderBullet: function (index, className) {
+              return '<div class="' + className + '"></div>';
+            },
+          }}
         >
           <SwiperSlide>
-            <div className="w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/01.webp')] bg-cover bg-center rounded-[40px] px-[30px] py-[40px] flex items-end justify-end">
-              <div className="px-[20px] py-[24px] bg-secondary-000 rounded-[20px] w-[464px] h-auto">
+            <div className="w-full lg:w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/01.webp')] bg-cover bg-center rounded-[20px] lg:rounded-[40px] px-[20px] lg:px-[30px] py-[30px] lg:py-[40px] flex items-end justify-end">
+              <div className="px-[16px] lg:px-[20px] py-[20px] lg:py-[24px] bg-secondary-000 rounded-[16px] lg:rounded-[20px] w-full lg:w-[464px] h-auto">
                 <div className="flex items-center justify-between">
                   <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
                     <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
@@ -103,8 +108,8 @@ const ProyectosDestacados = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/02.webp')] bg-cover bg-bottom rounded-[40px] px-[30px] py-[40px] flex items-end justify-end">
-              <div className="px-[20px] py-[24px] bg-secondary-000 rounded-[20px] w-[464px] h-auto">
+            <div className="w-full lg:w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/02.webp')] bg-cover bg-bottom rounded-[20px] lg:rounded-[40px] px-[20px] lg:px-[30px] py-[30px] lg:py-[40px] flex items-end justify-end">
+              <div className="px-[16px] lg:px-[20px] py-[20px] lg:py-[24px] bg-secondary-000 rounded-[16px] lg:rounded-[20px] w-full lg:w-[464px] h-auto">
                 <div className="flex items-center justify-between">
                   <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
                     <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
@@ -141,8 +146,8 @@ const ProyectosDestacados = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/03.jpg')] bg-cover bg-bottom rounded-[40px] px-[30px] py-[40px] flex items-end justify-end">
-              <div className="px-[20px] py-[24px] bg-secondary-000 rounded-[20px] w-[464px] h-auto">
+            <div className="w-full lg:w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/03.jpg')] bg-cover bg-bottom rounded-[20px] lg:rounded-[40px] px-[20px] lg:px-[30px] py-[30px] lg:py-[40px] flex items-end justify-end">
+              <div className="px-[16px] lg:px-[20px] py-[20px] lg:py-[24px] bg-secondary-000 rounded-[16px] lg:rounded-[20px] w-full lg:w-[464px] h-auto">
                 <div className="flex items-center justify-between">
                   <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
                     <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
@@ -179,8 +184,8 @@ const ProyectosDestacados = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/04.jpeg')] bg-cover bg-bottom rounded-[40px] px-[30px] py-[40px] flex items-end justify-end">
-              <div className="px-[20px] pt-[14px] pb-[24px] bg-secondary-000 rounded-[20px] w-[464px] h-auto">
+            <div className="w-full lg:w-[918px] h-[462px] bg-[url('/img/proyectos-destacados/04.jpeg')] bg-cover bg-bottom rounded-[20px] lg:rounded-[40px] px-[20px] lg:px-[30px] py-[30px] lg:py-[40px] flex items-end justify-end">
+              <div className="px-[16px] lg:px-[20px] pt-[14px] pb-[20px] lg:pb-[24px] bg-secondary-000 rounded-[16px] lg:rounded-[20px] w-full lg:w-[464px] h-auto">
                 <div className="flex items-center justify-between">
                   <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
                     <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
@@ -219,12 +224,27 @@ const ProyectosDestacados = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        <button className="z-20 arrow-left arrow">
+        
+        {/* Desktop Navigation - Hidden on mobile */}
+        <button className="hidden lg:flex z-20 arrow-left arrow">
           <Chevron stroke="#fff" className="rotate-180"/>
         </button>
-        <button className="z-20 arrow-right arrow">
+        <button className="hidden lg:flex z-20 arrow-right arrow">
           <Chevron stroke="#fff"  />
         </button>
+        
+        {/* Mobile Navigation and Pagination - Hidden on desktop */}
+        <div className="flex lg:hidden items-center justify-center gap-4 px-[20px] pb-[40px]">
+          <button className="arrow-left-mobile arrow-mobile">
+            <Chevron stroke="#fff" className="rotate-180"/>
+          </button>
+          
+          <div className="custom-pagination-proyectos bg-[#F7F7F7] p-[8px] rounded-[6px] flex gap-[8px] w-fit"></div>
+          
+          <button className="arrow-right-mobile arrow-mobile">
+            <Chevron stroke="#fff" />
+          </button>
+        </div>
       </div>
     </section>
   );
