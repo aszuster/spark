@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import Menu from "../../svg/menu";
 
 const Navbar = () => {
@@ -98,7 +99,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav
+    <motion.nav
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       onClick={handleNavClick}
       className={`hidden lg:flex fixed bottom-[58px] left-[50%] translate-x-[-50%] z-50 overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-[20px] items-center gap-[25px] py-[4px] pl-[20px] pr-[4px] 
@@ -233,7 +237,7 @@ const Navbar = () => {
           Trabajá con nosotros
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

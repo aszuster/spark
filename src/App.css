@@ -326,14 +326,16 @@ html.lenis {
 
 /* Custom pagination container */
 .custom-pagination,
-.custom-pagination-como {
+.custom-pagination-como,
+.custom-pagination-proyectos {
   width: fit-content !important;
   display: flex !important;
 }
 
 /* Custom pagination bullets */
 .custom-pagination .swiper-pagination-bullet,
-.custom-pagination-como .swiper-pagination-bullet {
+.custom-pagination-como .swiper-pagination-bullet,
+.custom-pagination-proyectos .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   border-radius: 2px;
@@ -345,6 +347,7 @@ html.lenis {
 }
 
 .custom-pagination .swiper-pagination-bullet-active,
-.custom-pagination-como .swiper-pagination-bullet-active {
+.custom-pagination-como .swiper-pagination-bullet-active,
+.custom-pagination-proyectos .swiper-pagination-bullet-active {
   background-color: #cc4f14;
 }

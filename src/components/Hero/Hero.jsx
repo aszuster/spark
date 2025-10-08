@@ -6,7 +6,7 @@ import RevealByLine from "../ui/RevealByLine";
 import FadeInAnimation from "../ui/FadeInAnimation";
 // import RevealByLine from "../ui/RevealByLine";
 
-const Hero = () => {
+const Hero = ({ onAnimationComplete }) => {
   const [animationState, setAnimationState] = useState("initial");
 
   useEffect(() => {
@@ -23,12 +23,20 @@ const Hero = () => {
       setAnimationState("expand"); // Se expande completamente
     }, 1500);
 
+    // Llamar a onAnimationComplete cuando la animación de expansión termine
+    const timer4 = setTimeout(() => {
+      if (onAnimationComplete) {
+        onAnimationComplete();
+      }
+    }, 2300); // 1500ms (inicio expand) + 800ms (duración) = 2300ms
+
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timer4);
     };
-  }, []);
+  }, [onAnimationComplete]);
 
   // Definir las animaciones según el estado
   const getAnimationProps = () => {
