@@ -90,9 +90,6 @@ const Clientes = () => {
             loop={true}
             loopedSlides={Logos.length}
             speed={300}
-            allowTouchMove={false}
-            simulateTouch={false}
-            touchRatio={0}
             watchSlidesProgress={true}
             autoplay={{
               delay: 3000,
