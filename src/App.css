@@ -110,7 +110,7 @@ html.lenis {
 
   border-radius: inherit;
   /* padding is the border width */
-  padding: 2px;
+  padding: 1px;
   background: linear-gradient(
     to bottom right,
     #dddddd 0%,
@@ -124,6 +124,13 @@ html.lenis {
   mask-composite: exclude;
   transition: --c1 300ms ease, --c2 300ms ease, --c3 300ms ease;
 }
+
+@media screen and (min-width: 1025px) {
+  .buttonBorderWhite::before {
+    padding: 2px;
+  }
+}
+
 
 .buttonBorderWhite:hover::before {
   background: linear-gradient(
@@ -246,4 +253,98 @@ html.lenis {
     width: 918px !important;
     flex-shrink: 0 !important;
   }
+}
+
+/* Clientes swiper - centered with scale effect */
+.clientes-swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.clientes-swiper .swiper-wrapper {
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.clientes-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 254px !important;
+  flex-shrink: 0;
+}
+
+.clientes-swiper .swiper-slide > div {
+  width: 178px;
+  height: 100px;
+  transition: all 0.3s ease;
+}
+
+.clientes-swiper .swiper-slide-active > div {
+  width: 254px !important;
+  height: 160px !important;
+}
+
+.clientes-swiper .swiper-slide > div img {
+  width: 140px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.clientes-swiper .swiper-slide-active > div img {
+  width: 200px !important;
+  height: 100px !important;
+}
+
+/* Custom mobile navigation arrows */
+.arrow-mobile {
+  height: 40px;
+  width: 40px;
+  border-radius: 12px;
+  background-color: #cc4f14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-mobile:disabled {
+  background-color: #c7c7c7;
+  cursor: not-allowed;
+}
+
+.arrow-mobile:disabled svg {
+  stroke: #717d96;
+}
+
+.arrow-mobile:hover:not(:disabled) {
+  background-color: #a33f10;
+}
+
+/* Custom pagination container */
+.custom-pagination,
+.custom-pagination-como {
+  width: fit-content !important;
+  display: flex !important;
+}
+
+/* Custom pagination bullets */
+.custom-pagination .swiper-pagination-bullet,
+.custom-pagination-como .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background-color: #B8BBBF;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.custom-pagination .swiper-pagination-bullet-active,
+.custom-pagination-como .swiper-pagination-bullet-active {
+  background-color: #cc4f14;
 }
