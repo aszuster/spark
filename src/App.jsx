@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Lenis from "lenis";
 import './App.css'
 import Hero from "./components/Hero/Hero";
@@ -16,6 +16,11 @@ import Navbar from "./components/navbar/Navbar";
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [showNavbar, setShowNavbar] = useState(false);
+
+  const handleAnimationComplete = useCallback(() => {
+    setShowNavbar(true);
+  }, []);
 
   const switchLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -55,8 +60,8 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <Hero />
+      {showNavbar && <Navbar />}
+      <Hero onAnimationComplete={handleAnimationComplete} />
       <QuienesSomos />
       <QueHacemos />
       <ComoTrabajamos />
