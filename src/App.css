@@ -199,7 +199,6 @@ html.lenis {
   width: 50px;
   border-radius: 16px;
   background-color: #cc4f14;
-  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
