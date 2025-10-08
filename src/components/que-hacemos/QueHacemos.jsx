@@ -254,7 +254,7 @@ const QueHacemos = () => {
         <img
           src="/img/que-hacemos/misc.svg"
           alt="bg"
-          className="absolute top-0 right-0 w-[90%] hidden lg:block xxl:hidden"
+          className="absolute top-0 right-0 w-full hidden lg:block xxl:hidden"
         />
         <img
           src="/img/que-hacemos/misc2.svg"
