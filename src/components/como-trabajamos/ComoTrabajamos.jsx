@@ -13,9 +13,9 @@ import "swiper/css/navigation";
 const ComoTrabajamos = () => {
   return (
     <section id="como-trabajamos" className="block w-full relative">
-      <div className="bg-secondary-000 relative pt-[20px] lg:pt-[0px] pl-[10px] lg:pl-[0px]">
-        <div className="flex h-[535px] items-center justify-center ">
-          <div className="w-full lg:w-[90%] h-auto bg-bg-02 rounded-tl-[100px] mr-0 ml-auto pl-[68px] lg:pl-[233px] xxl:pl-[307px] pt-[70px] lg:pt-[167px] pr-[20px] lg:pr-[0px] z-10 relative">
+      <div className="bg-secondary-000 relative pt-[20px] md:pt-[180px] lg:pt-[0px] pl-[10px] lg:pl-[0px]">
+        <div className="flex h-[535px] items-center justify-center md:h-full">
+          <div className="w-full lg:w-[90%] h-auto bg-bg-02 rounded-tl-[100px] mr-0 ml-auto pl-[68px] md:pl-[233px] xxl:pl-[307px] pt-[70px] lg:pt-[167px] pr-[20px] md:pr-[118px] lg:pr-[0px] z-10 relative">
             <motion.div
               className="hidden lg:block absolute lg:top-[132px]  lg:left-[-15px]  z-30"
               initial="initial"
@@ -114,7 +114,7 @@ const ComoTrabajamos = () => {
                   ease: "easeInOut",
                   delay: 0.3,
                 }}
-                className="flex gap-[20px] flex-col lg:flex-row"
+                className="flex gap-[20px] flex-col lg:flex-row "
               >
                 <div className="flex flex-col gap-[20px] font-inter text-[14px] lg:text-[16px] font-normal leading-[20px] lg:leading-[24px] tracking-[-0.56px] lg:tracking-[-0.64px]">
                   <p>
@@ -142,17 +142,24 @@ const ComoTrabajamos = () => {
         </div>
 
         {/* Mobile Swiper Slider */}
-        <div className="lg:hidden px-[20px] py-[60px] bg-bg-02">
+        <div className="lg:hidden px-[20px] md:px-0 md:ml-[-10px] py-[60px] bg-bg-02">
           <img
             src="/img/como-trabajamos/a.svg"
             alt=""
             className="absolute bottom-0 left-[-140px] z-[0] h-[700px] w-auto"
           />
-          <div className="relative">
+          <div className="relative ">
             <Swiper
               modules={[Pagination, Navigation]}
+
               spaceBetween={20}
               slidesPerView={1}
+              breakpoints={{
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                }}}
               pagination={{
                 clickable: true,
                 el: ".custom-pagination-como",
@@ -167,7 +174,7 @@ const ComoTrabajamos = () => {
               className="mySwiper"
             >
               {cards.map((card) => (
-                <SwiperSlide key={card.id}>
+                <SwiperSlide key={card.id} className="md:w-[340px]! md:ml-[30px] md:pb-[70px]">
                   <div className="relative h-[460px] w-full overflow-hidden rounded-[16px] bg-transparent">
                     <div
                       style={{
