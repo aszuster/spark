@@ -8,11 +8,11 @@ import Twitter from "../../svg/twitter";
 
 const Footer = () => {
   return (
-    <footer className="mt-[-1px] h-full lg:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
-      <div className="flex flex-col md:flex-row justify-between items-start pb-[150px] md:pb-[162px] md:pr-[321px]">
-        <Logo color="var(--color-p-orange-600)" className="mb-[80px] md:mb-0 lg:w-[138px]" />
-        <div className="flex flex-col md:flex-row gap-[92px] md:gap-[0px] justify-between md:items-center md:w-[750px]">
-          <div className="flex flex-col gap-[20px] md:gap-[24px] font-inter text-[20px] md:text-[24px] text-secondary-100 md:leading-[24px] tracking-[-1.2px] ">
+    <footer className="mt-[-1px] h-full md:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
+      <div className="flex flex-col md:flex-row justify-between items-start pb-[150px] lg:pb-[162px] xxl:pr-[321px]">
+        <Logo color="var(--color-p-orange-600)" className="mb-[80px] md:mb-0 md:w-[138px]" />
+        <div className="flex flex-col md:flex-row gap-[92px] md:gap-[0px] justify-between md:items-center md:w-[490px] lg:w-[750px]">
+          <div className="flex flex-col gap-[20px] md:gap-[24px] font-inter text-[20px] lg:text-[24px] text-secondary-100 md:leading-[24px] tracking-[-1.2px] ">
             <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Quiénes somos</a>
             <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Qué hacemos</a>
             <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Cómo trabajamos</a>
@@ -21,7 +21,7 @@ const Footer = () => {
             <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Cultura</a>
             <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Trabajá con nosotros</a>
           </div>
-          <div className="flex flex-col gap-[84px] md:gap-[96px] w-[284px]">
+          <div className="flex flex-col gap-[84px] md:gap-[96px] w-[284px] md:w-[185px] lg:w-[284px] md:h-full lg:h-auto ">
             <div className="flex flex-col gap-[12px] md:gap-[22px]">
               <div className="flex items-center gap-[16px]">
                 <Phone />
@@ -33,8 +33,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div>
-              <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[31px]">
+            <div className="">
+              <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[64px] lg:mb-[31px]">
                 Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina
               </p>
               <div className="flex gap-[16px]">
