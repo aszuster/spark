@@ -211,7 +211,7 @@ const QueHacemos = () => {
     <section
       id="que-hacemos"
       ref={sectionRef}
-      className="block h-auto lg:h-[600vh] w-full relative "
+      className="block h-auto lg:h-[600vh] w-full relative md:overflow-hidden lg:overflow-visible"
     >
       <div className="sticky top-0 h-auto lg:h-screen w-full flex">
         <motion.div
