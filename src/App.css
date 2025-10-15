@@ -221,6 +221,12 @@ html.lenis {
   } 
 }
 
+@media screen and (min-width: 1025px) {
+  .arrow-left {
+   left:150px;
+  } 
+}
+
 @media screen and (min-width: 1920px) {
   .arrow-left {
     left: calc(50% - 527px);
@@ -235,6 +241,12 @@ html.lenis {
 @media screen and (min-width: 768px) {
   .arrow-right {
    right:20px;
+  } 
+}
+
+@media screen and (min-width: 1025px) {
+  .arrow-right {
+   right:150px;
   } 
 }
 
