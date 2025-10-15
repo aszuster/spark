@@ -101,6 +101,13 @@ html.lenis {
   );
 }
 
+
+
+.buttonBorder.lightBorder {
+  padding: 1px;
+}
+
+
 .buttonBorderWhite::before {
   content: "";
   position: absolute;
@@ -213,7 +220,18 @@ html.lenis {
 
 .arrow-left {
   left: 150px;
+}
 
+@media screen and (min-width: 768px) {
+  .arrow-left {
+   left:20px;
+  } 
+}
+
+@media screen and (min-width: 1025px) {
+  .arrow-left {
+   left:150px;
+  } 
 }
 
 @media screen and (min-width: 1920px) {
@@ -225,6 +243,18 @@ html.lenis {
 
 .arrow-right {
   right: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .arrow-right {
+   right:20px;
+  } 
+}
+
+@media screen and (min-width: 1025px) {
+  .arrow-right {
+   right:150px;
+  } 
 }
 
 @media screen and (min-width: 1920px) {
@@ -283,6 +313,10 @@ html.lenis {
 .clientes-swiper .swiper-slide-active > div {
   width: 254px !important;
   height: 160px !important;
+}
+
+@media (min-width: 768px) {
+
 }
 
 .clientes-swiper .swiper-slide > div img {
@@ -350,3 +384,7 @@ html.lenis {
 .custom-pagination-proyectos .swiper-pagination-bullet-active {
   background-color: #cc4f14;
 }
+
+
+
+

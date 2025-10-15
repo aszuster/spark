@@ -461,7 +461,7 @@ const MobileCounter = ({ value, prefix = "", suffix = "" }) => {
   return (
     <span
       ref={ref}
-      className="font-muli font-normal text-[64px] leading-[58px] tracking-[-5.12px] number-mobile-wrapper"
+      className="font-muli font-normal text-[64px] md:text-[130px] leading-[58px] md:leading-[140px] tracking-[-5.12px] number-mobile-wrapper"
     >
       {prefix}0{suffix}
     </span>
@@ -492,7 +492,7 @@ const MobileNumbers = () => {
   ];
 
   return (
-    <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] px-[22px] overflow-hidden">
+    <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] md:pt-[106px] px-[22px] overflow-hidden md:mb-[-1px]">
       <img
         src="/img/r.png"
         alt=""
@@ -516,7 +516,7 @@ const MobileNumbers = () => {
               ></div>
             </div>
 
-            <div className="flex items-end gap-[12px]">
+            <div className="flex items-end gap-[12px] md:ml-[75px]">
               <div className="relative flex items-end gap-[12px]">
                 <MobileCounter
                   value={stat.value}
@@ -524,7 +524,7 @@ const MobileNumbers = () => {
                   suffix={stat.suffix}
                 />
               </div>
-              <p className="text-secondary-000 font-muli font-normal text-[18px] leading-[20px] tracking-[-0.9px]">
+              <p className="text-secondary-000 font-muli font-normal text-[18px] md:text-[24px] leading-[20px] tracking-[-0.9px]">
                 {stat.text}
               </p>
             </div>

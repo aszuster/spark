@@ -148,11 +148,11 @@ const NavbarMobile = () => {
       
       {/* Menú desplegable */}
       <div 
-        className={`mt-[12px] bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] transition-all duration-300 rounded-[16px] p-[4px] ${
+        className={`w-[200px] h-[295px] mt-[12px] bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] transition-all duration-300 rounded-[20px] flex items-center justify-center buttonBorder lightBorder ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col gap-[24px] items-center justify-center text-[14px] font-inter text-[#262535] font-medium bg-[#E5E5E5] p-[20px] rounded-[16px]">
+        <div className="flex flex-col gap-[24px] items-center justify-center text-[14px] leading-[14px] font-inter text-[#262535] p-[20px] font-medium bg-[#E5E5E5]  rounded-[16px]">
           <a href="#quienes-somos" onClick={(e) => handleLinkClick(e, "quienes-somos")} className="hover:text-[#FF6B00] transition-colors">Quiénes somos</a>
           <a href="#que-hacemos" onClick={(e) => handleLinkClick(e, "que-hacemos")} className="hover:text-[#FF6B00] transition-colors">Qué hacemos</a>
           <a href="#como-trabajamos" onClick={(e) => handleLinkClick(e, "como-trabajamos")} className="hover:text-[#FF6B00] transition-colors">Cómo trabajamos</a>
