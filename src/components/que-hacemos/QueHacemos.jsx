@@ -249,7 +249,7 @@ const QueHacemos = () => {
         <img
           src="/img/que-hacemos/misc800.svg"
           alt="bg"
-          className="absolute top-0 left-0 w-full lg:hidden"
+          className="absolute top-0 left-0 w-full lg:hidden tabletMisc"
         />
         <img
           src="/img/que-hacemos/misc.svg"
@@ -283,8 +283,8 @@ const QueHacemos = () => {
             }}
             className="flex-1 flex flex-col lg:items-center"
           >
-            <div className="relative w-[186px] h-[128px] lg:w-[446px] lg:h-[336px] xxl:w-[554px] xxl:h-[400px]">
-              <div className="ml-[8px] lg:ml-0 w-[186px] h-[128px] lg:w-[446px] lg:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
+            <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px]">
+              <div className="ml-[8px] w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
                 <img
                   src="/img/que-hacemos/01.jpg"
                   alt="bg"
@@ -314,38 +314,38 @@ const QueHacemos = () => {
                   <span>[BOOT]</span>
                 </div>
               </div> */}
-              <div className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[320px] xxl:top-[380px] lg:left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] xxl:text-[26px]  font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] xxl:text-[26px]  font-normal md:tracking-[1px]">
                   <span>[EPCm]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:left-0 lg:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[E]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[130px] xxl:top-[160px] lg:right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px]  font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px]  font-normal md:tracking-[1px]">
                   <span>[BOOT]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] lg:left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[EP]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[210px] xxl:top-[240px] lg:right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[BOT]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] lg:left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[EPC]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] lg:w-[130px] lg:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute lg:top-[280px] xxl:top-[320px] lg:right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[14px] lg:text-[22px] font-normal lg:tracking-[1px]">
+              <div className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
+                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[O&M]</span>
                 </div>
               </div>
@@ -516,14 +516,14 @@ const QueHacemos = () => {
               </motion.div>
             </div>
           </div>
-          <div className="lg:hidden mt-[83px] py-[60px]">
-            <div className="flex flex-col gap-[28px] relative">
+          <div className="lg:hidden mt-[83px] py-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
+            <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
               <SectionLabel text="Qué hacemos" />
-              <p className="text-[20px] font-muli font-normal leading-[24px] tracking-[-0.8px] text-p-blue-500 w-full">
+              <p className="text-[20px] font-muli font-normal leading-[24px] tracking-[-0.8px] text-p-blue-500 w-full md:w-[285px]">
                 Participamos en todas las etapas del ciclo de vida de los Proyectos.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative md:w-[385px] md:basis-1/2">
               <Swiper
                 modules={[Pagination, Navigation]}
                 spaceBetween={50}
@@ -539,7 +539,7 @@ const QueHacemos = () => {
                   nextEl: ".arrow-right-mobile", 
                   prevEl: ".arrow-left-mobile" 
                 }}
-                className="mySwiper mt-[54px]"
+                className="mySwiper mt-[54px] md:mt-0"
               >
                 {contentStates.map((item, index) => (
                   <SwiperSlide key={index}>
@@ -582,7 +582,9 @@ const QueHacemos = () => {
               </Swiper>
               
               {/* Custom Navigation and Pagination */}
-              <div className="flex items-center justify-center gap-4 mt-8">
+
+            </div>
+            <div className="flex items-center justify-center gap-4 mt-8 md:absolute md:bottom-0 md:left-0 md:right-0 md:w-full">
                 <button className="arrow-left-mobile arrow-mobile">
                   <Chevron stroke="#fff" className="rotate-180"/>
                 </button>
@@ -593,7 +595,6 @@ const QueHacemos = () => {
                   <Chevron stroke="#fff" />
                 </button>
               </div>
-            </div>
           </div>
         </div>
       </div>

@@ -225,3 +225,11 @@ h2, h3, h4, h5, h6 {
 /* .swiper-wrapper{
   padding-left:25%
 } */
+
+
+@media (min-width: 768px) {
+  .tabletMisc {
+    width: 110%;
+    max-width: 110%;
+  }
+}
