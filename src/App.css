@@ -101,6 +101,13 @@ html.lenis {
   );
 }
 
+
+
+.buttonBorder.lightBorder {
+  padding: 1px;
+}
+
+
 .buttonBorderWhite::before {
   content: "";
   position: absolute;
