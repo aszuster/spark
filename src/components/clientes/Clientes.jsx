@@ -16,9 +16,9 @@ const Clientes = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   return (
-    <>
+    <section id="clientes">
     {/* Desktop Version */}
-    <section id="clientes" className="hidden lg:block lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
+    <div className="hidden lg:block lg:h-screen overflow-hidden w-full relative bg-p-blue-600">
       <div className="m-[16px] h-full lg:rounded-[80px] bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge">
         <div className="pt-[80px] pb-[115px]">
           <div className="flex flex-col gap-[22px] pl-[28px]">
@@ -62,10 +62,10 @@ const Clientes = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
     {/* Mobile Version */}
-    <section id="clientes-mobile" className="lg:hidden w-full relative bg-p-blue-600 py-[60px] overflow-hidden">
+    <div className="lg:hidden w-full relative bg-p-blue-600 py-[60px] overflow-hidden">
       <div className="bg-[url('/img/blue-bg.png')] bg-cover bg-center bg-[#0E0D29] bg-blend-color-dodge rounded-[40px] mx-[16px] pt-[60px] pb-[60px]">
         {/* Header */}
         <div className="flex flex-col gap-[22px] px-[24px] mb-[40px]">
@@ -155,8 +155,8 @@ const Clientes = () => {
           </div>
         </div>
       </div>
+    </div>
     </section>
-    </>
   );
 };
 

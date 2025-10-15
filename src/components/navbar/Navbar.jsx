@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import Menu from "../../svg/menu";
+import NavbarMobile from "./NavbarMobile";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,6 +100,7 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <motion.nav
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -238,6 +240,8 @@ const Navbar = () => {
         </a>
       </div>
     </motion.nav>
+    <NavbarMobile />
+    </>
   );
 };
 
