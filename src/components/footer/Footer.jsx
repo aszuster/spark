@@ -10,26 +10,73 @@ const Footer = () => {
   return (
     <footer className="mt-[-1px] h-full md:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
       <div className="flex flex-col md:flex-row justify-between items-start pb-[150px] lg:pb-[162px] xxl:pr-[321px]">
-        <Logo color="var(--color-p-orange-600)" className="mb-[80px] md:mb-0 md:w-[138px]" />
+        <div className="hidden lg:flex items-center gap-[20px]">
+          <Logo
+            color="var(--color-p-orange-600)"
+            className="mb-[80px] md:mb-0 md:w-[138px] lg:w-[200px] lg:h-[44px]"
+          />
+          <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[133px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
+            Ingeniería con sentido
+          </p>
+        </div>
         <div className="flex flex-col md:flex-row gap-[92px] md:gap-[0px] justify-between md:items-center md:w-[490px] lg:w-[750px]">
           <div className="flex flex-col gap-[20px] md:gap-[24px] font-inter text-[20px] lg:text-[24px] text-secondary-100 md:leading-[24px] tracking-[-1.2px] ">
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Quiénes somos</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Qué hacemos</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Cómo trabajamos</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Clientes</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Proyectos destacados</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Cultura</a>
-            <a href="" className="hover:text-p-orange-600 transition-all duration-300 hover:underline">Trabajá con nosotros</a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Quiénes somos
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Qué hacemos
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Cómo trabajamos
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Clientes
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Proyectos destacados
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Cultura
+            </a>
+            <a
+              href=""
+              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
+            >
+              Trabajá con nosotros
+            </a>
           </div>
           <div className="flex flex-col gap-[84px] md:gap-[96px] w-[284px] md:w-[185px] lg:w-[284px] md:h-full lg:h-auto ">
             <div className="flex flex-col gap-[12px] md:gap-[22px]">
               <div className="flex items-center gap-[16px]">
                 <Phone />
-                <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7]">(+54) 11 2271 1825</p>
+                <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7]">
+                  (+54) 11 2271 1825
+                </p>
               </div>
               <div className="flex items-center gap-[16px]">
                 <Mail />
-                <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7] ">info@sparkgy.com</p>
+                <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7] ">
+                  info@sparkgy.com
+                </p>
               </div>
             </div>
 
@@ -68,8 +115,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full flex flex-col md:flex-row gap-[8px] md:gap-[86px] md:items-center">
-        <a href="" className="font-inter text-[14px] text-secondary-700">Términos y condiciones</a>
-        <p className="font-inter text-[14px] text-secondary-700">2025 Spark Todos los derechos reservados</p>
+        <a href="" className="font-inter text-[14px] text-secondary-700">
+          Términos y condiciones
+        </a>
+        <p className="font-inter text-[14px] text-secondary-700">
+          2025 Spark Todos los derechos reservados
+        </p>
       </div>
     </footer>
   );

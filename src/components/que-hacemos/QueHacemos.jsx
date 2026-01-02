@@ -259,7 +259,7 @@ const QueHacemos = () => {
         <img
           src="/img/que-hacemos/misc2.svg"
           alt="bg"
-          className="absolute top-0 left-0 w-[90%] hidden xxl:block"
+          className="absolute top-0  left-0 w-[90%] hidden xxl:block"
         />
         <div className="lg:flex w-full px-[20px] lg:px-0">
           <motion.div
@@ -281,9 +281,42 @@ const QueHacemos = () => {
               ease: "easeInOut",
               delay: 0.5,
             }}
-            className="flex-1 flex flex-col lg:items-center"
+            className="flex-1 flex flex-col lg:items-center  lg:relative"
           >
-            <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px]">
+            {/* Iconos horizontales para el primer estado */}
+            <div className="lg:flex-1/2 lg:order-2">
+              <AnimatePresence mode="sync">
+                {currentImageIndex === 0 && (
+                  <motion.div
+                    key="icons-horizontal"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="hidden lg:flex  lg:justify-self-start flex-wrap gap-[12px] w-[400px] lg:h-[275px] justify-center items-end z-10"
+                  >
+                    {contentStates[0]?.elements.map((element, index) => (
+                      <motion.div
+                        key={`icon-${index}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        className="w-[67px] h-[67px] bg-secondary-200 rounded-[80px] flex items-center justify-center"
+                        title={element.content}
+                      >
+                        <img
+                          className="w-[47px] h-[47px]"
+                          src={element.icon}
+                          alt={element.content}
+                        />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] lg:flex-1/2">
               <div className="ml-[8px] w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
                 <img
                   src="/img/que-hacemos/01.jpg"
@@ -314,45 +347,77 @@ const QueHacemos = () => {
                   <span>[BOOT]</span>
                 </div>
               </div> */}
-              <div className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] xxl:text-[26px]  font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] 
+              absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%]  bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] 
+               flex flex-wrap gap-[8px] justify-center items-center "
+              >
+                <div className=" w-fit text-p-orange-500 text-[14px] md:text-[22px] xxl:text-[26px]  font-normal md:tracking-[1px]">
                   <span>[EPCm]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
+              xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-secondary-000 
+              border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] justify-center items-center "
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[E]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px]  font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
+              xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%]  bg-secondary-000 
+              border-[1px] border-secondary-500 rounded-[24px]  flex flex-wrap gap-[8px] justify-center items-center "
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px]  font-normal md:tracking-[1px]">
                   <span>[BOOT]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+               xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%]  translate-x-[-50%] 
+                bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] 
+                justify-center items-center "
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[EP]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
+              xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%]  translate-x-[50%] 
+               bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px]  flex flex-wrap gap-[8px] justify-center
+                items-center"
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[BOT]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%]  translate-x-[-50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center ">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
+              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%]  translate-x-[-50%] 
+               bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] 
+               justify-center items-center "
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[EPC]</span>
                 </div>
               </div>
-              <div className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%]  translate-x-[50%]  bg-[#6a6a6a]/30 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center">
-                <div className=" w-fit  text-secondary-000 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+              <div
+                className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
+              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%]  translate-x-[50%] 
+               bg-secondary-000 rounded-[24px] border-[1px] border-secondary-500 flex flex-wrap gap-[8px] 
+               justify-center items-center"
+              >
+                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
                   <span>[O&M]</span>
                 </div>
               </div>
             </div>
           </motion.div>
           <div className="hidden lg:flex flex-col flex-1 justify-center h-full items-center">
-            <div className="flex flex-col gap-[100px] h-[550px] w-[491px]">
+            <div className="flex flex-col gap-[100px] h-[550px] w-[491px]  lg:gap-0 lg:justify-between">
               <div className="flex flex-col gap-[28px] relative">
                 <motion.div
                   initial="initial"
@@ -420,12 +485,12 @@ const QueHacemos = () => {
                   ease: "easeInOut",
                   delay: 0.9,
                 }}
-                className="relative min-h-[400px]"
+                className="relative min-h-[400px] lg:min-h-[200px]"
               >
                 <AnimatePresence mode="sync">
                   <motion.div
                     key={currentImageIndex}
-                    className="absolute inset-0 space-y-6"
+                    className="absolute inset-0 space-y-6 lg:flex lg:flex-col lg:justify-end"
                     variants={contentVariants}
                     initial="enter"
                     animate="center"
@@ -455,13 +520,7 @@ const QueHacemos = () => {
                                   // delay: index * 0.1,
                                 }}
                               >
-                                <div className="w-[32px] h-[32px] p-[2.5px] flex items-center justify-center bg-secondary-200 rounded-[8px]">
-                                  <img
-                                    className="w-[21px] h-[21px]"
-                                    src={element.icon}
-                                    alt={element.content}
-                                  />
-                                </div>
+                                <div className="w-[12px] h-[12px] bg-p-orange-500 rounded-[3px]"></div>
                                 <span className="text-[24px] font-normal leading-[38px] tracking-[-1.2px] text-p-blue-500">
                                   {element.content}
                                 </span>
@@ -473,9 +532,9 @@ const QueHacemos = () => {
                     ) : (
                       // Cards tipo ícono grande + título + texto (cards 2-6)
                       <>
-                        <div className="flex flex-col items-start">
+                        <div className="flex flex-col items-start lg:h-[150px]">
                           <motion.div
-                            className="w-[97px] h-[97px] bg-secondary-200 rounded-[13px] flex items-center justify-center mb-[31px]"
+                            className="lg:absolute lg:left-[-196px] w-[97px] h-[97px] lg:w-[140px] lg:h-[140px] bg-bg-02 rounded-[80px] flex items-center justify-center mb-[31px] lg:mb-0"
                             variants={elementVariants}
                             initial="enter"
                             animate="center"
@@ -483,7 +542,7 @@ const QueHacemos = () => {
                             transition={{ duration: 0.4 }}
                           >
                             <img
-                              className="w-[67px] h-[67px]"
+                              className="w-[67px] h-[67px] lg:w-[100px] lg:h-[100px]"
                               src={contentStates[currentImageIndex]?.icon}
                               alt={contentStates[currentImageIndex]?.title}
                             />
@@ -520,24 +579,25 @@ const QueHacemos = () => {
             <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
               <SectionLabel text="Qué hacemos" />
               <p className="text-[20px] font-muli font-normal leading-[24px] tracking-[-0.8px] text-p-blue-500 w-full md:w-[285px]">
-                Participamos en todas las etapas del ciclo de vida de los Proyectos.
+                Participamos en todas las etapas del ciclo de vida de los
+                Proyectos.
               </p>
             </div>
             <div className="relative md:w-[385px] md:basis-1/2">
               <Swiper
                 modules={[Pagination, Navigation]}
-                spaceBetween={50}
+                spaceBetween={0}
                 slidesPerView={1}
-                pagination={{ 
+                pagination={{
                   clickable: true,
-                  el: '.custom-pagination',
+                  el: ".custom-pagination",
                   renderBullet: function (index, className) {
                     return '<div class="' + className + '"></div>';
                   },
                 }}
-                navigation={{ 
-                  nextEl: ".arrow-right-mobile", 
-                  prevEl: ".arrow-left-mobile" 
+                navigation={{
+                  nextEl: ".arrow-right-que-hacemos",
+                  prevEl: ".arrow-left-que-hacemos",
                 }}
                 className="mySwiper mt-[54px] md:mt-0"
               >
@@ -546,13 +606,11 @@ const QueHacemos = () => {
                     {item.type === "list" ? (
                       <div className="space-y-[24px]">
                         {item.elements.map((element, index) => (
-                          <div key={`${index}-${index}`} className="flex items-center gap-3">
-                            <div className="w-[24px] h-[24px] p-[2.5px] flex items-center justify-center bg-secondary-200 rounded-[8px]">
-                              <img
-                                className="w-[16px] h-[16px]"
-                                src={element.icon}
-                                alt={element.content}
-                              />
+                          <div
+                            key={`${index}-${index}`}
+                            className="flex items-center gap-3"
+                          >
+                            <div className="w-[12px] h-[12px] flex items-center justify-center bg-p-orange-500 rounded-[3px]">
                             </div>
                             <span className="font-muli text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-p-blue-500">
                               {element.content}
@@ -562,7 +620,7 @@ const QueHacemos = () => {
                       </div>
                     ) : (
                       <div className="flex flex-col items-start">
-                        <div className="w-[67px] h-[67px] bg-secondary-200 rounded-[13px] flex items-center justify-center mb-[31px]">
+                        <div className="w-[67px] h-[67px] bg-secondary-200 rounded-[80px] flex items-center justify-center mb-[31px]">
                           <img
                             className="w-[47px] h-[47px]"
                             src={item.icon}
@@ -580,21 +638,20 @@ const QueHacemos = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              
-              {/* Custom Navigation and Pagination */}
 
+              {/* Custom Navigation and Pagination */}
             </div>
             <div className="flex items-center justify-center gap-4 mt-8 md:absolute md:bottom-0 md:left-0 md:right-0 md:w-full">
-                <button className="arrow-left-mobile arrow-mobile">
-                  <Chevron stroke="#fff" className="rotate-180"/>
-                </button>
-                
+              <button className="arrow-left-que-hacemos arrow-mobile">
+                <Chevron stroke="#fff" className="rotate-180" />
+              </button>
+
               <div className="custom-pagination bg-[#F7F7F7] p-[8px] rounded-[6px] flex gap-[8px] w-fit"></div>
-                
-                <button className="arrow-right-mobile arrow-mobile">
-                  <Chevron stroke="#fff" />
-                </button>
-              </div>
+
+              <button className="arrow-right-que-hacemos arrow-mobile">
+                <Chevron stroke="#fff" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

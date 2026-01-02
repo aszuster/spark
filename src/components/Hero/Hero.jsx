@@ -109,50 +109,70 @@ const Hero = ({ onAnimationComplete }) => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0 }}
+            className="flex items-center gap-[30px] absolute top-[20px] left-[16px] lg:top-[32px] lg:left-[28px] z-30 "
           >
             <Logo
               color="var(--color-secondary-000)"
-              className="absolute top-[20px] left-[16px] lg:top-[32px] lg:left-[28px] z-30 w-[97px] lg:w-[137px]"
+              className="w-[150px] lg:w-[200px] lg:h-[44px]"
             />
+            <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[133px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
+              Ingeniería con sentido
+            </p>
           </motion.div>
 
           <div className="absolute px-[12px] py-[40px] lg:px-[20px] top-0 left-0 w-full h-full flex flex-col justify-end gap-[32px] md:justify-center lg:gap-auto lg:flex-row lg:items-center lg:justify-between z-30">
-            <h2 className="font-muli text-[34px] md:text-[60px] lg:text-[86px] font-semibold leading-[40px] md:leading-[68px] lg:leading-[101px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-[920px]">
-              <RevealByLine
-                text="Soluciones de Ingeniería"
-                className="text-secondary-000"
-                delay={1.7}
-              />{" "}
-              <RevealByLine
-                text="y&nbsp;Proyectos para"
-                delay={1.8}
-                className="text-secondary-000"
-              />{" "}
-              <RevealByLine
-                text="la Industria"
+            <div className="flex flex-col gap-[32px] lg:gap-[50px] items-start h-full justify-center">
+              <h2 className="font-muli text-[34px] md:text-[60px] lg:text-[68px] font-semibold leading-[40px] md:leading-[68px] lg:leading-[80px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-full">
+                <RevealByLine
+                  text="Soluciones de Ingeniería"
+                  className="text-secondary-000"
+                  delay={1.7}
+                />{" "}
+                <RevealByLine
+                  text="y&nbsp;Proyectos para la Industria"
+                  delay={1.8}
+                  className="text-secondary-000"
+                />{" "}
+                {/* <RevealByLine
+                text=""
                 delay={1.9}
                 className="text-secondary-000"
-              />
-            </h2>
-            <div className="flex flex-col gap-[32px] lg:gap-[24px] items-start">
-              <p className="font-inter text-[14px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000 w-full md:w-[488px] lg:w-[330px] xxl:mr-[115px]">
+              /> */}
+              </h2>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
+                className="hidden md:block md:relative  z-30"
+              >
+                <ul className="text-secondary-000 font-inter text-[18px] font-normal leading-[32px] tracking-[-0.56px] 
+                ">
+                  <li>| PETRÓLEO Y GAS (Uptream / Midstream / Downstream)</li>
+                  <li>| ENERGÍA (Renovables / Nuclear / Hidrógeno)</li>
+                  <li>| QUÍMICA</li>
+                  <li>| MINERÍA</li>
+                </ul>
+              </motion.div>
+            </div>
+            <div className="flex flex-col gap-[32px] md:gap-0 lg:gap-[24px] items-start lg:self-end lg:pb-[150px]">
+              <p className="font-inter text-[14px] lg:text-[18px] lg:leading-[24px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000 w-full md:w-[377px] xxl:mr-[115px]">
                 <RevealByLine
-                  text="Pensamos, Diseñamos, Construimos, y Operamos"
+                  text="Pensamos, Diseñamos, Construimos, y"
                   delay={1.8}
                   className="text-secondary-000"
                 />
                 <RevealByLine
-                  text="instalaciones industriales alineadas con criterios de"
+                  text="Operamos instalaciones industriales alineadas"
                   delay={1.9}
                   className="text-secondary-000"
                 />
                 <RevealByLine
-                  text="eficiencia y optimizadas conforme a las necesidades"
+                  text="con criterios de eficiencia y optimizadas"
                   delay={2}
                   className="text-secondary-000"
                 />
                 <RevealByLine
-                  text="de cada contexto."
+                  text="conforme a las necesidades de cada contexto."
                   delay={2.1}
                   className="text-secondary-000"
                 />
@@ -161,28 +181,16 @@ const Hero = ({ onAnimationComplete }) => {
                 conforme a las necesidades de cada contexto. */}
               </p>
               <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
-          >
-              <ArrowButton text="Nuestras soluciones" />
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
+              >
+                {/* <ArrowButton text="Nuestras soluciones" /> */}
               </motion.div>
             </div>
           </div>
           {/* <FadeInAnimation delay={2.2}> */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
-            className="hidden md:block md:absolute bottom-[32px] left-[28px] z-30"
-          >
-            <ul className="text-secondary-000 font-inter text-[14px] font-normal leading-[24px] tracking-[-0.56px] list-disc list-inside">
-              <li>PETRÓLEO Y GAS (Uptream / Midstream / Downstream)</li>
-              <li>ENERGÍA (Renovables / Nuclear / Hidrógeno)</li>
-              <li>QUÍMICA</li>
-              <li>MINERÍA</li>
-            </ul>
-          </motion.div>
+
           {/* </FadeInAnimation> */}
           <img
             src="/img/hero/misc.png"
