@@ -27,22 +27,16 @@ const cards = [
   },
   {
     id: 4,
-    title: "Desafíos y Aprendizaje",
+    title: "Own the Business",
     description:
-      "Trabajamos en una industria que nos reta a innovar constantemente. Cada proyecto es una oportunidad para aprender, mejorar y crecer a través de la acción.",
+      "Nos apasiona lo que hacemos y entendemos el impacto de nuestro trabajo. En Spark cada persona conoce el negocio y contribuye a construir una visión integral.",
   },
   {
     id: 5,
-    title: "Desafíos y Aprendizaje",
+    title: "Trabajo Flexible (Work & Life Balance)",
     description:
-      "Trabajamos en una industria que nos reta a innovar constantemente. Cada proyecto es una oportunidad para aprender, mejorar y crecer a través de la acción.",
-  },
-  {
-    id: 6,
-    title: "Desafíos y Aprendizaje",
-    description:
-      "Trabajamos en una industria que nos reta a innovar constantemente. Cada proyecto es una oportunidad para aprender, mejorar y crecer a través de la acción.",
-  },
+      "Trabajo Flexible (Work & Life Balance)",
+  }
 ];
 
 const Unite = () => {
