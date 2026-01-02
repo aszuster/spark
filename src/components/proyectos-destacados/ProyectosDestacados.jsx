@@ -41,25 +41,16 @@ const ProyectosDestacados = () => {
         <Swiper
           slidesPerView={1}
           spaceBetween={20}
+          centeredSlides={false}
           breakpoints={{
             768: {
               slidesPerView: 1,
-
+              spaceBetween: 20,
               centeredSlides: true,
             },
             1025: {
-              slidesPerView: 1.5,
-              spaceBetween: 150,
-              centeredSlides: true,
-            },
-            1440: {
-              slidesPerView: 1.5,
-              spaceBetween: 150,
-              centeredSlides: true,
-            },
-            1920: {
               slidesPerView: "auto",
-              spaceBetween: 150,
+              spaceBetween: 200,
               centeredSlides: true,
             },
           }}
@@ -77,7 +68,7 @@ const ProyectosDestacados = () => {
             },
           }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="!w-auto">
             <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
               <div className="w-full h-[280px] md:w-[623px] lg:w-[918px] md:h-[462px] bg-[url('/img/proyectos-destacados/01.webp')] bg-cover bg-center rounded-[20px] md:rounded-[40px] px-[20px] md:px-[30px] py-[30px] md:py-[40px] flex items-end justify-end">
                 <div className="hidden md:block px-[16px] md:px-[20px] py-[20px] md:py-[24px] bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-[464px] h-auto">
@@ -151,7 +142,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="!w-auto">
             <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
             <div className="w-full h-[280px] md:mx-0 md:w-[623px] lg:w-[918px] md:h-[462px] bg-[url('/img/proyectos-destacados/02.webp')] bg-cover bg-bottom rounded-[20px] md:rounded-[40px] px-[20px] md:px-[30px] py-[30px] md:py-[40px] flex items-end justify-end">
               <div className="hidden md:block px-[16px] md:px-[20px] py-[20px] md:py-[24px] bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-[464px] h-auto">
@@ -225,7 +216,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="!w-auto">
           <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
             <div className="w-full h-[280px] md:mx-0 md:w-[623px] lg:w-[918px] md:h-[462px] bg-[url('/img/proyectos-destacados/03.jpg')] bg-cover bg-bottom rounded-[20px] md:rounded-[40px] px-[20px] md:px-[30px] py-[30px] md:py-[40px] flex items-end justify-end">
               <div className="hidden md:block px-[16px] md:px-[20px] py-[20px] md:py-[24px] bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-[464px] h-auto">
@@ -299,7 +290,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="!w-auto">
           <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
             <div className="w-full h-[280px] md:mx-0 md:w-[623px] lg:w-[918px] md:h-[462px] bg-[url('/img/proyectos-destacados/04.jpeg')] bg-cover bg-bottom rounded-[20px] md:rounded-[40px] px-[20px] md:px-[30px] py-[30px] md:py-[40px] flex items-end justify-end">
               <div className="hidden md:block px-[16px] md:px-[20px] pt-[14px] pb-[20px] md:pb-[24px] bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-[464px] h-auto">

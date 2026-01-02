@@ -5,7 +5,7 @@ import Menu from "../../svg/menu";
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkText, setIsDarkText] = useState(false);
-  const [currentSection, setCurrentSection] = useState("Spark");
+  const [currentSection, setCurrentSection] = useState("SPARK");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -65,7 +65,7 @@ const NavbarMobile = () => {
 
       setIsDarkText(isOverLightSection);
       setCurrentSection(
-        currentSectionId ? sectionNames[currentSectionId] : "Spark"
+        currentSectionId ? sectionNames[currentSectionId] : "SPARK"
       );
     };
 

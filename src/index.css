@@ -226,6 +226,10 @@ h2, h3, h4, h5, h6 {
   padding-left:25%
 } */
 
+/* Unite swiper slides */
+.unite-swiper .swiper-slide {
+  width: 329px !important;
+}
 
 @media (min-width: 768px) {
   .tabletMisc {

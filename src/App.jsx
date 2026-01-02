@@ -11,6 +11,7 @@ import Clientes from "./components/clientes/Clientes";
 import ProyectosDestacados from "./components/proyectos-destacados/ProyectosDestacados";
 import Cultura from "./components/cultura/Cultura";
 import Banner from "./components/banner/Banner";
+import Unite from "./components/unite/Unite"
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 
@@ -69,7 +70,7 @@ function App() {
       <Clientes />
       <ProyectosDestacados />
       <Cultura />
-      <Banner />
+      <Unite />
       <Footer />
             {/* <h3>{t("change_language")}:</h3>
       <button onClick={() => switchLanguage("en")}>🇬🇧 English</button>
