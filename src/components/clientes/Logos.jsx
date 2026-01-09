@@ -35,7 +35,7 @@ export const Logos = [
       height: 49,
     },
     {
-      url: "/img/clientes/vista.svg",
+      url: "/img/clientes/vista.png",
       id: 6,
       name: "VISTA",  
       width: 115,

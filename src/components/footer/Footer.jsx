@@ -20,48 +20,42 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-[92px] md:gap-[0px] justify-between md:items-center md:w-[490px] lg:w-[750px]">
-          <div className="flex flex-col gap-[20px] md:gap-[24px] font-inter text-[20px] lg:text-[24px] text-secondary-100 md:leading-[24px] tracking-[-1.2px] ">
+          <div className="flex flex-col gap-[20px] md:gap-[24px] font-inter text-[20px] lg:text-[20px] text-secondary-100 md:leading-[24px] tracking-[-1.2px] ">
             <a
-              href=""
+              href="#quienes-somos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Quiénes somos
             </a>
             <a
-              href=""
+              href="#que-hacemos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Qué hacemos
             </a>
             <a
-              href=""
+              href="#como-trabajamos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Cómo trabajamos
             </a>
             <a
-              href=""
+              href="#clientes"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Clientes
             </a>
             <a
-              href=""
+              href="#proyectos-destacados"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Proyectos destacados
             </a>
             <a
-              href=""
+              href="#cultura"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
               Cultura
-            </a>
-            <a
-              href=""
-              className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
-            >
-              Trabajá con nosotros
             </a>
           </div>
           <div className="flex flex-col gap-[84px] md:gap-[96px] w-[284px] md:w-[185px] lg:w-[284px] md:h-full lg:h-auto ">
