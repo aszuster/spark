@@ -53,9 +53,28 @@ function App() {
 
     requestAnimationFrame(raf);
 
+    // Manejar clicks en enlaces de anclaje para smooth scroll
+    const handleAnchorClick = (e) => {
+      const target = e.target.closest('a[href^="#"]');
+      if (target) {
+        e.preventDefault();
+        const id = target.getAttribute('href').slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          lenis.scrollTo(element, {
+            offset: 0,
+            duration: 1.2,
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+
     // Cleanup
     return () => {
       lenis.destroy();
+      document.removeEventListener('click', handleAnchorClick);
     };
   }, []);
 
