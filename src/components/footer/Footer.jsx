@@ -74,9 +74,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-[16px]">
                 <Mail />
-                <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7] ">
+                <a
+                  href="mailto:info@sparkgy.com"
+                  className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7] hover:text-p-orange-600 transition-all duration-300"
+                >
                   info@sparkgy.com
-                </p>
+                </a>
               </div>
             </div>
 
@@ -85,30 +88,30 @@ const Footer = () => {
                 Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina
               </p>
               <div className="flex gap-[16px]">
-                <div
+                <a href="https://www.linkedin.com/company/sparknrgsol"
                   className="p-[11px] cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-full flex items-center justify-center text-secondary-000 buttonBorder
       w-auto group"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
                   <Linkedin />
-                </div>
-                <div
+                </a>
+                {/* <div
                   className="py-[11px] px-[14px] cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-full flex items-center justify-center text-secondary-000 buttonBorder
       w-auto group"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
                   <Facebook />
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   className="py-[11px] px-[11px] cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-full flex items-center justify-center text-secondary-000 buttonBorder
       w-auto group"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
                   <Twitter />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

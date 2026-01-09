@@ -1,11 +1,14 @@
 import ArrowRight from "../../svg/arrow-right";
 import Download from "../../svg/Download";
 
-const ArrowButton = ({ text, children, download = false, className = "" }) => {
+const ArrowButton = ({ text, children, download = false, className = "", href }) => {
   return (
-    <button
-      className={`cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
-      backdrop-blur-sm rounded-[20px] flex items-center text-secondary-000 gap-[25px] py-[4px] pl-[16px] pr-[4px] 
+    <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+      className={`cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20
+      backdrop-blur-sm rounded-[20px] flex items-center text-secondary-000 gap-[25px] py-[4px] pl-[16px] pr-[4px]
       w-auto group ${className} ${download ? "" : "buttonBorder"}`}
     >
       <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
@@ -18,7 +21,7 @@ const ArrowButton = ({ text, children, download = false, className = "" }) => {
       >
         {download ? <Download /> : <ArrowRight stroke="#262535" />}
       </div>
-    </button>
+    </a>
   );
 };
 
