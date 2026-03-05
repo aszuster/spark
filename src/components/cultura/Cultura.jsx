@@ -83,7 +83,7 @@ const Cultura = () => {
                 </p>
                 <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
                   Buscamos pensar “Out of the box” para traer nuevas soluciones
-                  a nuestros Cliente. Nos sentimos cómodos trabajando desde una
+                  a nuestros Clientes. Nos sentimos cómodos trabajando desde una
                   hoja en blanco.
                 </p>
               </div>
