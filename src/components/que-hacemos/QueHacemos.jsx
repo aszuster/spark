@@ -22,87 +22,51 @@ const QueHacemos = () => {
   } = useFeatureStore();
   const sectionRef = useRef(null);
 
-  // Array de imágenes (6 imágenes como mencionaste)
-  const images = [
-    "/img/que-hacemos/01.jpg",
-    "/img/que-hacemos/01.jpg",
-    "/img/que-hacemos/01.jpg",
-    "/img/que-hacemos/01.jpg",
-    "/img/que-hacemos/01.jpg",
-    "/img/que-hacemos/01.jpg",
+  // Íconos en círculos (siempre visibles en ambos steps)
+  const circleIcons = [
+    { icon: "/img/que-hacemos/ingenieria.svg", content: "Ingeniería" },
+    {
+      icon: "/img/que-hacemos/plantas-modulares.svg",
+      content: "Plantas Modulares",
+    },
+    {
+      icon: "/img/que-hacemos/gestion-proyectos.svg",
+      content: "Gestión de Proyectos",
+    },
+    {
+      icon: "/img/que-hacemos/operacion-mantenimiento.svg",
+      content: "Operación y Mantenimiento",
+    },
+    {
+      icon: "/img/que-hacemos/servicios-gas-petroleo.svg",
+      content: "Servicios de Procesamiento de Gas y Petróleo",
+    },
   ];
+
+  // Array de imágenes (2 steps)
+  const images = ["/img/que-hacemos/01.jpg", "/img/que-hacemos/bg-2.png"];
 
   // Array de textos que cambiarán con el scroll
   const texts = [
     "Participamos en todas las etapas del ciclo de vida de los Proyectos.",
     "Diseñamos soluciones innovadoras para la industria energética.",
-    "Implementamos tecnologías de vanguardia en cada proyecto.",
-    "Garantizamos la excelencia operativa en cada etapa.",
-    "Optimizamos procesos para máxima eficiencia energética.",
-    "Entregamos resultados que superan las expectativas del cliente.",
   ];
 
   // Array de estados de contenido con elementos complejos
   const contentStates = [
     {
       id: 0,
-      type: "list",
-      title:
-        "Participamos en todas las etapas del ciclo de vida de los Proyectos.",
-      elements: [
-        { icon: "/img/que-hacemos/ingenieria.svg", content: "Ingeniería" },
-        {
-          icon: "/img/que-hacemos/plantas-modulares.svg",
-          content: "Plantas Modulares",
-        },
-        {
-          icon: "/img/que-hacemos/gestion-proyectos.svg",
-          content: "Gestión de Proyectos",
-        },
-        {
-          icon: "/img/que-hacemos/operacion-mantenimiento.svg",
-          content: "Operación y Mantenimiento",
-        },
-        {
-          icon: "/img/que-hacemos/servicios-gas-petroleo.svg",
-          content: "Servicios de Procesamiento de Gas y Petróleo",
-        },
-      ],
+      type: "card",
+      icon: "/img/que-hacemos/ingenieria.svg",
+      title: "Título step 1",
+      text: "Contenido del step 1.",
     },
     {
       id: 1,
       type: "card",
       icon: "/img/que-hacemos/ingenieria.svg",
-      title: "Ingeniería",
-      text: "Desarrollamos Ingeniería en todas sus fases. Ingeniería Conceptual, Básica, y de Detalle. Incluyendo Estudios Especiales, Estimación de Costos, y Evaluación de Proyectos.",
-    },
-    {
-      id: 2,
-      type: "card",
-      icon: "/img/que-hacemos/plantas-modulares.svg",
-      title: "Plantas Modulares",
-      text: "Fabricamos Plantas de Procesos y Equipos Modulares para la Industria.",
-    },
-    {
-      id: 3,
-      type: "card",
-      icon: "/img/que-hacemos/gestion-proyectos.svg",
-      title: "Gestión de Proyectos",
-      text: "Realizamos la Gestión Integral de Proyectos. Ingeniería de Propiedad, gestión de suministros, gestión de calidad, oficina técnica y supervisión.",
-    },
-    {
-      id: 4,
-      type: "card",
-      icon: "/img/que-hacemos/operacion-mantenimiento.svg",
-      title: "Operación y Mantenimiento",
-      text: "Realizamos Precomisionado, Comisionado, y Puesta en Marcha. Operación de Plantas de Proceso. Soporte Técnico a Operaciones.",
-    },
-    {
-      id: 5,
-      type: "card",
-      icon: "/img/que-hacemos/servicios-gas-petroleo.svg",
-      title: "Servicios de Procesamiento de Gas y Petróleo",
-      text: "Realizamos Servicios de Procesamientos de Gas y Petróleo para el Upstream y el Midstream con equipos propios.",
+      title: "Título step 2",
+      text: "Contenido del step 2.",
     },
   ];
 
@@ -186,7 +150,7 @@ const QueHacemos = () => {
       const clampedTextIndex = Math.min(textIndex, texts.length - 1);
       const clampedContentIndex = Math.min(
         contentIndex,
-        contentStates.length - 1
+        contentStates.length - 1,
       );
 
       setCurrentImageIndex(clampedImageIndex);
@@ -211,55 +175,23 @@ const QueHacemos = () => {
     <section
       id="que-hacemos"
       ref={sectionRef}
-      className="block h-auto lg:h-[600vh] w-full relative md:overflow-hidden lg:overflow-visible"
+      className="block min-h-screen md:min-h-auto lg:h-[200vh] w-full relative md:overflow-hidden lg:overflow-visible"
     >
-      <div className="sticky top-0 h-auto lg:h-screen w-full flex">
-        <motion.div
-          initial="initial"
-          whileInView="inView"
-          variants={{
-            initial: {
-              y: 20,
-              opacity: 0,
-            },
-            inView: {
-              y: 0,
-              opacity: 1,
-            },
-          }}
-          viewport={{ margin: "-50px", once: true }}
-          transition={{
-            duration: 0.8,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="hidden absolute bg-[#F7F7F7] p-[8px] rounded-[6px] w-fit lg:flex flex-col gap-[8px] top-[50%] translate-y-[-50%] right-[32px]"
-        >
-          {Array.from({ length: 6 }, (_, index) => (
-            <div
-              key={index}
-              className={`h-[8px] w-[8px] rounded-[2px] transition-colors duration-300 ${
-                currentImageIndex === index
-                  ? "bg-p-orange-600"
-                  : "bg-secondary-400"
-              }`}
-            />
-          ))}
-        </motion.div>
-        <img
+      <div className="lg:sticky top-0 h-auto lg:h-screen w-full flex">
+        {/* <img
           src="/img/que-hacemos/misc800.svg"
           alt="bg"
           className="absolute top-0 left-0 w-full lg:hidden tabletMisc"
-        />
+        /> */}
         <img
           src="/img/que-hacemos/misc.svg"
           alt="bg"
-          className="absolute top-0 right-0 w-full hidden lg:block xxl:hidden"
+          className="absolute top-0 left-0 w-[80%] hidden lg:block xxl:hidden"
         />
         <img
-          src="/img/que-hacemos/misc2.svg"
+          src="/img/que-hacemos/misc-2.svg"
           alt="bg"
-          className="absolute top-0  left-0 w-[90%] hidden xxl:block"
+          className="absolute top-0  left-0 w-[75%]  hidden xxl:block"
         />
         <div className="lg:flex w-full px-[20px] lg:px-0">
           <motion.div
@@ -281,48 +213,50 @@ const QueHacemos = () => {
               ease: "easeInOut",
               delay: 0.5,
             }}
-            className="flex-1 flex flex-col lg:items-center  lg:relative"
+            className="hidden flex-1 lg:flex flex-col lg:items-center lg:max-w-[45%]  lg:relative "
           >
             {/* Iconos horizontales para el primer estado */}
-            <div className="lg:flex-1/2 lg:order-2">
-              <AnimatePresence mode="sync">
-                {currentImageIndex === 0 && (
-                  <motion.div
-                    key="icons-horizontal"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
-                    className="hidden lg:flex  lg:justify-self-start flex-wrap gap-[12px] w-[400px] lg:h-[275px] justify-center items-end z-10"
-                  >
-                    {contentStates[0]?.elements.map((element, index) => (
-                      <motion.div
-                        key={`icon-${index}`}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                        className="w-[67px] h-[67px] bg-secondary-200 rounded-[80px] flex items-center justify-center"
-                        title={element.content}
-                      >
-                        <img
-                          className="w-[47px] h-[47px]"
-                          src={element.icon}
-                          alt={element.content}
-                        />
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className=" lg:flex-1/2 lg:order-2 lg:flex lg:flex-col lg:justify-center">
+              <div className="max-h-[150px] flex flex-col">
+                <p className="text-[20px] lg:max-w-[400px] leading-[24px]">
+                  Participamos en todas las etapas del ciclo de vida de los
+                  Proyectos.
+                </p>
+                <div className="hidden lg:flex lg:justify-self-start flex-wrap gap-[12px] w-[400px] lg:h-[275px] justify-center items-end z-10">
+                  {circleIcons.map((element, index) => (
+                    <div
+                      key={`icon-${index}`}
+                      className="w-[67px] h-[67px] bg-secondary-200 rounded-[80px] flex items-center justify-center"
+                      title={element.content}
+                    >
+                      <img
+                        className="w-[47px] h-[47px]"
+                        src={element.icon}
+                        alt={element.content}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] lg:flex-1/2">
               <div className="ml-[8px] w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
-                <img
-                  src="/img/que-hacemos/01.jpg"
-                  alt="bg"
-                  className="absolute inset-0 object-cover h-full w-full"
-                />
+                <AnimatePresence mode="sync">
+                  <motion.img
+                    key={currentImageIndex}
+                    src={images[currentImageIndex]}
+                    alt="bg"
+                    className="absolute inset-0 object-cover h-full w-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                  />
+                </AnimatePresence>
               </div>
               {/* <div className="z-30 absolute top-[261px] xxl:top-[345px] left-[50%] translate-x-[-50%] w-[249px] h-[93px] bg-[#6a6a6a]/20 backdrop-blur-sm rounded-[24px] glassBorder flex flex-wrap gap-[8px] justify-center items-center py-[10px]">
                 <div className="py-[4px] px-[8px] w-fit border-[1px] border-secondary-000 rounded-[8px] text-secondary-000 text-[14px] font-normal tracking-[-0.56px]">
@@ -347,77 +281,95 @@ const QueHacemos = () => {
                   <span>[BOOT]</span>
                 </div>
               </div> */}
+              {/* Pills — colores se invierten en step 2 */}
               <div
-                className="z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px] 
-              absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%]  bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] 
-               flex flex-wrap gap-[8px] justify-center items-center "
+                className={`z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px]
+              absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%] border-[1px] rounded-[24px]
+               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+               ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
-                <div className=" w-fit text-p-orange-500 text-[14px] md:text-[22px] xxl:text-[26px]  font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] xxl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                >
                   <span>[EPCm]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
-              xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%]  bg-secondary-000 
-              border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] justify-center items-center "
+                className={`z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%] border-[1px] rounded-[24px]
+              flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+              ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                >
                   <span>[E]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
-              xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%]  bg-secondary-000 
-              border-[1px] border-secondary-500 rounded-[24px]  flex flex-wrap gap-[8px] justify-center items-center "
+                className={`z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%] border-[1px] rounded-[24px]
+              flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+              ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px]  font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                >
                   <span>[BOOT]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-               xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%]  translate-x-[-50%] 
-                bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] 
-                justify-center items-center "
+                className={`z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+               xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%] translate-x-[-50%] border-[1px] rounded-[24px]
+               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+               ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                >
                   <span>[EP]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
-              xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%]  translate-x-[50%] 
-               bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px]  flex flex-wrap gap-[8px] justify-center
-                items-center"
+                className={`z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%] translate-x-[50%] border-[1px] rounded-[24px]
+              flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+              ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                >
                   <span>[BOT]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
-              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%]  translate-x-[-50%] 
-               bg-secondary-000 border-[1px] border-secondary-500 rounded-[24px] flex flex-wrap gap-[8px] 
-               justify-center items-center "
+                className={`z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%] translate-x-[-50%] border-[1px] rounded-[24px]
+               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+               ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                >
                   <span>[EPC]</span>
                 </div>
               </div>
               <div
-                className="z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px] 
-              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%]  translate-x-[50%] 
-               bg-secondary-000 rounded-[24px] border-[1px] border-secondary-500 flex flex-wrap gap-[8px] 
-               justify-center items-center"
+                className={`z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%] translate-x-[50%] border-[1px] rounded-[24px]
+               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
+               ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
-                <div className=" w-fit  text-p-orange-500 text-[14px] md:text-[22px] font-normal md:tracking-[1px]">
+                <div
+                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                >
                   <span>[O&M]</span>
                 </div>
               </div>
             </div>
           </motion.div>
           <div className="hidden lg:flex flex-col flex-1 justify-center h-full items-center">
-            <div className="flex flex-col gap-[100px] h-[550px] w-[491px]  lg:gap-0 lg:justify-between">
+            <div className="flex flex-col gap-[100px] h-[550px] lg:h-full lg:py-[30px] xxl:py-0 xxl:h-[600px] w-full lg:gap-0 lg:pl-[20px] lg:pr-[30px]">
               <div className="flex flex-col gap-[28px] relative">
                 <motion.div
                   initial="initial"
@@ -441,7 +393,8 @@ const QueHacemos = () => {
                 >
                   <SectionLabel text="Qué hacemos" />
                 </motion.div>
-                <motion.p
+                <motion.img
+                  src="/img/que-hacemos/logo-orange-2.svg"
                   initial="initial"
                   whileInView="inView"
                   variants={{
@@ -460,11 +413,8 @@ const QueHacemos = () => {
                     ease: "easeInOut",
                     delay: 0.8,
                   }}
-                  className="text-[32px] font-normal leading-[40px] tracking-[-1.28px] text-p-blue-500 w-[373px]"
-                >
-                  Participamos en todas las etapas del ciclo de vida de los
-                  Proyectos.
-                </motion.p>
+                  className="w-[200px] h-auto xxl:pt-[50px]"
+                />
               </div>
               <motion.div
                 initial="initial"
@@ -490,7 +440,7 @@ const QueHacemos = () => {
                 <AnimatePresence mode="sync">
                   <motion.div
                     key={currentImageIndex}
-                    className="absolute inset-0 space-y-6 lg:flex lg:flex-col lg:justify-end"
+                    className="absolute inset-0 space-y-6"
                     variants={contentVariants}
                     initial="enter"
                     animate="center"
@@ -501,87 +451,121 @@ const QueHacemos = () => {
                       opacity: { duration: 0.4 },
                     }}
                   >
-                    {/* Renderizar según el tipo de card */}
-                    {contentStates[currentImageIndex]?.type === "list" ? (
-                      // Card tipo lista (primera card)
-                      <>
-                        <div className="space-y-4">
-                          {contentStates[currentImageIndex]?.elements.map(
-                            (element, index) => (
-                              <motion.div
-                                key={`${currentImageIndex}-${index}`}
-                                className="flex items-center gap-3"
-                                variants={elementVariants}
-                                initial="enter"
-                                animate="center"
-                                exit="exit"
-                                transition={{
-                                  duration: 0.4,
-                                  // delay: index * 0.1,
-                                }}
-                              >
-                                <div className="w-[12px] h-[12px] bg-p-orange-500 rounded-[3px]"></div>
-                                <span className="text-[24px] font-normal leading-[38px] tracking-[-1.2px] text-p-blue-500">
-                                  {element.content}
-                                </span>
-                              </motion.div>
-                            )
-                          )}
+                    {currentImageIndex === 0 ? (
+                      <div className="flex flex-col items-start lg:h-[150px] ">
+                        <p className="text-[26px] font-muli uppercase lg:pb-[60px]">
+                          Ingeniería y construcción
+                        </p>
+                        <div className="flex gap-[60px]">
+                          <div className="flex flex-col gap-[30px]">
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli font-medium">
+                                Ingeniería [E]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Desarrollamos Ingeniería en todas sus fases.
+                                Ingeniería Conceptual, Básica, y de Detalle.
+                                Estudios Especiales, Estimación de Costos, y
+                                Evaluación de Proyectos.
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Plantas y Equipos Modulares [EP]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Diseñamos y Fabricamos Plantas de Procesos y
+                                Equipos Modulares.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex flex-col gap-[30px]">
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Plantas Llave en Mano [EPC]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Diseñamos, Fabricamos y Construimos Plantas de
+                                Procesos Llave en Mano.
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Gestión de Proyectos [EPCm / OE]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Realizamos la Gestión Integral de Proyectos.
+                                Ingeniería de Propiedad, Gestión de Suministros,
+                                Gestión Contractual, Gestión de Calidad, Oficina
+                                Técnica y Supervisión.
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                      </>
+                      </div>
                     ) : (
-                      // Cards tipo ícono grande + título + texto (cards 2-6)
-                      <>
-                        <div className="flex flex-col items-start lg:h-[150px]">
-                          <motion.div
-                            className="lg:absolute lg:left-[-196px] w-[97px] h-[97px] lg:w-[140px] lg:h-[140px] bg-bg-02 rounded-[80px] flex items-center justify-center mb-[31px] lg:mb-0"
-                            variants={elementVariants}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            transition={{ duration: 0.4 }}
-                          >
-                            <img
-                              className="w-[67px] h-[67px] lg:w-[100px] lg:h-[100px]"
-                              src={contentStates[currentImageIndex]?.icon}
-                              alt={contentStates[currentImageIndex]?.title}
-                            />
-                          </motion.div>
-                          <motion.h2
-                            className="text-[40px] font-normal leading-[48px] tracking-[-2px] text-p-blue-500 w-[446px] text-left mb-[24px]"
-                            variants={elementVariants}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            transition={{ duration: 0.4 }}
-                          >
-                            {contentStates[currentImageIndex]?.title}
-                          </motion.h2>
-                          <motion.p
-                            className="text-[16px] font-inter font-normal leading-[24px] tracking-[-0.64px] text-p-blue-500 w-[446px] text-left"
-                            variants={elementVariants}
-                            initial="enter"
-                            animate="center"
-                            exit="exit"
-                            transition={{ duration: 0.4 }}
-                          >
-                            {contentStates[currentImageIndex]?.text}
-                          </motion.p>
+                      <div className="flex flex-col items-start lg:h-[150px] lg:pr-[50px]">
+                        <p className="text-[26px] font-muli uppercase lg:pb-[60px]">
+                          Midstream
+                        </p>
+                        <div className="flex gap-[60px]">
+                          <div className="flex flex-col gap-[30px]">
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli font-medium">
+                                Servicios de Procesamiento de Gas y Petróleo
+                                [BOOT]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Realizamos Servicios de Procesamientos de Gas y
+                                Petróleo para terceros con equipos propios.
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Procesamiento y Comercialización de LGN y GLP
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Procesamos corrientes de LGN (Líquidos del Gas
+                                Natural) y GLP (Gas Licuado de Petróleo) para su
+                                puesta en valor comercial y posterior
+                                comercialización.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex flex-col gap-[30px]">
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Operación y Mantenimiento [O&M]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Realizamos Servicios de Operación de Plantas de
+                                Proceso para terceros. Soporte Técnico a
+                                Operaciones. Precomisionado, Comisionado, y
+                                Puesta en Marcha.
+                              </p>
+                            </div>
+                            <div>
+                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                                Well Testing [WT]
+                              </h3>
+                              <p className="font-inter text-[18px] leading-[27px]">
+                                Servicio de medición y análisis de las variables
+                                asociadas a la producción de pozos.
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                      </>
+                      </div>
                     )}
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
             </div>
           </div>
-          <div className="lg:hidden mt-[83px] py-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
+          <div className="lg:hidden py-[60px] pt-[30px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
             <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
               <SectionLabel text="Qué hacemos" />
-              <p className="text-[20px] font-muli font-normal leading-[24px] tracking-[-0.8px] text-p-blue-500 w-full md:w-[285px]">
-                Participamos en todas las etapas del ciclo de vida de los
-                Proyectos.
-              </p>
+              <img src="/img/que-hacemos/logo-orange-2.svg" className="w-[150px]"/>
             </div>
             <div className="relative md:w-[385px] md:basis-1/2">
               <Swiper
@@ -599,44 +583,101 @@ const QueHacemos = () => {
                   nextEl: ".arrow-right-que-hacemos",
                   prevEl: ".arrow-left-que-hacemos",
                 }}
-                className="mySwiper mt-[54px] md:mt-0"
+                className="mySwiper mt-[20px] md:mt-0"
               >
-                {contentStates.map((item, index) => (
-                  <SwiperSlide key={index}>
-                    {item.type === "list" ? (
-                      <div className="space-y-[24px]">
-                        {item.elements.map((element, index) => (
-                          <div
-                            key={`${index}-${index}`}
-                            className="flex items-center gap-3"
-                          >
-                            <div className="w-[12px] h-[12px] flex items-center justify-center bg-p-orange-500 rounded-[3px]">
-                            </div>
-                            <span className="font-muli text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-p-blue-500">
-                              {element.content}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col items-start">
-                        <div className="w-[67px] h-[67px] bg-secondary-200 rounded-[80px] flex items-center justify-center mb-[31px]">
-                          <img
-                            className="w-[47px] h-[47px]"
-                            src={item.icon}
-                            alt={item.title}
-                          />
-                        </div>
-                        <h2 className="text-[24px] font-muli font-semibold leading-[38px] text-p-blue-500 w-full text-left mb-[24px]">
-                          {item.title}
-                        </h2>
-                        <p className="text-[16px] font-inter font-normal leading-[24px] tracking-[-0.64px] text-p-blue-500 w-full text-left">
-                          {item.text}
-                        </p>
-                      </div>
-                    )}
-                  </SwiperSlide>
-                ))}
+                {/* Slide 1 — Ingeniería y construcción */}
+                <SwiperSlide>
+                  <div className="flex flex-col items-start gap-[20px]">
+                    <p className="text-[18px] font-muli uppercase pb-[4px]">
+                      Ingeniería y construcción
+                    </p>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Ingeniería [E]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Desarrollamos Ingeniería en todas sus fases. Ingeniería
+                        Conceptual, Básica, y de Detalle. Estudios Especiales,
+                        Estimación de Costos, y Evaluación de Proyectos.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Plantas y Equipos Modulares [EP]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Diseñamos y Fabricamos Plantas de Procesos y Equipos
+                        Modulares.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Plantas Llave en Mano [EPC]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Diseñamos, Fabricamos y Construimos Plantas de Procesos
+                        Llave en Mano.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Gestión de Proyectos [EPCm / OE]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Realizamos la Gestión Integral de Proyectos. Ingeniería
+                        de Propiedad, Gestión de Suministros, Gestión
+                        Contractual, Gestión de Calidad, Oficina Técnica y
+                        Supervisión.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                {/* Slide 2 — Midstream */}
+                <SwiperSlide>
+                  <div className="flex flex-col items-start gap-[20px]">
+                    <p className="text-[18px] font-muli uppercase pb-[4px]">
+                      Midstream
+                    </p>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Servicios de Procesamiento de Gas y Petróleo [BOOT]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Realizamos Servicios de Procesamientos de Gas y Petróleo
+                        para terceros con equipos propios.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Procesamiento y Comercialización de LGN y GLP
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Procesamos corrientes de LGN (Líquidos del Gas Natural)
+                        y GLP (Gas Licuado de Petróleo) para su puesta en valor
+                        comercial y posterior comercialización.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Operación y Mantenimiento [O&M]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Realizamos Servicios de Operación de Plantas de Proceso
+                        para terceros. Soporte Técnico a Operaciones.
+                        Precomisionado, Comisionado, y Puesta en Marcha.
+                      </p>
+                    </div>
+                    <div>
+                      <h3 className="text-p-orange-500 text-[16px] font-muli font-semibold">
+                        Well Testing [WT]
+                      </h3>
+                      <p className="font-inter text-[14px] leading-[18px] sl:leading-[24px]">
+                        Servicio de medición y análisis de las variables
+                        asociadas a la producción de pozos.
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
               </Swiper>
 
               {/* Custom Navigation and Pagination */}
