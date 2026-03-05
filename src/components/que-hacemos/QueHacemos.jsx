@@ -140,7 +140,7 @@ const QueHacemos = () => {
 
       // Calcular el índice basado en el progreso del scroll
       // Ajustar el progreso para que el último estado se mantenga más tiempo
-      const adjustedProgress = scrollProgress < 0.8 ? scrollProgress / 0.8 : 1;
+      const adjustedProgress = scrollProgress < 0.5 ? scrollProgress / 0.5 : 1;
 
       const imageIndex = Math.floor(adjustedProgress * images.length);
       const textIndex = Math.floor(adjustedProgress * texts.length);
@@ -175,7 +175,7 @@ const QueHacemos = () => {
     <section
       id="que-hacemos"
       ref={sectionRef}
-      className="block min-h-screen md:min-h-auto lg:h-[200vh] w-full relative md:overflow-hidden lg:overflow-visible"
+      className="block min-h-screen md:min-h-auto lg:h-[260vh] w-full relative md:overflow-hidden lg:overflow-visible"
     >
       <div className="lg:sticky top-0 h-auto lg:h-screen w-full flex">
         {/* <img
