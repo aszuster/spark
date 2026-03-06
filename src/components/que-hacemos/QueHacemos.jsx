@@ -240,8 +240,8 @@ const QueHacemos = () => {
               </div>
             </div>
 
-            <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] lg:flex-1/2">
-              <div className="ml-[8px] w-[186px] h-[128px] md:w-[446px] md:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
+            <div className="relative w-[186px] h-[128px] md:w-[446px] md:h-[336px] lg:w-[400px] lg:h-[280px] xl:w-[446px] xl:h-[336px] xxl:w-[554px] xxl:h-[400px] lg:flex-1/2">
+              <div className="ml-[8px] w-[186px] h-[128px] md:w-[446px] md:h-[336px] lg:w-[400px] lg:h-[280px] xl:w-[446px] xl:h-[336px] xxl:w-[554px] xxl:h-[400px] rounded-t-[40px] rounded-b-[180px] overflow-hidden relative">
                 <AnimatePresence mode="sync">
                   <motion.img
                     key={currentImageIndex}
@@ -283,85 +283,85 @@ const QueHacemos = () => {
               </div> */}
               {/* Pills — colores se invierten en step 2 */}
               <div
-                className={`z-30 w-[65px] h-[25px] top-[120px] left-[53%] md:w-[130px] md:h-[40px] xxl:w-[150px] xxl:h-[45px]
-              absolute md:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[120px] left-[53%] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px] xxl:h-[45px]
+              absolute lg:top-[260px] xl:top-[320px] xxl:top-[380px] md:left-[50%] translate-x-[-50%] border-[1px] rounded-[24px]
                flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
                ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] xxl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] xxl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
                 >
                   <span>[EPCm]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[10px] left-[10px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-              xxl:h-[45px] absolute md:left-0 md:top-[130px] xxl:top-[160px] translate-x-[-50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[10px] left-[10px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute md:left-0 lg:top-[110px] xl:top-[130px] xxl:top-[160px] translate-x-[-50%] border-[1px] rounded-[24px]
               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
               ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
                 >
                   <span>[E]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[10px] right-[-10px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-              xxl:h-[45px] absolute md:top-[130px] xxl:top-[160px] md:right-0 translate-x-[50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[10px] right-[-10px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute lg:top-[110px] xl:top-[130px]  xxl:top-[160px] md:right-0 translate-x-[50%] border-[1px] rounded-[24px]
               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
               ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
                 >
                   <span>[BOOT]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[50px] left-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-               xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:left-[4%] translate-x-[-50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[50px] left-[20px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+               xxl:h-[45px] absolute lg:top-[170px] xl:top-[210px] xxl:top-[240px] md:left-[4%] translate-x-[-50%] border-[1px] rounded-[24px]
                flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
                ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
                 >
                   <span>[EP]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[50px] right-[0px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-              xxl:h-[45px] absolute md:top-[210px] xxl:top-[240px] md:right-[4%] translate-x-[50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[50px] right-[0px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute lg:top-[170px] xl:top-[210px] xxl:top-[240px] md:right-[4%] translate-x-[50%] border-[1px] rounded-[24px]
               flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
               ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
                 >
                   <span>[BOT]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[90px] left-[40px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:left-[14%] translate-x-[-50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[90px] left-[40px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute lg:top-[220px] xl:top-[280px] xxl:top-[320px] md:left-[14%] translate-x-[-50%] border-[1px] rounded-[24px]
                flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
                ${currentImageIndex === 0 ? "bg-p-orange-500 border-p-orange-500" : "bg-secondary-000 border-secondary-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-secondary-000" : "text-p-orange-500"}`}
                 >
                   <span>[EPC]</span>
                 </div>
               </div>
               <div
-                className={`z-30 w-[65px] h-[25px] top-[90px] right-[20px] md:w-[130px] md:h-[40px] xxl:w-[150px]
-              xxl:h-[45px] absolute md:top-[280px] xxl:top-[320px] md:right-[14%] translate-x-[50%] border-[1px] rounded-[24px]
+                className={`z-30 w-[65px] h-[25px] top-[90px] right-[20px] lg:w-[100px] lg:h-[35px] xl:w-[130px] xl:h-[40px] xxl:w-[150px]
+              xxl:h-[45px] absolute lg:top-[220px] xl:top-[280px] xxl:top-[320px] md:right-[14%] translate-x-[50%] border-[1px] rounded-[24px]
                flex flex-wrap gap-[8px] justify-center items-center transition-colors duration-500
                ${currentImageIndex === 0 ? "bg-secondary-000 border-secondary-500" : "bg-p-orange-500 border-p-orange-500"}`}
               >
                 <div
-                  className={`w-fit text-[14px] md:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
+                  className={`w-fit text-[14px] lg:text-[18px] xl:text-[22px] font-semibold md:tracking-[1px] transition-colors duration-500 ${currentImageIndex === 0 ? "text-p-orange-500" : "text-secondary-000"}`}
                 >
                   <span>[O&M]</span>
                 </div>
@@ -459,10 +459,10 @@ const QueHacemos = () => {
                         <div className="flex gap-[60px]">
                           <div className="flex flex-col gap-[30px]">
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli font-medium">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli font-medium">
                                 Ingeniería [E]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Desarrollamos Ingeniería en todas sus fases.
                                 Ingeniería Conceptual, Básica, y de Detalle.
                                 Estudios Especiales, Estimación de Costos, y
@@ -470,10 +470,10 @@ const QueHacemos = () => {
                               </p>
                             </div>
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Plantas y Equipos Modulares [EP]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Diseñamos y Fabricamos Plantas de Procesos y
                                 Equipos Modulares.
                               </p>
@@ -481,19 +481,19 @@ const QueHacemos = () => {
                           </div>
                           <div className="flex flex-col gap-[30px]">
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Plantas Llave en Mano [EPC]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Diseñamos, Fabricamos y Construimos Plantas de
                                 Procesos Llave en Mano.
                               </p>
                             </div>
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Gestión de Proyectos [EPCm / OE]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px]  xxl:leading-[27px]">
                                 Realizamos la Gestión Integral de Proyectos.
                                 Ingeniería de Propiedad, Gestión de Suministros,
                                 Gestión Contractual, Gestión de Calidad, Oficina
@@ -505,26 +505,26 @@ const QueHacemos = () => {
                       </div>
                     ) : (
                       <div className="flex flex-col items-start lg:h-[150px] lg:pr-[50px]">
-                        <p className="text-[26px] font-muli uppercase lg:pb-[60px]">
+                        <p className="text-[26px] font-muli uppercase lg:pb-[30px] xl:pb-[60px]">
                           Midstream
                         </p>
                         <div className="flex gap-[60px]">
                           <div className="flex flex-col gap-[30px]">
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli font-medium">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli font-medium">
                                 Servicios de Procesamiento de Gas y Petróleo
                                 [BOOT]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Realizamos Servicios de Procesamientos de Gas y
                                 Petróleo para terceros con equipos propios.
                               </p>
                             </div>
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Procesamiento y Comercialización de LGN y GLP
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Procesamos corrientes de LGN (Líquidos del Gas
                                 Natural) y GLP (Gas Licuado de Petróleo) para su
                                 puesta en valor comercial y posterior
@@ -534,10 +534,10 @@ const QueHacemos = () => {
                           </div>
                           <div className="flex flex-col gap-[30px]">
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Operación y Mantenimiento [O&M]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Realizamos Servicios de Operación de Plantas de
                                 Proceso para terceros. Soporte Técnico a
                                 Operaciones. Precomisionado, Comisionado, y
@@ -545,10 +545,10 @@ const QueHacemos = () => {
                               </p>
                             </div>
                             <div>
-                              <h3 className="text-p-orange-500 text-[24px] font-muli">
+                              <h3 className="text-p-orange-500 text-[22px] leading-[28px] xxl:text-[24px] font-muli">
                                 Well Testing [WT]
                               </h3>
-                              <p className="font-inter text-[18px] leading-[27px]">
+                              <p className="font-inter xxl:text-[18px] xxl:leading-[27px]">
                                 Servicio de medición y análisis de las variables
                                 asociadas a la producción de pozos.
                               </p>
