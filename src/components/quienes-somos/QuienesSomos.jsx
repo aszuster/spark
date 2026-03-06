@@ -37,7 +37,7 @@ const QuienesSomos = () => {
           </div>
         </div> */}
           <div className="md:flex-1 md:flex items-center justify-start md:pl-[122px] lg:pl-[146px] xxl:pl-[185px] md:pr-4 z-10">
-            <div className="px-[20px] mt-[80px] z-30 md:px-0 md:mt-0 md:w-[434px] lg:w-[677px] xxl:w-[878px] ">
+            <div className="px-[20px] mt-[80px] z-30 md:px-0 md:mt-0 md:w-[434px] lg:w-[483px] xl:w-[677px] xxl:w-[878px] ">
               <motion.p 
                initial="initial"
                whileInView="inView"

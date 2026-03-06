@@ -43,6 +43,7 @@ const Navbar = () => {
         "que-hacemos",
         "como-trabajamos",
         "clientes",
+        "numbers",
         "proyectos-destacados",
         "cultura",
         "trabaja-con-nosotros",
@@ -69,7 +70,9 @@ const Navbar = () => {
       setCurrentSection(
         currentSectionId ? sectionNames[currentSectionId] : "SPARK"
       );
-      setIsHidden(currentSectionId === "que-hacemos" && window.innerWidth < 1600);
+      const hideInSection = currentSectionId === "numbers" ||
+        (currentSectionId === "que-hacemos" && window.innerWidth < 1600);
+      setIsHidden(hideInSection);
     };
 
     // Initial check
