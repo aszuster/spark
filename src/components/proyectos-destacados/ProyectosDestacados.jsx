@@ -12,7 +12,7 @@ const ProyectosDestacados = () => {
   return (
     <section
       id="proyectos-destacados"
-      className="lg:h-screen w-full relative bg-secondary-200 md:pb-[120px] lg:pb-0"
+      className="lg:min-h-screen w-full relative bg-secondary-200 md:pb-[120px] lg:pb-[80px]"
     >
       <img
         src="/img/proyectos-destacados/k.svg"
@@ -26,7 +26,7 @@ const ProyectosDestacados = () => {
             className="absolute top-[60px] md:top-[120px] md:left-[32px] bg-gradient-to-br from-[#E2E5EA] to-[#EFF1F6] border-[1px] border-secondary-000"
           />
         </div>
-        <div className="flex flex-col lg:flex-row lg:w-[800px] lg:justify-between gap-[32px] items-start mx-auto w-full md:w-[493px] pt-[120px] md:ml-[305px] lg:ml-auto">
+        <div className="flex flex-col lg:flex-row lg:w-[650px] xl:w-[800px] lg:justify-between gap-[32px] items-start mx-auto w-full md:w-[493px] pt-[120px] md:ml-[305px] lg:ml-auto">
           <h3 className="text-p-blue-500 font-muli text-[20px] md:text-[20px] lg:text-[32px] font-semibold leadig-[24px] md:leading-[40px] tracking-[-0.8px] md:tracking-[-1px] lg:tracking-[-1.6px]">
             Proyectos que generan valor
           </h3>

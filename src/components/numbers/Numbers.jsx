@@ -191,6 +191,14 @@ const Numbers = () => {
     },
   ];
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   // Calcular el estado activo basado en el scroll
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((latest) => {
@@ -252,10 +260,11 @@ const Numbers = () => {
     <>
       {/* Desktop Version */}
       <section
+        id="numbers"
         ref={containerRef}
         className="hidden lg:block h-[300vh] w-full relative bg-p-blue-600"
       >
-        <div className="sticky top-0 h-screen flex items-center justify-center">
+        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
           <img
             src="/img/r.png"
             className="absolute top-0 right-0 h-full w-auto z-0"
@@ -323,7 +332,7 @@ const Numbers = () => {
               animate={{
                 height: currentState.second.height,
                 gap: currentState.second.gap,
-                marginLeft: shouldAnimate("second") ? "200px" : "341px",
+                marginLeft: shouldAnimate("second") ? (windowWidth < 1440 ? "0px" : "200px") : "341px",
               }}
               transition={{
                 duration: 0.6,

@@ -7,6 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkText, setIsDarkText] = useState(false);
   const [currentSection, setCurrentSection] = useState("SPARK");
+  const [isHidden, setIsHidden] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -42,6 +43,7 @@ const Navbar = () => {
         "que-hacemos",
         "como-trabajamos",
         "clientes",
+        "numbers",
         "proyectos-destacados",
         "cultura",
         "trabaja-con-nosotros",
@@ -68,6 +70,9 @@ const Navbar = () => {
       setCurrentSection(
         currentSectionId ? sectionNames[currentSectionId] : "SPARK"
       );
+      const hideInSection = currentSectionId === "numbers" ||
+        (currentSectionId === "que-hacemos" && window.innerWidth < 1600);
+      setIsHidden(hideInSection);
     };
 
     // Initial check
@@ -101,13 +106,16 @@ const Navbar = () => {
 
   return (
     <>
+    <div
+      className={`hidden lg:flex fixed bottom-[58px] left-[50%] translate-x-[-50%] z-50 transition-opacity duration-400 ease-in-out ${isHidden ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+    >
     <motion.nav
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       onClick={handleNavClick}
-      className={`hidden lg:flex fixed bottom-[58px] left-[50%] translate-x-[-50%] z-50 overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20 
-      backdrop-blur-sm rounded-[20px] items-center gap-[25px] py-[4px] pl-[20px] pr-[4px] 
+      className={`flex overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20
+      backdrop-blur-sm rounded-[20px] items-center gap-[25px] py-[4px] pl-[20px] pr-[4px]
       w-auto group buttonBorder ${!isOpen ? "cursor-pointer" : ""}`}
     >
       <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
@@ -240,6 +248,7 @@ const Navbar = () => {
         </a>
       </div>
     </motion.nav>
+    </div>
     <NavbarMobile />
     </>
   );
