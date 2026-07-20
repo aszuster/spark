@@ -64,7 +64,7 @@ const Unite = () => {
             1024: {
               spaceBetween: 20,
               slidesPerView: "auto",
-              slidesOffsetBefore: typeof window !== 'undefined' ? window.innerWidth / 2 - 329 / 2 : 0,
+              // slidesOffsetBefore: typeof window !== 'undefined' ? window.innerWidth / 2 - 329 / 2 : 0,
             },
           }}
           spaceBetween={20}

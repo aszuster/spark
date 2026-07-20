@@ -90,11 +90,33 @@ const ComoTrabajamos = () => {
                   ease: "easeInOut",
                   delay: 0.2,
                 }}
-                className="font-muli text-[20px] lg:text-[32px] font-semibold leading-[24px] lg:leading-[40px] tracking-[-1px] lg:tracking-[-1.6px] mb-[48px] mt-[32px]"
+                className="font-muli text-[20px] lg:text-[32px] font-semibold leading-[24px] lg:leading-[40px] tracking-[-1px] lg:tracking-[-1.6px] mt-[32px]"
               >
-                Nos comprometemos con los objetivos de cada Proyecto haciendo
-                propia la mirada del negocio (Engineering for Bussines).
+                Nos comprometemos con los objetivos de cada Proyecto haciendo propia la mirada del negocio, nuestra filosofia:
               </motion.p>
+               <motion.p
+                initial="initial"
+                whileInView="inView"
+                variants={{
+                  initial: {
+                    y: 20,
+                    opacity: 0,
+                  },
+                  inView: {
+                    y: 0,
+                    opacity: 1,
+                  },
+                }}
+                viewport={{ margin: "-50px", once: true }}
+                transition={{
+                  duration: 0.6,
+                  ease: "easeInOut",
+                  delay: 0.2,
+                }}
+                className="text-p-orange-500 font-bold text-[34px] mb-[48px] mt-[20px]"
+               >
+                Engineering for Bussines
+               </motion.p>
               <motion.div
                 initial="initial"
                 whileInView="inView"

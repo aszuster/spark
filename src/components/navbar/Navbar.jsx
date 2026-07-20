@@ -15,7 +15,7 @@ const Navbar = () => {
 
   // Map section IDs to display names
   const sectionNames = {
-    "quienes-somos": "Quiénes somos",
+    "quienes-somos": "Nosotros",
     "que-hacemos": "Qué hacemos",
     "como-trabajamos": "Cómo trabajamos",
     clientes: "Clientes",
@@ -178,7 +178,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Quiénes somos
+          Nosotros
         </a>
         <a
           href="#que-hacemos"

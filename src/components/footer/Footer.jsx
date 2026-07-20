@@ -81,15 +81,18 @@ const Footer = () => {
               <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[64px] lg:mb-[31px]">
                 Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina
               </p>
+              <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[64px] lg:mb-[31px]">
+                Brentana 35, Cipoletti, Rio Negro
+              </p>
               <div className="flex gap-[16px]">
-                <a href="https://www.linkedin.com/company/sparknrgsol"
+                {/* <a href="https://www.linkedin.com/company/sparknrgsol"
                   className="p-[11px] cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-full flex items-center justify-center text-secondary-000 buttonBorder
       w-auto group"
                 >
                   <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
                   <Linkedin />
-                </a>
+                </a> */}
                 {/* <div
                   className="py-[11px] px-[14px] cursor-pointer relative overflow-hidden transition-all duration-300 bg-[#E3E4E5]/20 
       backdrop-blur-sm rounded-full flex items-center justify-center text-secondary-000 buttonBorder

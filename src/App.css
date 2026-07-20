@@ -219,35 +219,13 @@ html.lenis {
 }
 
 .arrow-left {
+  position:absolute;
   left: 150px;
 }
 
-@media screen and (min-width: 768px) {
-  .arrow-left {
-   left:20px;
-  } 
-}
-
-@media screen and (min-width: 1025px) {
-  .arrow-left {
-    left: calc(50% - 459px - 100px);
-  }
-}
-
-.arrow-right {
+.arrow-right{
+    position:absolute;
   right: 150px;
-}
-
-@media screen and (min-width: 768px) {
-  .arrow-right {
-   right:20px;
-  } 
-}
-
-@media screen and (min-width: 1025px) {
-  .arrow-right {
-    right: calc(50% - 459px - 100px);
-  }
 }
 
 /* Estilos específicos para el swiper de proyectos destacados */
@@ -269,6 +247,7 @@ html.lenis {
     flex-shrink: 0 !important;
   }
 }
+
 
 /* Clientes swiper - centered with scale effect */
 .clientes-swiper {
