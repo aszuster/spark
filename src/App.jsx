@@ -85,9 +85,10 @@ function App() {
       <QuienesSomos />
       <QueHacemos />
       <ComoTrabajamos />
+            <ProyectosDestacados />
       <Numbers />
       <Clientes />
-      <ProyectosDestacados />
+
       <Cultura />
       <Unite />
       <Footer />

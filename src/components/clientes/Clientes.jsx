@@ -26,20 +26,20 @@ const Clientes = () => {
                 text="Clientes"
                 className="bg-[#dddddd]/24! backdrop-blur-sm! text-secondary-000! glassBorder"
               />
-              <h3 className="font-muli text-[48px] leading-[57px] tracking-[-2.4px] text-secondary-500 w-[600px]">
-                Empresas líderes <br />
-                que confían en Spark
+              <h3 className="font-muli text-[34px] leading-[44px]  text-secondary-500 w-[800px]">
+                Nuestra mayor garantía: Empresas líderes  <br />
+                de la energía eligen a SPARK.
               </h3>
             </div>
             <div className="w-full h-full">
-            <div className="w-fit h-auto grid grid-cols-[repeat(6,minmax(0,146px))] gap-[20px] mx-auto">
+            <div className="w-fit h-auto grid grid-cols-[repeat(7,minmax(0,146px))] gap-[20px] mx-auto">
               {Logos.map((logo, index) => {
-                const isFirstOfLastFour = index === Logos.length - 4;
+                const isFirstOfLastFour = index === Logos.length - 3;
                 return (
                   <div
                     key={`${logo.id}-${index}`}
                     className={`group w-[146px] h-[80px] flex items-center justify-center bg-secondary-000 rounded-xl overflow-hidden cursor-pointer ${
-                      isFirstOfLastFour ? 'col-start-2' : ''
+                      isFirstOfLastFour ? 'col-start-3' : ''
                     }`}
                   >
                     <div className="max-w-[115px] transition-transform duration-300 group-hover:scale-110">

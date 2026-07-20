@@ -101,8 +101,8 @@ const NavbarMobile = () => {
   return (
     <div className="flex lg:hidden fixed top-[28px] right-[24px] z-50 flex-col items-end">
       <motion.nav
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         onClick={handleNavClick}
         className={`overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20 

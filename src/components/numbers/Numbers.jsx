@@ -265,10 +265,10 @@ const Numbers = () => {
         className="hidden lg:block h-[300vh] w-full relative bg-p-blue-600"
       >
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-          <img
+          {/* <img
             src="/img/r.png"
             className="absolute top-0 right-0 h-full w-auto z-0"
-          />
+          /> */}
           <div className="my-[90px] px-[32px] z-30 relative w-full xxl:max-w-[1544px]">
             <div className="w-full h-[1px] bg-secondary-600 relative">
               <div className="w-[8px] h-[8px] bg-p-orange-600 rounded-[2px] absolute top-[-3.6px] right-0"></div>

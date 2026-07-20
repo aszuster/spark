@@ -22,13 +22,13 @@ const Cultura = () => {
           </p>
           <div className="w-full md:w-[335px] lg:w-[475px] h-[142px] md:h-[142px] lg:h-[179px] xxl:w-[604px] xxl:h-[227px] rounded-[16px] xxl:rounded-[20px] py-[16px] px-[24px] xxl:py-[20px] xxl:px-[30px] bg-[#0A093D] flex items-center justify-between gap-[16px] lg:gap-[0px]">
             <img
-              className="w-[241px] md:w-[241px] lg:w-[346px] xxl:w-[440px] h-auto"
+              className="w-[241px] md:w-[241px] lg:w-[346px] xxl:w-[400px] h-auto"
               src="/img/cultura/certificate.webp"
               alt=""
             />
             <div className="rounded-full bg-secondary-000 p-[10px] md:p-[6px] lg:p-[10px] flex items-center justify-center">
               <img
-                className="w-[50px] md:w-[60px] lg:w-[50px] xxl:w-[60px]"
+                className="w-[50px] md:w-[60px] lg:w-[50px] xxl:w-[90px]"
                 src="/img/cultura/compromiso.svg"
                 alt=""
               />
@@ -40,7 +40,7 @@ const Cultura = () => {
         text="Política de Sostenibilidad"
         download={true}
         className="buttonBorder w-full md:w-fit justify-between md:justify-start"
-        href="https://www.sparkgy.com/_files/ugd/892f7a_9acb4c086ea24f28852ed4c2aeeed2fe.pdf"
+        href="/docs/politica-sostenibilidad.pdf"
       />
       <div className="mt-[53px] md:mt-[130px] w-full h-[1700px] md:h-[1200px] lg:h-[800px] relative lg:mt-[200px]">
         {/* <div className="w-full md:w-[439px] lg:w-[794px] h-auto z-20 relative xxl:w-[986px]">
