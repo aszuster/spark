@@ -220,12 +220,24 @@ html.lenis {
 
 .arrow-left {
   position:absolute;
+  left: 50px;
+}
+
+.arrow-right{
+    position:absolute;
+  right: 50px;
+}
+
+@media (min-width: 1920px) {
+  .arrow-left {
+  position:absolute;
   left: 150px;
 }
 
 .arrow-right{
     position:absolute;
   right: 150px;
+}
 }
 
 /* Estilos específicos para el swiper de proyectos destacados */

@@ -6,7 +6,7 @@ import ArrowDown from "../../svg/ArrowDown";
 const QuienesSomos = () => {
   return (
     <div id="quienes-somos" className="h-[725px] md:h-[655px] lg:h-screen overflow-hidden">
-      <div>
+      {/* <div>
         {" "}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -21,7 +21,7 @@ const QuienesSomos = () => {
             <li>MINERÍA</li>
           </ul>
         </motion.div>
-      </div>
+      </div> */}
       <section className="h-[756px] md:h-[655px] lg:h-screen overflow-hidden w-full relative">
         <img src="/img/quienes-somos/s-grey.png" alt="bg" className="md:hidden absolute top-[19px] right-0 h-[423px] w-auto" />
         <SectionLabel className="absolute lg:top-[55px] left-[20px] lg:left-[35px] " text="Nosotros" />
@@ -37,7 +37,7 @@ const QuienesSomos = () => {
           </div>
         </div> */}
           <div className="md:flex-1 md:flex items-center justify-start md:pl-[122px] lg:pl-[146px] xxl:pl-[185px] md:pr-4 z-10">
-            <div className="px-[20px] mt-[80px] z-30 md:px-0 md:mt-0 md:w-[434px] lg:w-[483px] xl:w-[677px] xxl:w-[878px] ">
+            <div className="flex flex-col h-full justify-center px-[20px]  z-30 md:px-0 md:mt-0 md:w-[434px] lg:w-[483px] xl:w-[677px] xxl:w-[878px] ">
               <motion.p 
                initial="initial"
                whileInView="inView"

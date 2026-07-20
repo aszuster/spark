@@ -122,7 +122,7 @@ const Hero = ({ onAnimationComplete }) => {
 
           <div className="absolute px-[12px] py-[40px] lg:px-[50px] top-0 left-0 w-full h-full flex flex-col justify-end gap-[32px] md:justify-center lg:gap-auto lg:flex-row lg:items-center lg:justify-between z-30">
             <div className="flex flex-col gap-[32px] lg:gap-[50px] items-start h-full justify-center">
-              <h2 className="font-muli text-[34px] md:text-[60px] lg:text-[68px] font-semibold leading-[40px] md:leading-[68px] lg:leading-[80px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-full">
+              <h2 className="font-muli text-[34px] smd:text-[60px] lg:text-[68px] font-semibold leading-[40px] smd:leading-[68px] lg:leading-[80px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-full">
                 <RevealByLine
                   text="Soluciones de Ingeniería"
                   className="text-secondary-000"
@@ -139,14 +139,11 @@ const Hero = ({ onAnimationComplete }) => {
                 className="text-secondary-000"
               /> */}
               </h2>
-              <motion.div
+            </div>
+            <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
-                className="hidden md:block md:relative  z-30"
-              ></motion.div>
-            </div>
-            <div className="flex flex-col gap-[32px] md:gap-0 lg:gap-[24px] items-start">
+                transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }} className="flex flex-col gap-[32px] md:gap-0 lg:gap-[24px] items-start">
               <ul
                 className="text-secondary-000 font-inter text-[18px] font-normal leading-[32px] tracking-[-0.56px] lg:pr-[100px]
                 "
@@ -156,14 +153,7 @@ const Hero = ({ onAnimationComplete }) => {
                 <li><span className="lg:text-[28px]">Química</span></li>
                 <li><span className="lg:text-[28px]">Minería</span></li>
               </ul>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 2.2 }}
-              >
-                {/* <ArrowButton text="Nuestras soluciones" /> */}
-              </motion.div>
-            </div>
+            </motion.div>
           </div>
           {/* <FadeInAnimation delay={2.2}> */}
 

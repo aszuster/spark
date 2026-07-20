@@ -110,8 +110,8 @@ const Navbar = () => {
       className={`hidden lg:flex fixed bottom-[58px] left-[50%] translate-x-[-50%] z-50 transition-opacity duration-400 ease-in-out ${isHidden ? "opacity-0 pointer-events-none" : "opacity-100"}`}
     >
     <motion.nav
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       onClick={handleNavClick}
       className={`flex overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20

@@ -40,7 +40,7 @@ const Cultura = () => {
         text="Política de Sostenibilidad"
         download={true}
         className="buttonBorder w-full md:w-fit justify-between md:justify-start"
-        href="https://www.sparkgy.com/_files/ugd/892f7a_9acb4c086ea24f28852ed4c2aeeed2fe.pdf"
+        href="/docs/politica-sostenibilidad.pdf"
       />
       <div className="mt-[53px] md:mt-[130px] w-full h-[1700px] md:h-[1200px] lg:h-[800px] relative lg:mt-[200px]">
         {/* <div className="w-full md:w-[439px] lg:w-[794px] h-auto z-20 relative xxl:w-[986px]">

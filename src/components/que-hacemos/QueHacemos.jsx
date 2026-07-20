@@ -106,7 +106,7 @@ const QueHacemos = () => {
         <div className="lg:flex w-full px-[20px] lg:px-0">
           <div className="lg:hidden py-[60px] pt-[30px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
             <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
-              <SectionLabel text="Qué hacemos" />
+              {/* <SectionLabel text="Qué hacemos" /> */}
               <img
                 src="/img/que-hacemos/logo-orange-2.svg"
                 className="w-[150px]"

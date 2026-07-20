@@ -15,11 +15,11 @@ const ProyectosDestacados = () => {
       id="proyectos-destacados"
       className="lg:min-h-screen w-full relative bg-secondary-200 md:pb-[120px] lg:pb-[80px]"
     >
-      <img
+      {/* <img
         src="/img/proyectos-destacados/k.svg"
         alt=""
         className="absolute top-0 right-0 h-full w-auto object-cover"
-      />
+      /> */}
       <div className="z-10 relative mb-[60px] md:mb-[120px] px-[20px] md:px-0 ">
         <div>
           <SectionLabel
@@ -43,9 +43,9 @@ const ProyectosDestacados = () => {
           <Chevron stroke="#fff" />
         </button>
 </div>
-      <div className="h-auto md:h-[462px] w-full relative lg:max-w-[1000px] mx-auto">
+      <div className="h-auto lg:h-[500px] w-full relative lg:max-w-[1000px] mx-auto">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={1}
           spaceBetween={20}
           centeredSlides={true}
           breakpoints={{
@@ -75,13 +75,13 @@ const ProyectosDestacados = () => {
             },
           }}
         >
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="h-[500px] w-[250px] lg:w-[300px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/01.jpg" alt="" />
                 </div>
-                <div className="hidden md:block  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -109,49 +109,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/02.jpg" alt="" />
                 </div>
-                <div className="hidden md:block    bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -179,49 +145,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/03.jpg" alt="" />
                 </div>
-                <div className="hidden md:block   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -248,49 +180,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="  w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/04.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -317,49 +215,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/05.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -386,49 +250,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/06.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -455,49 +285,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/07.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -524,49 +320,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/08.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -593,49 +355,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/09.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -663,49 +391,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/10.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -733,49 +427,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/11.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -802,49 +462,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/09.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -871,49 +497,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/12.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -940,49 +532,15 @@ const ProyectosDestacados = () => {
                   </div>
                 </div>
               </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
-              </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-auto">
-            <div className="flex flex-col w-full h-full mx-[20px] md:items-center lg:block md:mx-0">
-              <div className="w-full h-[280px] md:w-[623px] lg:w-[300px] md:h-[462px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/13.jpg" alt="" />
                 </div>
-                <div className="hidden md:block px-[16px]   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
                   <div className="flex items-center justify-between">
                     <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
@@ -1008,40 +566,6 @@ const ProyectosDestacados = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="block md:hidden bg-secondary-000 rounded-[16px]  w-full  h-full px-[20px] py-[24px]">
-                <div className="flex items-center justify-between">
-                  <div className="] bg-p-orange-600 rounded-[6px] h-[26px] w-[70px] flex items-center justify-center">
-                    <span className="text-secondary-000 font-inter text-[14px] leading-[14px] tracking-[-0.7px] uppercase">
-                      Cliente
-                    </span>
-                  </div>
-                  <div className="w-[106px] h-auto">
-                    <img
-                      src="/img/clientes/pan-american.svg"
-                      alt=""
-                      className="w-[106px] h-auto"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Proyecto:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px] mb-[10px]">
-                  PO Planta Compresora
-                </p>
-                <div className="flex items-center gap-[8px]">
-                  {/* <Chevron stroke="#4A5468" className="w-[6px] h-[14px]" /> */}
-                  <p className="text-secondary-700 font-inter font-semibold text-[16px] leading-[24px] tracking-[-0.64px]">
-                    Alcance:
-                  </p>
-                </div>
-                <p className="text-p-blue-600 font-muli text-[14px] leading-[24px] tracking-[-0.56px]">
-                  Ingeniería Conceptual y Básica
-                </p>
               </div>
             </div>
           </SwiperSlide>
