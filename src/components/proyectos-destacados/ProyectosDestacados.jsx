@@ -31,7 +31,6 @@ const ProyectosDestacados = () => {
           <h3 className="text-p-blue-500 font-muli text-[20px] md:text-[20px] lg:text-[32px] font-semibold leadig-[24px] md:leading-[40px] tracking-[-0.8px] md:tracking-[-1px] lg:tracking-[-1.6px]">
             Proyectos que generan valor
           </h3>
-
         </div>
       </div>
       <div className="w-full">
@@ -42,7 +41,7 @@ const ProyectosDestacados = () => {
         <button className="hidden md:flex z-20 arrow-right arrow">
           <Chevron stroke="#fff" />
         </button>
-</div>
+      </div>
       <div className="h-auto lg:h-[500px] w-full relative lg:max-w-[1000px] mx-auto">
         <Swiper
           slidesPerView={1}
@@ -77,32 +76,35 @@ const ProyectosDestacados = () => {
         >
           <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className="h-[500px] w-[250px] lg:w-[300px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+              <div className="h-[500px] w-[250px] lg:w-[300px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/01.jpg" alt="" />
                 </div>
                 <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className="bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería conceptual
+                      </p>
                     </div>
-                    <div className="w-[75px] h-auto">
+                    <div className="w-[75px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/ypf.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className="h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería conceptual
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Gathering LNG - ENI</p>
                       <p className="pt-[10px] pb-[5px]">
                         Red de gathering del gas que se inyectará el proyecto
-                        lng. <br/>Cuadal: 60 mmscmd
+                        lng. <br />
+                        Cuadal: 60 mmscmd
                       </p>
                       <p className="text-p-orange-500">2025</p>
                     </div>
@@ -113,32 +115,35 @@ const ProyectosDestacados = () => {
           </SwiperSlide>
           <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/02.jpg" alt="" />
                 </div>
                 <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería conceptual
+                      </p>
                     </div>
-                    <div className="w-[75px] h-auto">
+                    <div className="w-[75px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/ypf.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería conceptual
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Argentina LNG - Pretratamiento</p>
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Argentina LNG - Pretratamiento
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de pre-tratamiento de gas de 25 mmscmd
-
                       </p>
                       <p className="text-p-orange-500">2023</p>
                     </div>
@@ -149,28 +154,30 @@ const ProyectosDestacados = () => {
           </SwiperSlide>
           <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[25px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
                   <img src="/img/proyectos-destacados/03.jpg" alt="" />
                 </div>
                 <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería conceptual
+                      </p>
                     </div>
-                    <div className="w-[75px] h-auto">
+                    <div className="w-[75px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/ypf.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería conceptual
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Oleoducto Vaca Muerta Sur</p>
                       <p className="pt-[10px] pb-[5px]">
                         Oleoducto vmos incluyendo las estaciones de bombeo
@@ -189,26 +196,29 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/04.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative ">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería básica extendida
+                      </p>
                     </div>
-                    <div className="w-[100px] h-auto">
+                    <div className="w-[100px] h-auto absolute top-[-5px] right-[-5px]">
                       <img
                         src="/img/clientes/pan-american.svg"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería básica extendida
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Gasoducto dedicado LNG</p>
                       <p className="pt-[10px] pb-[5px]">
-                        Gasoducto 480km - 36 pulgadas + estación de compresión 70.000 hp
+                        Gasoducto 480km - 36 pulgadas + estación de compresión
+                        70.000 hp
                       </p>
                       <p className="text-p-orange-500">2025</p>
                     </div>
@@ -224,26 +234,29 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/05.jpg" alt="" />
                 </div>
                 <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería conceptual
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[50px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/shell.svg"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería conceptual
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">CPF Bajada de añelo</p>
                       <p className="pt-[10px] pb-[5px]">
-                        Planta de tratamiento de petróleo crudo 40.000 bbl/d y gas 120 MSCMD
+                        Planta de tratamiento de petróleo crudo 40.000 bbl/d y
+                        gas 120 MSCMD
                       </p>
                       <p className="text-p-orange-500">2025</p>
                     </div>
@@ -259,24 +272,29 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/06.jpg" alt="" />
                 </div>
                 <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería y construcción{" "}
+                        <span className="text-p-orange-500">EPC</span>
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[120px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/phoenix.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería y construcción <span className="text-p-orange-500">EPC</span>
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Planta tratamiento de crudo mata mora</p>
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Planta tratamiento de crudo mata mora
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de tratamiento de crudo Mata Mora - 20.000 bbl/d
                       </p>
@@ -294,24 +312,28 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/07.jpg" alt="" />
                 </div>
                 <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería básica extendida
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[80px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/pluspetrol.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería básica extendida
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Planta de tratamiento de gas La Calera fase 1.5</p>
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Planta de tratamiento de gas La Calera fase 1.5
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de tratamiento de gas La Calera fase 1.5
                       </p>
@@ -329,23 +351,25 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/08.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between ">
+                    <div>
+                      <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería básica extendida
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[75px] h-auto">
                       <img
                         src="/img/clientes/tgs.svg"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería básica extendida
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Planta de extracción de LPG</p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de tratamiento de gas de 24 mmscmd
@@ -364,25 +388,34 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/09.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería y construcción{" "}
+                        <span
+                          className="text-p-orange-500
+                      "
+                        >
+                          EPC
+                        </span>
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[120px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/phoenix.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería y construcción <span className="text-p-orange-500
-                      ">EPC</span>
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Planta tratamiento de gas Mata Mora</p>
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Planta tratamiento de gas Mata Mora
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de tratamiento de gas Mata Mora - 250.000 mscd
                       </p>
@@ -400,27 +433,35 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/10.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería y construcción{" "}
+                        <span
+                          className="text-p-orange-500
+                      "
+                        >
+                          EPC
+                        </span>
+                      </p>
                     </div>
-                    <div className="w-[50px] h-auto">
+                    <div className="w-[70px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/facilities-energy.svg"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Ingeniería y construcción <span className="text-p-orange-500
-                      ">EPC</span>
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Fraccionadora sargento vidal</p>
                       <p className="pt-[10px] pb-[5px]">
-                        Planta de fraccionamiento, Condensados (2.000 TN/M) con producción de Gasolina y LPG
+                        Planta de fraccionamiento, Condensados (2.000 TN/M) con
+                        producción de Gasolina y LPG
                       </p>
                       <p className="text-p-orange-500">2025-2026</p>
                     </div>
@@ -436,26 +477,34 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/11.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
                     </div>
-                    <div className="w-[50px] h-auto">
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Owner engineering
+                    </p>
+                    </div>
+                    <div className="w-[100px] h-auto absolute top-[-10px] right-0">
                       <img
                         src="/img/clientes/mega.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                     Owner engineering
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Proyecto expansión planta Bahía Blanca</p>
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Proyecto expansión planta Bahía Blanca
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
-                        Equipo de 45 profesionales al Servicio del Owner Engineering de la Ingeniería, Calidad, Seguridad, Fabricación de Equipos, Planificación, Supervisión en Campo y Oficina Técnica
+                        Equipo de 45 profesionales al Servicio del Owner
+                        Engineering de la Ingeniería, Calidad, Seguridad,
+                        Fabricación de Equipos, Planificación, Supervisión en
+                        Campo y Oficina Técnica
                       </p>
                       <p className="text-p-orange-500">2023-2026</p>
                     </div>
@@ -471,24 +520,29 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/09.jpg" alt="" />
                 </div>
                 <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
                     </div>
-                    <div className="w-[50px] h-auto">
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Operación y mantenimiento
+                    </p>
+                    </div>
+                    <div className="w-[120px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/phoenix.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                     Operación y mantenimiento
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Planta tratamiento de gas Mata Mora</p>
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Planta tratamiento de gas Mata Mora
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
                         Planta de tratamiento de gas Mata Mora - 250.000 mscd
                       </p>
@@ -506,26 +560,33 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/12.jpg" alt="" />
                 </div>
                 <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
                     </div>
-                    <div className="w-[50px] h-auto">
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Ingeniería y construcción{" "}
+                      <span className="text-p-orange-500">EPC</span>
+                    </p>
+                    </div>
+                    <div className="w-[100px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/geopark.png"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                     Ingeniería y construcción <span className="text-p-orange-500">EPC</span>
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Upgrade batería Loma Jarillosa</p>
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Upgrade batería Loma Jarillosa
+                      </p>
                       <p className="pt-[10px] pb-[5px]">
-                        Ampliación de la Bateria de Crudo hasta una producción de 10.000 Bbl/da
+                        Ampliación de la Bateria de Crudo hasta una producción
+                        de 10.000 Bbl/da
                       </p>
                       <p className="text-p-orange-500">2026</p>
                     </div>
@@ -541,26 +602,30 @@ const ProyectosDestacados = () => {
                   <img src="/img/proyectos-destacados/13.jpg" alt="" />
                 </div>
                 <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-center justify-between">
-                    <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                       <Logo />
                     </div>
-                    <div className="w-[50px] h-auto">
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Operación y mantenimiento
+                    </p>
+                    </div>
+                    <div className="w-[70px] h-auto absolute top-0 right-0">
                       <img
                         src="/img/clientes/facilities-energy.svg"
                         alt=""
-                        className="w-[106px] h-auto"
+                        className=" h-auto"
                       />
                     </div>
                   </div>
                   <div>
-                    <p className="uppercase text-[12px] font-bold pt-[8px]">
-                     Operación y mantenimiento
-                    </p>
-                    <div  className="pt-[20px] text-[14px] leading-[20px]">
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
                       <p className="uppercase">Fraccionadora Sargento Vidal</p>
                       <p className="pt-[10px] pb-[5px]">
-                        Planta de fraccionamiento, condensados (2.000 tn/m) con producción de gasolina y lpg
+                        Planta de fraccionamiento, condensados (2.000 tn/m) con
+                        producción de gasolina y lpg
                       </p>
                       <p className="text-p-orange-500">En ejecución</p>
                     </div>
