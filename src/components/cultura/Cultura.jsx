@@ -26,13 +26,13 @@ const Cultura = () => {
               src="/img/cultura/certificate.webp"
               alt=""
             />
-            <div className="rounded-full bg-secondary-000 p-[10px] md:p-[6px] lg:p-[10px] flex items-center justify-center">
+            <a href="https://www.seamosbosques.com.ar/formulario" className="rounded-full bg-secondary-000 p-[10px] md:p-[6px] lg:p-[10px] flex items-center justify-center">
               <img
                 className="w-[50px] md:w-[60px] lg:w-[50px] xxl:w-[90px]"
                 src="/img/cultura/compromiso.svg"
                 alt=""
               />
-            </div>
+            </a>
           </div>
         </div>
       </div>

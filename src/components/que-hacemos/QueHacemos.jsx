@@ -92,7 +92,7 @@ const QueHacemos = () => {
               Procesamos corrientes de LGN (Líquidos del Gas Natural) y GLP (Gas Licuado de Petróleo) para su puesta en valor comercial y posterior comercialización.
             </p>
           </div>
-          <a href="#" className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"><p className="uppercase font-bold text-[18px] ">Midstream</p></a>
+          <a href="https://fesa.com.ar/" className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"><p className="uppercase font-bold text-[18px] ">Midstream</p></a>
           </div>
         </div>
       </div>
