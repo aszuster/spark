@@ -189,45 +189,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
-            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className="  w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
-                <div className="w-full h-auto">
-                  <img src="/img/proyectos-destacados/04.jpg" alt="" />
-                </div>
-                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-start justify-between relative ">
-                    <div>
-                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                        <Logo />
-                      </div>
-                      <p className="uppercase text-[12px] font-bold pt-[8px]">
-                        Ingeniería básica extendida
-                      </p>
-                    </div>
-                    <div className="w-[100px] h-auto absolute top-[-5px] right-[-5px]">
-                      <img
-                        src="/img/clientes/pan-american.svg"
-                        alt=""
-                        className=" h-auto"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Gasoducto dedicado LNG</p>
-                      <p className="pt-[10px] pb-[5px]">
-                        Gasoducto 480km - 36 pulgadas + estación de compresión
-                        70.000 hp
-                      </p>
-                      <p className="text-p-orange-500">2025</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
+                    <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
@@ -265,26 +227,25 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
+                    <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
-                  <img src="/img/proyectos-destacados/06.jpg" alt="" />
+                  <img src="/img/proyectos-destacados/08.jpg" alt="" />
                 </div>
-                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-start justify-between relative">
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                  <div className="flex items-start justify-between ">
                     <div>
-                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                      <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                         <Logo />
                       </div>
                       <p className="uppercase text-[12px] font-bold pt-[8px]">
-                        Ingeniería y construcción{" "}
-                        <span className="text-p-orange-500">EPC</span>
+                        Ingeniería básica extendida
                       </p>
                     </div>
-                    <div className="w-[120px] h-auto absolute top-0 right-0">
+                    <div className="w-[75px] h-auto">
                       <img
-                        src="/img/clientes/phoenix.png"
+                        src="/img/clientes/tgs.svg"
                         alt=""
                         className=" h-auto"
                       />
@@ -292,11 +253,47 @@ const ProyectosDestacados = () => {
                   </div>
                   <div>
                     <div className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">
-                        Planta tratamiento de crudo mata mora
-                      </p>
+                      <p className="uppercase">Planta de extracción de LPG Tratayen</p>
                       <p className="pt-[10px] pb-[5px]">
-                        Planta de tratamiento de crudo Mata Mora - 20.000 bbl/d
+                        Planta de tratamiento de gas de 24 mmscmd
+                      </p>
+                      <p className="text-p-orange-500">2022-2024</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="  w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+                <div className="w-full h-auto">
+                  <img src="/img/proyectos-destacados/04.jpg" alt="" />
+                </div>
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                  <div className="flex items-start justify-between relative ">
+                    <div>
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                        <Logo />
+                      </div>
+                      <p className="uppercase text-[12px] font-bold pt-[8px]">
+                        Ingeniería básica extendida
+                      </p>
+                    </div>
+                    <div className="w-[100px] h-auto absolute top-[-5px] right-[-5px]">
+                      <img
+                        src="/img/clientes/pan-american.svg"
+                        alt=""
+                        className=" h-auto"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">Gasoducto dedicado LNG</p>
+                      <p className="pt-[10px] pb-[5px]">
+                        Gasoducto 480km - 36 pulgadas + estación de compresión
+                        70.000 hp
                       </p>
                       <p className="text-p-orange-500">2025</p>
                     </div>
@@ -348,21 +345,22 @@ const ProyectosDestacados = () => {
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
-                  <img src="/img/proyectos-destacados/08.jpg" alt="" />
+                  <img src="/img/proyectos-destacados/06.jpg" alt="" />
                 </div>
-                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-start justify-between ">
+                <div className=" bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                  <div className="flex items-start justify-between relative">
                     <div>
-                      <div className="] bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                      <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
                         <Logo />
                       </div>
                       <p className="uppercase text-[12px] font-bold pt-[8px]">
-                        Ingeniería básica extendida
+                        Ingeniería y construcción{" "}
+                        <span className="text-p-orange-500">EPC</span>
                       </p>
                     </div>
-                    <div className="w-[75px] h-auto">
+                    <div className="w-[120px] h-auto absolute top-0 right-0">
                       <img
-                        src="/img/clientes/tgs.svg"
+                        src="/img/clientes/phoenix.png"
                         alt=""
                         className=" h-auto"
                       />
@@ -370,17 +368,21 @@ const ProyectosDestacados = () => {
                   </div>
                   <div>
                     <div className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">Planta de extracción de LPG</p>
-                      <p className="pt-[10px] pb-[5px]">
-                        Planta de tratamiento de gas de 24 mmscmd
+                      <p className="uppercase">
+                        Planta tratamiento de crudo mata mora
                       </p>
-                      <p className="text-p-orange-500">2022-2024</p>
+                      <p className="pt-[10px] pb-[5px]">
+                        Planta de tratamiento de crudo Mata Mora - 20.000 bbl/d
+                      </p>
+                      <p className="text-p-orange-500">2025</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </SwiperSlide>
+
+
           <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
@@ -470,90 +472,7 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
-            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
-                <div className="w-full h-auto">
-                  <img src="/img/proyectos-destacados/11.jpg" alt="" />
-                </div>
-                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-start justify-between relative">
-                    <div>
-                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
-                    </div>
-                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Owner engineering
-                    </p>
-                    </div>
-                    <div className="w-[100px] h-auto absolute top-[-10px] right-0">
-                      <img
-                        src="/img/clientes/mega.png"
-                        alt=""
-                        className=" h-auto"
-                      />
-                    </div>
-                  </div>
-                  <div>
-
-                    <div className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">
-                        Proyecto expansión planta Bahía Blanca
-                      </p>
-                      <p className="pt-[10px] pb-[5px]">
-                        Equipo de 45 profesionales al Servicio del Owner
-                        Engineering de la Ingeniería, Calidad, Seguridad,
-                        Fabricación de Equipos, Planificación, Supervisión en
-                        Campo y Oficina Técnica
-                      </p>
-                      <p className="text-p-orange-500">2023-2026</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
-            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
-              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
-                <div className="w-full h-auto">
-                  <img src="/img/proyectos-destacados/09.jpg" alt="" />
-                </div>
-                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
-                  <div className="flex items-start justify-between relative">
-                    <div>
-                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
-                      <Logo />
-                    </div>
-                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
-                      Operación y mantenimiento
-                    </p>
-                    </div>
-                    <div className="w-[120px] h-auto absolute top-0 right-0">
-                      <img
-                        src="/img/clientes/phoenix.png"
-                        alt=""
-                        className=" h-auto"
-                      />
-                    </div>
-                  </div>
-                  <div>
-
-                    <div className="pt-[20px] text-[14px] leading-[20px]">
-                      <p className="uppercase">
-                        Planta tratamiento de gas Mata Mora
-                      </p>
-                      <p className="pt-[10px] pb-[5px]">
-                        Planta de tratamiento de gas Mata Mora - 250.000 mscd
-                      </p>
-                      <p className="text-p-orange-500">2022-2025</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="!w-full md:!w-auto">
+                    <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
                 <div className="w-full h-auto">
@@ -595,6 +514,48 @@ const ProyectosDestacados = () => {
               </div>
             </div>
           </SwiperSlide>
+
+          <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+                <div className="w-full h-auto">
+                  <img src="/img/proyectos-destacados/09.jpg" alt="" />
+                </div>
+                <div className="   bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                      <Logo />
+                    </div>
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Operación y mantenimiento
+                    </p>
+                    </div>
+                    <div className="w-[120px] h-auto absolute top-0 right-0">
+                      <img
+                        src="/img/clientes/phoenix.png"
+                        alt=""
+                        className=" h-auto"
+                      />
+                    </div>
+                  </div>
+                  <div>
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Planta tratamiento de gas Mata Mora
+                      </p>
+                      <p className="pt-[10px] pb-[5px]">
+                        Planta de tratamiento de gas Mata Mora - 250.000 mscd
+                      </p>
+                      <p className="text-p-orange-500">2022-2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
           <SwiperSlide className="!w-full md:!w-auto">
             <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
               <div className="w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
@@ -628,6 +589,49 @@ const ProyectosDestacados = () => {
                         producción de gasolina y lpg
                       </p>
                       <p className="text-p-orange-500">En ejecución</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+                    <SwiperSlide className="!w-full md:!w-auto">
+            <div className="flex flex-col w-full h-full items-center lg:block md:mx-0">
+              <div className=" w-[250px] lg:w-[300px] h-[500px] bg-secondary-000 rounded-[20px] md:rounded-[30px] px-[20px] md:px-[15px] py-[30px] md:py-[40px] flex flex-col gap-[20px]">
+                <div className="w-full h-auto">
+                  <img src="/img/proyectos-destacados/11.jpg" alt="" />
+                </div>
+                <div className="  bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">
+                  <div className="flex items-start justify-between relative">
+                    <div>
+                    <div className=" bg-p-orange-500 rounded-[6px] h-[26px] w-[70px] px-[8px] flex items-center justify-center text-secondary-000">
+                      <Logo />
+                    </div>
+                                        <p className="uppercase text-[12px] font-bold pt-[8px]">
+                      Owner engineering
+                    </p>
+                    </div>
+                    <div className="w-[100px] h-auto absolute top-[-10px] right-0">
+                      <img
+                        src="/img/clientes/mega.png"
+                        alt=""
+                        className=" h-auto"
+                      />
+                    </div>
+                  </div>
+                  <div>
+
+                    <div className="pt-[20px] text-[14px] leading-[20px]">
+                      <p className="uppercase">
+                        Proyecto expansión planta Bahía Blanca
+                      </p>
+                      <p className="pt-[10px] pb-[5px]">
+                        Equipo de 45 profesionales al Servicio del Owner
+                        Engineering de la Ingeniería, Calidad, Seguridad,
+                        Fabricación de Equipos, Planificación, Supervisión en
+                        Campo y Oficina Técnica
+                      </p>
+                      <p className="text-p-orange-500">2023-2026</p>
                     </div>
                   </div>
                 </div>
