@@ -89,6 +89,7 @@ const Hero = ({ onAnimationComplete }) => {
             loop
             muted
             playsInline
+            poster="/img/hero-fallback.png"
             width="100%"
             height="auto"
           >
@@ -166,7 +167,7 @@ const Hero = ({ onAnimationComplete }) => {
           <img
             src="/img/hero/misc2.png"
             alt=""
-            className="hidden lg:block lg:absolute top-0 right-[50px] z-30 w-[498px] h-[183px] lg:w-[600px] lg:h-auto xxl:right-[175px]"
+            className="hidden lg:block lg:absolute top-[-25px] right-[50px] z-30 w-[498px] h-[183px] lg:w-[600px] lg:h-auto xxl:right-[175px]"
           />
         </div>
       </motion.div>
