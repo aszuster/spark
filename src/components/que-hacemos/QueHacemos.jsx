@@ -22,7 +22,7 @@ const QueHacemos = () => {
         text="Qué hacemos"
       />
 
-      <div className="hidden lg:flex align-center w-full justify-between lg:max-w-[1080px] xl:max-w-[1280px] xxl:max-w-[1600px] lg:mx-auto py-[175px] gap-[150px]">
+      <div className="hidden lg:flex align-center w-full justify-between lg:max-w-[1280px] xxl:max-w-[1600px] lg:mx-auto py-[175px] lg:py-[135px] xl:py-[175px] gap-[150px]">
         <div className="basis-1/3">
           <img src="/img/que-hacemos/logo-orange-2.svg" className="w-[150px]" />
           <p className="font-bold uppercase py-[15px]">
@@ -207,60 +207,67 @@ const QueHacemos = () => {
                 </SwiperSlide>
                 {/* Slide 2 — Midstream */}
                 <SwiperSlide>
-        <div className="">
-          <p className="font-bold uppercase py-[15px]">Servicios petroleros</p>
-          <div className="flex flex-col gap-[20px] pt-[10px]">
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Operación y Mantenimiento [O&M]
-              </p>
-              <p className="font-medium leading-[20px]">
-                Realizamos Servicios de Operación de Plantas de Proceso para
-                terceros. Soporte Técnico a Operaciones. Precomisionado,
-                Comisionado, y Puesta en Marcha.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">Well Testing</p>
-              <p className="font-medium leading-[20px]">
-                Servicio de medición y análisis de las variables asociadas a la
-                producción de pozos.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Servicios de Procesamiento de Gas y Petróleo{" "}
-              </p>
-              <p className="font-medium leading-[20px]">
-                Realizamos Servicios de Procesamientos de Gas y Petróleo para
-                terceros con equipos propios.
-              </p>
-            </div>
-          </div>
-        </div>
+                  <div className="">
+                    <p className="font-bold uppercase py-[15px]">
+                      Servicios petroleros
+                    </p>
+                    <div className="flex flex-col gap-[20px] pt-[10px]">
+                      <div>
+                        <p className="text-p-orange-500 font-bold">
+                          Operación y Mantenimiento [O&M]
+                        </p>
+                        <p className="font-medium leading-[20px]">
+                          Realizamos Servicios de Operación de Plantas de
+                          Proceso para terceros. Soporte Técnico a Operaciones.
+                          Precomisionado, Comisionado, y Puesta en Marcha.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-p-orange-500 font-bold">
+                          Well Testing
+                        </p>
+                        <p className="font-medium leading-[20px]">
+                          Servicio de medición y análisis de las variables
+                          asociadas a la producción de pozos.
+                        </p>
+                      </div>
+                      <div>
+                        <p className="text-p-orange-500 font-bold">
+                          Servicios de Procesamiento de Gas y Petróleo{" "}
+                        </p>
+                        <p className="font-medium leading-[20px]">
+                          Realizamos Servicios de Procesamientos de Gas y
+                          Petróleo para terceros con equipos propios.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                          <div className="">
-          <p className="font-bold uppercase py-[15px]">Midstream</p>
-          <div className="flex flex-col gap-[20px] pt-[10px]">
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Procesamiento y Comercialización de LGN y GLP
-              </p>
-              <p className="font-medium leading-[20px]">
-                Procesamos corrientes de LGN (Líquidos del Gas Natural) y GLP
-                (Gas Licuado de Petróleo) para su puesta en valor comercial y
-                posterior comercialización.
-              </p>
-            </div>
-            <a
-              href="https://fesa.com.ar/"
-              className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"
-            >
-              <p className="uppercase font-bold text-[18px] ">Midstream</p>
-            </a>
-          </div>
-        </div>
+                  <div className="">
+                    <p className="font-bold uppercase py-[15px]">Midstream</p>
+                    <div className="flex flex-col gap-[20px] pt-[10px]">
+                      <div>
+                        <p className="text-p-orange-500 font-bold">
+                          Procesamiento y Comercialización de LGN y GLP
+                        </p>
+                        <p className="font-medium leading-[20px]">
+                          Procesamos corrientes de LGN (Líquidos del Gas
+                          Natural) y GLP (Gas Licuado de Petróleo) para su
+                          puesta en valor comercial y posterior
+                          comercialización.
+                        </p>
+                      </div>
+                      <a
+                        href="https://fesa.com.ar/"
+                        className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"
+                      >
+                        <p className="uppercase font-bold text-[18px] ">
+                          Midstream
+                        </p>
+                      </a>
+                    </div>
+                  </div>
                 </SwiperSlide>
               </Swiper>
 
