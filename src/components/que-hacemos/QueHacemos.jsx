@@ -15,7 +15,7 @@ const QueHacemos = () => {
   return (
     <section
       id="que-hacemos"
-      className="block  md:min-h-auto w-full relative h-screen "
+      className="block  md:min-h-auto w-full relative min-h-screen "
     >
       <SectionLabel
         className="absolute lg:top-[55px] left-[20px] lg:left-[35px] "
@@ -121,15 +121,9 @@ const QueHacemos = () => {
           </div>
         </div>
       </div>
-      <div className="lg:sticky top-0 h-auto lg:h-screen w-full flex">
-        {/* <img
-          src="/img/que-hacemos/misc800.svg"
-          alt="bg"
-          className="absolute top-0 left-0 w-full lg:hidden tabletMisc"
-        /> */}
 
-        <div className="lg:flex w-full px-[20px] lg:px-0">
-          <div className="lg:hidden py-[60px] pt-[30px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
+
+          <div className="lg:hidden px-[20px] py-[60px] pt-[30px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
             <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
               {/* <SectionLabel text="Qué hacemos" /> */}
               <img
@@ -284,8 +278,6 @@ const QueHacemos = () => {
                 <Chevron stroke="#fff" />
               </button>
             </div>
-          </div>
-        </div>
       </div>
     </section>
   );
