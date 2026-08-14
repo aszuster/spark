@@ -1,25 +1,27 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import Menu from "../../svg/menu";
 
+// Mapea los IDs de sección del DOM a las claves usadas en navbar.mobile.links (es.json)
+const SECTION_KEYS = {
+  "quienes-somos": "quienesSomos",
+  "que-hacemos": "queHacemos",
+  "como-trabajamos": "comoTrabajamos",
+  clientes: "clientes",
+  "proyectos-destacados": "proyectosDestacados",
+  cultura: "cultura",
+  "trabaja-con-nosotros": "trabajaConNosotros",
+};
+
 const NavbarMobile = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkText, setIsDarkText] = useState(false);
-  const [currentSection, setCurrentSection] = useState("SPARK");
+  const [currentSection, setCurrentSection] = useState(t("navbar.defaultSection"));
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  // Map section IDs to display names
-  const sectionNames = {
-    "quienes-somos": "Quiénes somos",
-    "que-hacemos": "Qué hacemos",
-    "como-trabajamos": "Cómo trabajamos",
-    clientes: "Clientes",
-    "proyectos-destacados": "Proyectos destacados",
-    cultura: "Cultura",
-    "trabaja-con-nosotros": "Trabajá con nosotros",
   };
 
   useEffect(() => {
@@ -65,7 +67,9 @@ const NavbarMobile = () => {
 
       setIsDarkText(isOverLightSection);
       setCurrentSection(
-        currentSectionId ? sectionNames[currentSectionId] : "SPARK"
+        currentSectionId
+          ? t(`navbar.mobile.links.${SECTION_KEYS[currentSectionId]}`)
+          : t("navbar.defaultSection")
       );
     };
 
@@ -78,7 +82,7 @@ const NavbarMobile = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [t]);
 
   const handleNavClick = () => {
     // Only open the menu when it's closed
@@ -99,14 +103,14 @@ const NavbarMobile = () => {
   };
 
   return (
-    <div className="flex lg:hidden fixed top-[28px] right-[24px] z-50 flex-col items-end">
+    <div className="flex lg:hidden fixed top-[25px] right-[24px] z-50 flex-col items-end">
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         onClick={handleNavClick}
-        className={`overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20 
-        backdrop-blur-sm rounded-[25px] items-center gap-[25px] py-[20px] pl-[30px] pr-[30px] 
+        className={`overflow-hidden transition-all duration-500 ease-in-out bg-[#E3E4E5]/20
+        backdrop-blur-sm rounded-[25px] items-center gap-[25px] py-[20px] pl-[30px] pr-[30px]
         w-auto group buttonBorder ${!isOpen ? "cursor-pointer" : ""} relative`}
       >
         <div className="absolute inset-0 bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 "></div>
@@ -141,25 +145,25 @@ const NavbarMobile = () => {
             className={`relative z-10 text-[14px] transition-colors duration-300`}
             style={{ color: isDarkText ? "#262535" : "white" }}
           >
-            {isOpen ? "Cerrar" : "Menú"}
+            {isOpen ? t("navbar.menu.close") : t("navbar.menu.open")}
           </span>
         </button>
       </motion.nav>
-      
+
       {/* Menú desplegable */}
-      <div 
+      <div
         className={`w-[200px] h-[295px] mt-[12px] bg-[linear-gradient(268deg,rgba(227,228,229,0.60)_4.08%,rgba(227,228,229,0.12)_58.6%)] transition-all duration-300 rounded-[20px] flex items-center justify-center buttonBorder lightBorder ${
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
         <div className="flex flex-col gap-[24px] items-center justify-center text-[14px] leading-[14px] font-inter text-[#262535] p-[20px] font-medium bg-[#E5E5E5]  rounded-[16px]">
-          <a href="#quienes-somos" onClick={(e) => handleLinkClick(e, "quienes-somos")} className="hover:text-[#FF6B00] transition-colors">Quiénes somos</a>
-          <a href="#que-hacemos" onClick={(e) => handleLinkClick(e, "que-hacemos")} className="hover:text-[#FF6B00] transition-colors">Qué hacemos</a>
-          <a href="#como-trabajamos" onClick={(e) => handleLinkClick(e, "como-trabajamos")} className="hover:text-[#FF6B00] transition-colors">Cómo trabajamos</a>
-          <a href="#clientes" onClick={(e) => handleLinkClick(e, "clientes")} className="hover:text-[#FF6B00] transition-colors">Clientes</a>
-          <a href="#proyectos-destacados" onClick={(e) => handleLinkClick(e, "proyectos-destacados")} className="hover:text-[#FF6B00] transition-colors">Proyectos destacados</a>
-          <a href="#cultura" onClick={(e) => handleLinkClick(e, "cultura")} className="hover:text-[#FF6B00] transition-colors">Cultura</a>
-          <a href="#trabaja-con-nosotros" onClick={(e) => handleLinkClick(e, "trabaja-con-nosotros")} className="hover:text-[#FF6B00] transition-colors">Trabajá con nosotros</a>
+          <a href="#quienes-somos" onClick={(e) => handleLinkClick(e, "quienes-somos")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.quienesSomos")}</a>
+          <a href="#que-hacemos" onClick={(e) => handleLinkClick(e, "que-hacemos")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.queHacemos")}</a>
+          <a href="#como-trabajamos" onClick={(e) => handleLinkClick(e, "como-trabajamos")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.comoTrabajamos")}</a>
+          <a href="#clientes" onClick={(e) => handleLinkClick(e, "clientes")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.clientes")}</a>
+          <a href="#proyectos-destacados" onClick={(e) => handleLinkClick(e, "proyectos-destacados")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.proyectosDestacados")}</a>
+          <a href="#cultura" onClick={(e) => handleLinkClick(e, "cultura")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.cultura")}</a>
+          <a href="#trabaja-con-nosotros" onClick={(e) => handleLinkClick(e, "trabaja-con-nosotros")} className="hover:text-[#FF6B00] transition-colors">{t("navbar.mobile.links.trabajaConNosotros")}</a>
         </div>
       </div>
     </div>

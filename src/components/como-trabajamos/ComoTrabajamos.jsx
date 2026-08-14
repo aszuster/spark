@@ -1,6 +1,7 @@
 import HorizontalScrollCarousel, { cards } from "./HorizontalScroll";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import SectionLabel from "../ui/SectionLabel";
 import ArrowDown from "../../svg/ArrowDown";
 import Chevron from "../../svg/Chevron";
@@ -11,6 +12,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const ComoTrabajamos = () => {
+  const { t } = useTranslation();
+  const paragraphs = t("comoTrabajamos.paragraphs", { returnObjects: true });
+
   return (
     <section id="como-trabajamos" className="block w-full relative">
       <div className="bg-secondary-000 relative pt-[20px] md:pt-[180px] lg:pt-[0px] pl-[10px] lg:pl-[0px]">
@@ -67,7 +71,7 @@ const ComoTrabajamos = () => {
                 }}
               >
                 <SectionLabel
-                  text="Cómo trabajamos"
+                  text={t("comoTrabajamos.sectionLabel")}
                   className={"bg-secondary-000"}
                 />
               </motion.div>
@@ -92,7 +96,7 @@ const ComoTrabajamos = () => {
                 }}
                 className="font-muli text-[20px] lg:text-[32px] font-semibold leading-[24px] lg:leading-[40px] tracking-[-1px] lg:tracking-[-1.6px] mt-[32px]"
               >
-                Nos comprometemos con los objetivos de cada Proyecto haciendo propia la mirada del negocio, nuestra filosofia:
+                {t("comoTrabajamos.intro")}
               </motion.p>
                <motion.p
                 initial="initial"
@@ -115,7 +119,7 @@ const ComoTrabajamos = () => {
                 }}
                 className="text-p-orange-500 font-bold text-[34px] mb-[48px] mt-[20px]"
                >
-                Engineering for Bussines
+                {t("comoTrabajamos.philosophy")}
                </motion.p>
               <motion.div
                 initial="initial"
@@ -139,24 +143,12 @@ const ComoTrabajamos = () => {
                 className="flex gap-[20px] flex-col lg:flex-row "
               >
                 <div className="flex flex-col gap-[20px] font-inter text-[14px] lg:text-[16px] font-normal leading-[20px] lg:leading-[24px] tracking-[-0.56px] lg:tracking-[-0.64px]">
-                  <p>
-                    Desarrollamos e integramos tecnologías de procesos complejos
-                    garantizando la solución más adecuada para cada Proyecto.
-                  </p>
-                  <p>
-                    Aplicamos el conocimiento y la capacidad de análisis para la
-                    solución de cada desafío.
-                  </p>
+                  <p>{paragraphs[0]}</p>
+                  <p>{paragraphs[1]}</p>
                 </div>
                 <div className="flex flex-col gap-[20px] font-inter text-[14px] lg:text-[16px] font-normal leading-[20px] lg:leading-[24px] tracking-[-0.56px] lg:tracking-[-0.64px]">
-                  <p>
-                    Mantenemos un alto grado de independencia de proveedores
-                    (agnósticos tecnológicos).
-                  </p>
-                  <p>
-                    Trabajamos conforme a los estándares de cada industria y
-                    cada operador. Nos adaptamos al contexto de cada Proyecto.
-                  </p>
+                  <p>{paragraphs[2]}</p>
+                  <p>{paragraphs[3]}</p>
                 </div>
               </motion.div>
             </div>
@@ -195,7 +187,7 @@ const ComoTrabajamos = () => {
               }}
               className="mySwiper"
             >
-              {cards.map((card) => (
+              {cards.map((card, index) => (
                 <SwiperSlide key={card.id} className="md:w-[340px]! md:ml-[30px] md:pb-[70px]">
                   <div className="relative h-[460px] w-full overflow-hidden rounded-[16px] bg-transparent">
                     <div
@@ -209,10 +201,10 @@ const ComoTrabajamos = () => {
                     <div className="absolute inset-0 z-20 flex items-end justify-center pb-[24px] px-[16px] pt-[16px]">
                       <div className="bg-secondary-000 text-p-blue-500 pb-[24px] px-[16px] pt-[16px] rounded-[12px]">
                         <p className="text-inter font-semibold text-[18px] leading-[20px] tracking-[-0.9px] mb-[16px]">
-                          {card.title}
+                          {t(`comoTrabajamos.cards.${index}.title`)}
                         </p>
                         <p className="text-inter font-normal text-[14px] leading-[20px] tracking-[-0.7px]">
-                          {card.description}
+                          {t(`comoTrabajamos.cards.${index}.description`)}
                         </p>
                       </div>
                     </div>

@@ -1,5 +1,354 @@
 {
-    "welcome": "Welcome to my site",
-    "about": "About us",
-    "change_language": "Change language"
+  "navbar": {
+    "menu": {
+      "open": "Menu",
+      "close": "Close"
+    },
+    "defaultSection": "SPARK",
+    "desktop": {
+      "links": {
+        "quienesSomos": "About Us",
+        "queHacemos": "What We Do",
+        "comoTrabajamos": "How We Work",
+        "clientes": "Clients",
+        "proyectosDestacados": "Featured Projects",
+        "cultura": "Culture",
+        "trabajaConNosotros": "Join Us"
+      }
+    },
+    "mobile": {
+      "links": {
+        "quienesSomos": "About Us",
+        "queHacemos": "What We Do",
+        "comoTrabajamos": "How We Work",
+        "clientes": "Clients",
+        "proyectosDestacados": " Featured Projects",
+        "cultura": "Culture",
+        "trabajaConNosotros": "Join Us"
+      }
+    }
+  },
+
+  "hero": {
+    "logoTagline": "Engineering with Purpose",
+    "title": {
+      "line1": "Engineering Solutions",
+      "line2": "and Projects"
+    },
+    "industries": [
+      { "label": "Oil & Gas", "detail": "(Uptream / Midstream / Downstream)" },
+      { "label": "Energy", "detail": "(Renewables / Nuclear / Hydrogen)" },
+      { "label": "Chemical", "detail": "" },
+      { "label": "Mining", "detail": "" }
+    ],
+    "videoFallback": "Your browser does not support this video file."
+  },
+
+  "quienesSomos": {
+    "sectionLabel": "About Us",
+    "heading": "We think, design, build, and operate industrial facilities aligned with efficiency criteria and optimized according to the needs of each context."
+  },
+
+  "queHacemos": {
+    "sectionLabel": "What We Do",
+    "columns": {
+      "ingenieriaYConstruccion": {
+        "title": "Engineering and Construction",
+        "items": [
+          {
+            "label": "Engineering [E]",
+            "text": "We develop engineering across all phases: Conceptual, Basic, and Detailed Engineering, as well as Special Studies, Cost Estimation, and Project Evaluation."
+          },
+          {
+            "label": "Modular Plants and Equipment [EP]",
+            "text": "We design and manufacture modular process plants and equipment."
+          },
+          {
+            "label": "Turnkey Plants [EPC]",
+            "text": "We design, manufacture, and build turnkey process plants."
+          },
+          {
+            "label": "Project Management [EPCm / OE]",
+            "text": "We provide comprehensive project management: Owner's Engineering, Procurement Management, Contract Management, Quality Management, Technical Office, and Field Supervision."
+          }
+        ]
+      },
+      "serviciosPetroleros": {
+        "title": "Oilfield Services",
+        "items": [
+          {
+            "label": "Operation and Maintenance [O&M]",
+            "text": "We provide process plant operation services for third parties, technical support to operations, and pre-commissioning, commissioning, and start-up services."
+          },
+          {
+            "label": "Well Testing",
+            "text": "Measurement and analysis service for the variables associated with well production."
+          },
+          {
+            "label": "Oil and Gas Processing Services",
+            "text": "We provide oil and gas processing services for third parties using our own equipment."
+          }
+        ]
+      },
+      "midstream": {
+        "title": "Midstream",
+        "items": [
+          {
+            "label": "NGL and LPG Processing and Commercialization",
+            "text": "We process NGL (Natural Gas Liquids) and LPG (Liquefied Petroleum Gas) streams to bring them to commercial value for subsequent sale."
+          }
+        ],
+        "cta": "Midstream"
+      }
+    }
+  },
+
+  "comoTrabajamos": {
+    "sectionLabel": "How We Work",
+    "intro": "We commit to the objectives of each project by making the business perspective our own, this is our philosophy:",
+    "philosophy": "Engineering for Bussines",
+    "paragraphs": [
+      "We develop and integrate complex process technologies, ensuring the most suitable solution for each project.",
+      "We apply knowledge and analytical capability to solve every challenge.",
+      "We maintain a high degree of vendor independence (technology-agnostic).",
+      "We work in accordance with the standards of each industry and each operator. We adapt to the context of each project."
+    ],
+    "cards": [
+      {
+        "title": "Surface Facilities",
+        "description": "Wells | Pads | Gathering | Primary Separation | Storage and Transfer | Multiphase Pumping | Well Testing"
+      },
+      {
+        "title": "Gas and Condensate Treatment",
+        "description": "Dew Point Adjustment | Acid Gas Removal | Mercury Removal | NGL, LPG and Gasoline Recovery and Fractionation | LNG Liquefaction"
+      },
+      {
+        "title": "Oil Treatment",
+        "description": "Stabilization | Dehydration | Desalting | Contaminant Removal"
+      },
+      {
+        "title": "Produced Water Treatment",
+        "description": "Secondary Treatment | Tertiary Treatment | Storage and Reinjection | Solids Separation | Hydrocarbon Recovery"
+      },
+      {
+        "title": "Transportation",
+        "description": "Gas Pipelines, Oil Pipelines, Multi-Product Pipelines | Pig Launcher-Receiver Traps | Compression Stations | Pumping Stations | Regulating Stations | Storage Stations"
+      },
+      {
+        "title": "Refining Units",
+        "description": "Atmospheric and Vacuum Distillation | Fractionation | Hydrotreating | Acid Gas Removal"
+      },
+      {
+        "title": "Auxiliary Services",
+        "description": "Electric Power Generation | Steam Circuits | Thermal Fluid Circuit | Cooling Water | Refrigeration Circuits | Instrument / Service Air | Nitrogen | Drainage Systems | Vent Systems | Fire-Fighting Systems"
+      },
+      {
+        "title": "Power Generation",
+        "description": "Thermal Power Plants | Turbogenerators | Motor-Generators | Recovery Units | Combined Cycles | Cogeneration | Field Electrification"
+      },
+      {
+        "title": "Lithium Mining",
+        "description": "Wells and Ponds | Brine Concentration | Direct Extraction | Lithium Carbonate Plant"
+      }
+    ]
+  },
+
+  "numbers": {
+    "stats": [
+      { "value": 350, "prefix": "+", "suffix": "", "text": "projects executed" },
+      { "value": 170, "prefix": "+", "suffix": "", "text": "professionals" },
+      { "value": 250, "prefix": "", "suffix": "k", "text": "engineering hours/year" }
+    ]
+  },
+
+  "clientes": {
+    "sectionLabel": "Clients",
+    "headingDesktop": {
+      "line1": "Our greatest guarantee: leading energy",
+      "line2": "companies choose SPARK."
+    },
+    "headingMobile": {
+      "line1": "leading energy",
+      "line2": "companies that choose SPARK."
+    }
+  },
+
+  "proyectosDestacados": {
+    "sectionLabel": "Featured Projects",
+    "heading": "Projects that create value",
+    "projects": [
+      {
+        "category": "Conceptual Engineering",
+        "title": "Gathering LNG - ENI",
+        "description": "Gas gathering network to be injected into the LNG project. Flow rate: 60 MMSCMD",
+        "year": "2025"
+      },
+      {
+        "category": "Conceptual Engineering",
+        "title": "Argentina LNG - Pre-treatment",
+        "description": "Gas pre-treatment plant, 25 MMSCMD",
+        "year": "2023"
+      },
+      {
+        "category": "Conceptual Engineering",
+        "title": "Vaca Muerta Sur Oil Pipeline",
+        "description": "VMOS oil pipeline, including the pumping stations",
+        "year": "2022"
+      },
+      {
+        "category": "Conceptual Engineering",
+        "title": "CPF Bajada de Añelo",
+        "description": "Crude oil treatment plant, 40,000 bbl/d, and gas, 120 MSCMD",
+        "year": "2025"
+      },
+      {
+        "category": "Extended Basic Engineering",
+        "title": "Tratayen LPG Extraction Plant",
+        "description": "Gas treatment plant, 24 MMSCMD",
+        "year": "2022-2024"
+      },
+      {
+        "category": "Extended Basic Engineering",
+        "title": "Dedicated LNG Pipeline",
+        "description": "480 km, 36-inch pipeline plus a 70,000 hp compression station",
+        "year": "2025"
+      },
+      {
+        "category": "Extended Basic Engineering",
+        "title": "La Calera Gas Treatment Plant, Phase 1.5",
+        "description": "La Calera gas treatment plant, phase 1.5",
+        "year": "2023"
+      },
+      {
+        "category": "EPC Engineering and Construction",
+        "title": "Mata Mora Crude Treatment Plant",
+        "description": "Mata Mora crude treatment plant - 20,000 bbl/d",
+        "year": "2025"
+      },
+      {
+        "category": "EPC Engineering and Construction",
+        "title": "Mata Mora Gas Treatment Plant",
+        "description": "Mata Mora gas treatment plant - 250,000 MSCFD",
+        "year": "2022-2023"
+      },
+      {
+        "category": "EPC Engineering and Construction",
+        "title": "Sargento Vidal Fractionation Plant",
+        "description": "Condensate fractionation plant (2,000 t/month) producing gasoline and LPG",
+        "year": "2025-2026"
+      },
+      {
+        "category": "EPC Engineering and Construction",
+        "title": "Loma Jarillosa Battery Upgrade",
+        "description": "Expansion of the crude battery to a production of 10,000 bbl/d",
+        "year": "2026"
+      },
+      {
+        "category": "Operation and Maintenance",
+        "title": "Mata Mora Gas Treatment Plant",
+        "description": "Mata Mora gas treatment plant - 250,000 MSCFD",
+        "year": "2022-2025"
+      },
+      {
+        "category": "Operation and Maintenance",
+        "title": "Sargento Vidal Fractionation Plant",
+        "description": "Condensate fractionation plant (2,000 t/month) producing gasoline and LPG",
+        "year": "Ongoing"
+      },
+      {
+        "category": "Owner engineering",
+        "title": "Bahía Blanca Plant Expansion Project",
+        "description": "Team of 45 professionals providing Owner's Engineering services covering Engineering, Quality, Safety, Equipment Fabrication, Planning, Field Supervision, and Technical Office",
+        "year": "2023-2026"
+      }
+    ]
+  },
+
+  "cultura": {
+    "sectionLabel": "Culture",
+    "heading": "Technical excellence, collaborative work, and respect for people.",
+    "certificationsLabel": "Certifications",
+    "sustainabilityPolicyButton": "Sustainability Policy",
+    "valuesLabel": "Our Values",
+    "values": [
+      {
+        "title": "Passion and Commitment",
+        "description": "We fulfill the commitments we make, building trust and long-term relationships with our clients."
+      },
+      {
+        "title": "Reliability and Innovation",
+        "description": "We seek to think “out of the box” to bring new solutions to our clients. We are comfortable working from a blank page."
+      },
+      {
+        "title": "Agility",
+        "description": "We do things with dynamism and speed under the highest standards of quality, safety, and environmental care."
+      },
+      {
+        "title": "Teamwork",
+        "description": "We know that peak performance is achieved only by empowering collaborative teamwork."
+      },
+      {
+        "title": "Transparency",
+        "description": "We rely on internal and external information to accurately communicate our defined strategic objectives and the path to achieve them."
+      },
+      {
+        "title": "Honesty",
+        "description": "We carry out all our activities with honesty in our relationships with our employees, collaborators, clients, and other stakeholders."
+      }
+    ]
+  },
+
+  "banner": {
+    "heading": "¿Querés trabajar con nosotros?",
+    "cta": "Unite al equipo"
+  },
+
+  "unite": {
+    "heading": "Join Us in Creating the Energy of the Future",
+    "cta": "Join the Team",
+    "cards": [
+      {
+        "title": "Challenges and Learning",
+        "description": "We work in an industry that constantly challenges us to innovate. Every project is an opportunity to learn, improve, and grow through action."
+      },
+      {
+        "title": "Collaborative Work",
+        "description": "We connect, share knowledge, and work as a network. Technology and collaboration enhance results and allow us to work in an agile, digital way."
+      },
+      {
+        "title": "Diversity and Innovation",
+        "description": "Diversity drives our creativity. We value different perspectives and experiences, because the best ideas emerge from their intersection."
+      },
+      {
+        "title": "Own the Business",
+        "description": "We are passionate about what we do and understand the impact of our work. At Spark, every person knows the business and contributes to building a comprehensive vision."
+      },
+      {
+        "title": "Flexible Work (Work & Life Balance)",
+        "description": "Flexible Work (Work & Life Balance)"
+      }
+    ]
+  },
+
+  "footer": {
+    "tagline": "Engineering with Purpose",
+    "links": {
+      "quienesSomos": "Who We Are",
+      "queHacemos": "What We Do",
+      "comoTrabajamos": "How We Work",
+      "clientes": "Clients",
+      "proyectosDestacados": "Featured Projects",
+      "cultura": "Culture"
+    },
+    "contact": {
+      "phone": "(+54) 11 2271 1825",
+      "email": "info@sparkgy.com"
+    },
+    "addresses": [
+      "Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina",
+      "Brentana 35, Cipoletti, Rio Negro"
+    ],
+    "termsAndConditions": "Terms and Conditions",
+    "copyright": "2025 Spark. All rights reserved."
   }
+}

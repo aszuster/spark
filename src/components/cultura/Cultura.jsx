@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ArrowButton from "../ui/ArrowButton";
 
 const Cultura = () => {
+  const { t } = useTranslation();
+  const values = t("cultura.values", { returnObjects: true });
+
   return (
     <section
       id="cultura"
@@ -10,15 +14,15 @@ const Cultura = () => {
       <div
         className={`w-fit p-[8px]  bg-[#E3E4E5]/20 backdrop-blur-sm  rounded-[6px] flex items-center justify-center font-inter uppercase text-[14px] font-normal tracking-[-0.7px] text-p-blue-500 buttonBorder`}
       >
-        <span className=" text-secondary-000">Cultura</span>
+        <span className=" text-secondary-000">{t("cultura.sectionLabel")}</span>
       </div>
       <div className="flex md:flex-row flex-col justify-between items-center mt-[18px] mb-[40px] md:mb-[27px] xxl:mb-0">
         <h3 className="mb-[40px] md:mb-[0px] font-muli text-[28px] md:text-[32px] lg:text-[48px] leading-[36px] md:leading-[38px] lg:leading-[54px] tracking-[-1.4px] md:tracking-[-1.6px] lg:tracking-[-2.4px] text-secondary-500 md:w-[387px] lg:w-[750px] xxl:w-[836px]">
-          Excelencia técnica, trabajo colaborativo y respeto por las personas.
+          {t("cultura.heading")}
         </h3>
         <div className="flex flex-col gap-[13px]">
           <p className="font-inter text-[16px] leading-[16px] tracking-[-0.64px] text-secondary-000">
-            Certificaciones
+            {t("cultura.certificationsLabel")}
           </p>
           <div className="w-full md:w-[335px] lg:w-[475px] h-[142px] md:h-[142px] lg:h-[179px] xxl:w-[604px] xxl:h-[227px] rounded-[16px] xxl:rounded-[20px] py-[16px] px-[24px] xxl:py-[20px] xxl:px-[30px] bg-[#0A093D] flex items-center justify-between gap-[16px] lg:gap-[0px]">
             <img
@@ -37,7 +41,7 @@ const Cultura = () => {
         </div>
       </div>
       <ArrowButton
-        text="Política de Sostenibilidad"
+        text={t("cultura.sustainabilityPolicyButton")}
         download={true}
         className="buttonBorder w-full md:w-fit justify-between md:justify-start"
         href="/docs/politica-sostenibilidad.pdf"
@@ -64,67 +68,20 @@ const Cultura = () => {
             <div className="absolute top-[-250px] md:top-[-180px] left-[50%] translate-x-[-50%] md:left-auto md:translate-x-0 md:right-[-80px] bg-[url('/img/cultura/group-2.jpg')] bg-center bg-cover w-[400px] lg:w-[521px] h-[215px] rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-[30px] overflow-hidden"></div>
             <div className="bg-secondary-000 px-[8px] py-[6px] rounded-[6px] w-auto mb-[50px] max-w-[160px]">
               <p className="text-[14px] text-p-blue-500 font-inter uppercase">
-                Nuestros valores
+                {t("cultura.valuesLabel")}
               </p>
             </div>
             <div className="flex flex-col gap-y-[40px] lg:grid lg:grid-cols-2 lg:gap-y-[40px] gap-x-[120px]">
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Pasión y Compromiso
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Cumplimos con los compromisos que asumimos generando confianza
-                  y relaciones de largo plazo con nuestros Clientes.
-                </p>
-              </div>
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Confiabilidad e Innovación
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Buscamos pensar “Out of the box” para traer nuevas soluciones
-                  a nuestros Clientes. Nos sentimos cómodos trabajando desde una
-                  hoja en blanco.
-                </p>
-              </div>
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Agilidad
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Hacemos las cosas con dinamismo y velocidad bajo los más altos
-                  estándares de calidad, seguridad y cuidado del medio ambiente.
-                </p>
-              </div>
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Trabajo en Equipo
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Sabemos que la máxima performance se logra sólo potenciando el
-                  trabajo colaborativo en equipo.
-                </p>
-              </div>
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Transparencia
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Partimos de la información interna y externa para comunicar en
-                  forma precisa los objetivos estratégicos definidos y cuál es
-                  el camino para lograrlos.
-                </p>
-              </div>
-              <div>
-                <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
-                  Honestidad
-                </p>
-                <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
-                  Desarrollamos todas las actividades con honestidad en la
-                  relación con nuestros empleados, colaboradores, clientes y
-                  otras partes interesadas.
-                </p>
-              </div>
+              {values.map((value, index) => (
+                <div key={index}>
+                  <p className="mb-[8px] font-inter font-semibold text-secondary-000 text-[20px] leading-[28px] tracking-[-4%]">
+                    {value.title}
+                  </p>
+                  <p className="font-inter font-regular text-[16px] leading-[24px] tracking-[-4%] text-secondary-000">
+                    {value.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
           {/* <div className="absolute h-[485px] w-[710px] xxl:h-[485px] 
