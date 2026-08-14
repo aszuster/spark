@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Logo from "../../svg/logo";
 import Phone from "../../svg/phone";
 import Mail from "../../svg/mail";
@@ -7,6 +8,9 @@ import Facebook from "../../svg/facebook";
 import Twitter from "../../svg/twitter";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const addresses = t("footer.addresses", { returnObjects: true });
+
   return (
     <footer className="mt-[-1px] h-full md:h-auto overflow-hidden w-full relative bg-p-blue-600 pt-[100px] px-[32px] pb-[28px]">
       <div className="flex flex-col md:flex-row justify-between items-start pb-[150px] lg:pb-[162px] xxl:pr-[321px]">
@@ -16,7 +20,7 @@ const Footer = () => {
             className="mb-[80px] md:mb-0 md:w-[138px] lg:w-[200px] lg:h-[44px]"
           />
           <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[133px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
-            Ingeniería con sentido
+            {t("footer.tagline")}
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-[92px] md:gap-[0px] justify-between md:items-center md:w-[490px] lg:w-[750px]">
@@ -25,37 +29,37 @@ const Footer = () => {
               href="#quienes-somos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Quiénes somos
+              {t("footer.links.quienesSomos")}
             </a>
             <a
               href="#que-hacemos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Qué hacemos
+              {t("footer.links.queHacemos")}
             </a>
             <a
               href="#como-trabajamos"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Cómo trabajamos
+              {t("footer.links.comoTrabajamos")}
             </a>
             <a
               href="#clientes"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Clientes
+              {t("footer.links.clientes")}
             </a>
             <a
               href="#proyectos-destacados"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Proyectos destacados
+              {t("footer.links.proyectosDestacados")}
             </a>
             <a
               href="#cultura"
               className="hover:text-p-orange-600 transition-all duration-300 hover:underline"
             >
-              Cultura
+              {t("footer.links.cultura")}
             </a>
           </div>
           <div className="flex flex-col gap-[84px] md:gap-[96px] w-[284px] md:w-[185px] lg:w-[284px] md:h-full lg:h-auto ">
@@ -63,7 +67,7 @@ const Footer = () => {
               <div className="flex items-center gap-[16px]">
                 <Phone />
                 <p className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7]">
-                  (+54) 11 2271 1825
+                  {t("footer.contact.phone")}
                 </p>
               </div>
               <div className="flex items-center gap-[16px]">
@@ -72,17 +76,17 @@ const Footer = () => {
                   href="mailto:info@sparkgy.com"
                   className="font-inter text-[16px] leading-[16px] text-secondary-000 opacity-[0.7] hover:text-p-orange-600 transition-all duration-300"
                 >
-                  info@sparkgy.com
+                  {t("footer.contact.email")}
                 </a>
               </div>
             </div>
 
             <div className="">
               <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[64px] lg:mb-[31px]">
-                Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina
+                {addresses[0]}
               </p>
               <p className="font-inter text-[14px] md:text-[16px] md:leading-[16px] text-secondary-000 opacity-[0.7] mb-[40px] md:mb-[64px] lg:mb-[31px]">
-                Brentana 35, Cipoletti, Rio Negro
+                {addresses[1]}
               </p>
               <div className="flex gap-[16px]">
                 {/* <a href="https://www.linkedin.com/company/sparknrgsol"
@@ -116,10 +120,10 @@ const Footer = () => {
       </div>
       <div className="w-full flex flex-col md:flex-row gap-[8px] md:gap-[86px] md:items-center">
         <a href="" className="font-inter text-[14px] text-secondary-700">
-          Términos y condiciones
+          {t("footer.termsAndConditions")}
         </a>
         <p className="font-inter text-[14px] text-secondary-700">
-          2025 Spark Todos los derechos reservados
+          {t("footer.copyright")}
         </p>
       </div>
     </footer>

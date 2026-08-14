@@ -1,5 +1,6 @@
 import { LetterRevealTest } from "../ui/LetterRevealTest";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ArrowDown from "../../svg/ArrowDown";
 import SectionLabel from "../ui/SectionLabel";
 import { useFeatureStore } from "../quienes-somos/store";
@@ -12,123 +13,76 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const QueHacemos = () => {
+  const { t } = useTranslation();
+
+  const ingenieria = t("queHacemos.columns.ingenieriaYConstruccion", { returnObjects: true });
+  const serviciosPetroleros = t("queHacemos.columns.serviciosPetroleros", { returnObjects: true });
+  const midstream = t("queHacemos.columns.midstream", { returnObjects: true });
+
   return (
     <section
       id="que-hacemos"
       className="block  md:min-h-auto w-full relative min-h-screen "
     >
       <SectionLabel
-        className="absolute lg:top-[55px] left-[20px] lg:left-[35px] "
-        text="Qué hacemos"
+        className="absolute lg:top-[55px] left-[20px] lg:left-[35px]"
+        text={t("queHacemos.sectionLabel")}
       />
 
       <div className="hidden lg:flex align-center w-full justify-between lg:max-w-[1280px] xxl:max-w-[1600px] lg:mx-auto py-[175px] lg:py-[135px] xl:py-[175px] gap-[150px]">
         <div className="basis-1/3">
           <img src="/img/que-hacemos/logo-orange-2.svg" className="w-[150px]" />
           <p className="font-bold uppercase py-[15px]">
-            Ingeniería y construcción
+            {ingenieria.title}
           </p>
           <div className="flex flex-col gap-[20px] pt-[10px]">
-            <div>
-              <p className="text-p-orange-500 font-bold">Ingeniería [E]</p>
-              <p className="font-medium leading-[20px]">
-                Desarrollamos Ingeniería en todas sus fases. Ingeniería
-                Conceptual, Básica, y de Detalle. Estudios Especiales,
-                Estimación de Costos, y Evaluación de Proyectos.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Plantas y Equipos Modulares [EP]
-              </p>
-              <p className="font-medium leading-[20px]">
-                Diseñamos y Fabricamos Plantas de Procesos y Equipos Modulares.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Plantas Llave en Mano [EPC]
-              </p>
-              <p className="font-medium leading-[20px]">
-                Diseñamos, Fabricamos y Construimos Plantas de Procesos Llave en
-                Mano.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Gestión de Proyectos [EPCm / OE]
-              </p>
-              <p className="font-medium leading-[20px]">
-                Realizamos la Gestión Integral de Proyectos. Ingeniería de
-                Propiedad, Gestión de Suministros, Gestión Contractual, Gestión
-                de Calidad, Oficina Técnica y Supervisión.
-              </p>
-            </div>
+            {ingenieria.items.map((item, index) => (
+              <div key={index}>
+                <p className="text-p-orange-500 font-bold">{item.label}</p>
+                <p className="font-medium leading-[20px]">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="basis-1/3">
           <img src="/img/que-hacemos/logo-orange-2.svg" className="w-[150px]" />
-          <p className="font-bold uppercase py-[15px]">Servicios petroleros</p>
+          <p className="font-bold uppercase py-[15px]">{serviciosPetroleros.title}</p>
           <div className="flex flex-col gap-[20px] pt-[10px]">
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Operación y Mantenimiento [O&M]
-              </p>
-              <p className="font-medium leading-[20px]">
-                Realizamos Servicios de Operación de Plantas de Proceso para
-                terceros. Soporte Técnico a Operaciones. Precomisionado,
-                Comisionado, y Puesta en Marcha.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">Well Testing</p>
-              <p className="font-medium leading-[20px]">
-                Servicio de medición y análisis de las variables asociadas a la
-                producción de pozos.
-              </p>
-            </div>
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Servicios de Procesamiento de Gas y Petróleo{" "}
-              </p>
-              <p className="font-medium leading-[20px]">
-                Realizamos Servicios de Procesamientos de Gas y Petróleo para
-                terceros con equipos propios.
-              </p>
-            </div>
+            {serviciosPetroleros.items.map((item, index) => (
+              <div key={index}>
+                <p className="text-p-orange-500 font-bold">{item.label}</p>
+                <p className="font-medium leading-[20px]">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="basis-1/3">
           <img src="/img/que-hacemos/logo-orange-2.svg" className="w-[150px]" />
-          <p className="font-bold uppercase py-[15px]">Midstream</p>
+          <p className="font-bold uppercase py-[15px]">{midstream.title}</p>
           <div className="flex flex-col gap-[20px] pt-[10px]">
-            <div>
-              <p className="text-p-orange-500 font-bold">
-                Procesamiento y Comercialización de LGN y GLP
-              </p>
-              <p className="font-medium leading-[20px]">
-                Procesamos corrientes de LGN (Líquidos del Gas Natural) y GLP
-                (Gas Licuado de Petróleo) para su puesta en valor comercial y
-                posterior comercialización.
-              </p>
-            </div>
+            {midstream.items.map((item, index) => (
+              <div key={index}>
+                <p className="text-p-orange-500 font-bold">{item.label}</p>
+                <p className="font-medium leading-[20px]">{item.text}</p>
+              </div>
+            ))}
             <a
               href="https://fesa.com.ar/"
               className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"
             >
-              <p className="uppercase font-bold text-[18px] ">Midstream</p>
+              <p className="uppercase font-bold text-[18px] ">{midstream.cta}</p>
             </a>
           </div>
         </div>
       </div>
 
 
-          <div className="lg:hidden px-[20px] py-[60px] pt-[30px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
+          <div className="lg:hidden px-[20px] py-[100px] pt-[30px] sl:pb-[60px] sl:pt-[60px] md:flex overflow-hidden md:justify-between md:pt-[60px] md:pb-[120px]">
             <div className="flex flex-col gap-[28px] relative md:w-full md:basis-1/2">
               {/* <SectionLabel text="Qué hacemos" /> */}
               <img
                 src="/img/que-hacemos/logo-orange-2.svg"
-                className="w-[150px]"
+                className="w-[150px] pt-[25px]"
               />
             </div>
             <div className="relative md:w-[385px] md:basis-1/2">
@@ -153,111 +107,51 @@ const QueHacemos = () => {
                 <SwiperSlide>
                   <div className="">
                     <p className="font-bold uppercase py-[15px]">
-                      Ingeniería y construcción
+                      {ingenieria.title}
                     </p>
                     <div className="flex flex-col gap-[20px] pt-[10px]">
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Ingeniería [E]
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Desarrollamos Ingeniería en todas sus fases.
-                          Ingeniería Conceptual, Básica, y de Detalle. Estudios
-                          Especiales, Estimación de Costos, y Evaluación de
-                          Proyectos.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Plantas y Equipos Modulares [EP]
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Diseñamos y Fabricamos Plantas de Procesos y Equipos
-                          Modulares.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Plantas Llave en Mano [EPC]
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Diseñamos, Fabricamos y Construimos Plantas de
-                          Procesos Llave en Mano.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Gestión de Proyectos [EPCm / OE]
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Realizamos la Gestión Integral de Proyectos.
-                          Ingeniería de Propiedad, Gestión de Suministros,
-                          Gestión Contractual, Gestión de Calidad, Oficina
-                          Técnica y Supervisión.
-                        </p>
-                      </div>
+                      {ingenieria.items.map((item, index) => (
+                        <div key={index}>
+                          <p className="text-p-orange-500 font-bold">{item.label}</p>
+                          <p className="font-medium leading-[20px]">{item.text}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </SwiperSlide>
-                {/* Slide 2 — Midstream */}
+                {/* Slide 2 — Servicios petroleros */}
                 <SwiperSlide>
                   <div className="">
                     <p className="font-bold uppercase py-[15px]">
-                      Servicios petroleros
+                      {serviciosPetroleros.title}
                     </p>
                     <div className="flex flex-col gap-[20px] pt-[10px]">
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Operación y Mantenimiento [O&M]
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Realizamos Servicios de Operación de Plantas de
-                          Proceso para terceros. Soporte Técnico a Operaciones.
-                          Precomisionado, Comisionado, y Puesta en Marcha.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Well Testing
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Servicio de medición y análisis de las variables
-                          asociadas a la producción de pozos.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Servicios de Procesamiento de Gas y Petróleo{" "}
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Realizamos Servicios de Procesamientos de Gas y
-                          Petróleo para terceros con equipos propios.
-                        </p>
-                      </div>
+                      {serviciosPetroleros.items.map((item, index) => (
+                        <div key={index}>
+                          <p className="text-p-orange-500 font-bold">{item.label}</p>
+                          <p className="font-medium leading-[20px]">{item.text}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </SwiperSlide>
+                {/* Slide 3 — Midstream */}
                 <SwiperSlide>
                   <div className="">
-                    <p className="font-bold uppercase py-[15px]">Midstream</p>
+                    <p className="font-bold uppercase py-[15px]">{midstream.title}</p>
                     <div className="flex flex-col gap-[20px] pt-[10px]">
-                      <div>
-                        <p className="text-p-orange-500 font-bold">
-                          Procesamiento y Comercialización de LGN y GLP
-                        </p>
-                        <p className="font-medium leading-[20px]">
-                          Procesamos corrientes de LGN (Líquidos del Gas
-                          Natural) y GLP (Gas Licuado de Petróleo) para su
-                          puesta en valor comercial y posterior
-                          comercialización.
-                        </p>
-                      </div>
+                      {midstream.items.map((item, index) => (
+                        <div key={index}>
+                          <p className="text-p-orange-500 font-bold">{item.label}</p>
+                          <p className="font-medium leading-[20px]">{item.text}</p>
+                        </div>
+                      ))}
                       <a
                         href="https://fesa.com.ar/"
                         className="px-[20px] py-[8px] rounded-3xl border border-black w-[155px] mt-[20px] hover:bg-p-orange-500 transition-all duration-300 hover:text-white hover:border-white"
                       >
                         <p className="uppercase font-bold text-[18px] ">
-                          Midstream
+                          {midstream.cta}
                         </p>
                       </a>
                     </div>

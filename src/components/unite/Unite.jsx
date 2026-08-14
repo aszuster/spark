@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ArrowButton from "../ui/ArrowButton";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -6,51 +7,25 @@ import Chevron from "../../svg/Chevron";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const cards = [
-  {
-    id: 1,
-    title: "Desafíos y Aprendizaje",
-    description:
-      "Trabajamos en una industria que nos reta a innovar constantemente. Cada proyecto es una oportunidad para aprender, mejorar y crecer a través de la acción.",
-  },
-  {
-    id: 2,
-    title: "Trabajo Colaborativo",
-    description:
-      "Nos conectamos, compartimos conocimiento y trabajamos en red. La tecnología y la colaboración potencian los resultados y nos permiten hacerlo de forma ágil y digital.",
-  },
-  {
-    id: 3,
-    title: "Diversidad e Innovación",
-    description:
-      "La diversidad impulsa nuestra creatividad. Valoramos las distintas miradas y experiencias, porque de su encuentro surgen las mejores ideas.",
-  },
-  {
-    id: 4,
-    title: "Own the Business",
-    description:
-      "Nos apasiona lo que hacemos y entendemos el impacto de nuestro trabajo. En Spark cada persona conoce el negocio y contribuye a construir una visión integral.",
-  },
-  {
-    id: 5,
-    title: "Trabajo Flexible (Work & Life Balance)",
-    description:
-      "Trabajo Flexible (Work & Life Balance)",
-  }
-];
+// El texto (title/description) vive en unite.cards dentro de es.json / en.json,
+// en el mismo orden que este array. Acá solo queda el id, usado como key.
+const cardIds = [1, 2, 3, 4, 5];
 
 const Unite = () => {
+  const { t } = useTranslation();
+  const cards = t("unite.cards", { returnObjects: true });
+
   return (
     <section
       id="trabaja-con-nosotros"
-      className="mt-[-1px] lg:h-auto overflow-hidden w-full relative bg-p-blue-600  px-[5px] md:px-[32px]  md:py-[78px]"
+      className="mt-[-1px] lg:h-auto overflow-hidden w-full relative bg-p-blue-600  px-[20px] md:px-[32px]  md:py-[78px]"
     >
       <h3 className="md:max-w-[380px] mb-[40px] font-muli text-[28px] md:text-[32px] lg:text-[48px] leading-[36px] md:leading-[38px] lg:leading-[54px] tracking-[-1.4px] md:tracking-[-1.6px] lg:tracking-[-2.4px] text-secondary-500 md:w-[387px] lg:w-[750px] xxl:w-[836px]">
-        Sumate a crear la energía del futuro
+        {t("unite.heading")}
       </h3>
       <ArrowButton
       href="mailto:sumate@sparkgy.com"
-        text="Unite al equipo"
+        text={t("unite.cta")}
         className="w-full md:w-fit justify-between md:justify-start"
       />
       <div className="relative mt-[40px] overflow-hidden">
@@ -59,7 +34,7 @@ const Unite = () => {
           breakpoints={{
             768: {
               spaceBetween: 20,
-              slidesPerView: 2.3,
+              slidesPerView: "auto",
             },
             1024: {
               spaceBetween: 20,
@@ -68,7 +43,7 @@ const Unite = () => {
             },
           }}
           spaceBetween={20}
-          slidesPerView={1.2}
+          slidesPerView="auto"
           speed={300}
           watchSlidesProgress={true}
           navigation={{
@@ -78,9 +53,9 @@ const Unite = () => {
           className="unite-swiper"
         >
             {cards.map((card, index) => (
-              <SwiperSlide key={`${card.id}-${index}`}>
+              <SwiperSlide key={`${cardIds[index]}-${index}`}>
                 <div className="w-[329px] h-[289px] p-[32px] flex flex-col justify-center gap-y-[16px] bg-[url('/img/blue-bg.png')] bg-[#0E0D29] bg-cover bg-blend-color-dodge rounded-[12px]">
-                  <p className={`text-inter font-semibold text-[28px] ${card.id == 5 ? "h-[100px]" : "h-[65px]"}  leading-[32px] tracking-[-5%] text-secondary-000`}>
+                  <p className={`text-inter font-semibold text-[28px] ${cardIds[index] === 5 ? "h-[100px]" : "h-[65px]"}  leading-[32px] tracking-[-5%] text-secondary-000`}>
                     {card.title}
                   </p>
                   <p className="text-inter text-[16px] leading-[20px] tracking-[-5%] text-secondary-000">

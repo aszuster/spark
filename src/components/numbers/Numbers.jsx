@@ -7,9 +7,11 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Counter from "./Counter";
 
 const Numbers = () => {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -317,7 +319,7 @@ const Numbers = () => {
                 <p
                   className={`text-secondary-000 font-muli font-normal transition-all duration-600 ease-in-out ${currentState.first.textClass} flex items-end ${currentState.first.paddingText}`}
                 >
-                  proyectos ejecutados
+                  {t("numbers.stats.0.text")}
                 </p>
               </div>
             </motion.div>
@@ -364,7 +366,7 @@ const Numbers = () => {
                 <p
                   className={`text-secondary-000 font-muli font-normal transition-all duration-600 ease-in-out ${currentState.second.textClass} flex items-end ${currentState.second.paddingText}`}
                 >
-                  profesionales
+                  {t("numbers.stats.1.text")}
                 </p>
               </div>
             </motion.div>
@@ -411,7 +413,7 @@ const Numbers = () => {
                 <p
                   className={`text-secondary-000 font-muli font-normal transition-all duration-600 ease-in-out ${currentState.third.textClass} flex items-end ${currentState.third.paddingText}`}
                 >
-                  h/año de Ingeniería
+                  {t("numbers.stats.2.text")}
                 </p>
               </div>
             </motion.div>
@@ -479,26 +481,8 @@ const MobileCounter = ({ value, prefix = "", suffix = "" }) => {
 
 // Mobile Numbers Component
 const MobileNumbers = () => {
-  const mobileStats = [
-    {
-      value: 350,
-      prefix: "+",
-      suffix: "",
-      text: "proyectos ejecutados",
-    },
-    {
-      value: 170,
-      prefix: "+",
-      suffix: "",
-      text: "profesionales",
-    },
-    {
-      value: 250,
-      prefix: "",
-      suffix: "k",
-      text: "h/año de Ingeniería",
-    },
-  ];
+  const { t } = useTranslation();
+  const mobileStats = t("numbers.stats", { returnObjects: true });
 
   return (
     <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] md:pt-[106px] px-[22px] overflow-hidden md:mb-[-1px]">

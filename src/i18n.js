@@ -11,8 +11,8 @@ i18n
       en: { translation: en },
       es: { translation: es },
     },
-    lng: "en", // idioma por defecto
-    fallbackLng: "en",
+    lng: "es", // idioma por defecto
+    fallbackLng: "es",
     interpolation: {
       escapeValue: false, // react ya hace el escape
     },

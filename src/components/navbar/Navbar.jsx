@@ -1,27 +1,30 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import Menu from "../../svg/menu";
 import NavbarMobile from "./NavbarMobile";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
+
+// Mapea los IDs de sección del DOM a las claves usadas en navbar.desktop.links (es.json)
+const SECTION_KEYS = {
+  "quienes-somos": "quienesSomos",
+  "que-hacemos": "queHacemos",
+  "como-trabajamos": "comoTrabajamos",
+  clientes: "clientes",
+  "proyectos-destacados": "proyectosDestacados",
+  cultura: "cultura",
+  "trabaja-con-nosotros": "trabajaConNosotros",
+};
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkText, setIsDarkText] = useState(false);
-  const [currentSection, setCurrentSection] = useState("SPARK");
+  const [currentSection, setCurrentSection] = useState(t("navbar.defaultSection"));
   const [isHidden, setIsHidden] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  // Map section IDs to display names
-  const sectionNames = {
-    "quienes-somos": "Nosotros",
-    "que-hacemos": "Qué hacemos",
-    "como-trabajamos": "Cómo trabajamos",
-    clientes: "Clientes",
-    "proyectos-destacados": "Proyectos destacados",
-    cultura: "Cultura",
-    "trabaja-con-nosotros": "Trabajá con nosotros",
   };
 
   useEffect(() => {
@@ -68,7 +71,9 @@ const Navbar = () => {
 
       setIsDarkText(isOverLightSection);
       setCurrentSection(
-        currentSectionId ? sectionNames[currentSectionId] : "SPARK"
+        currentSectionId
+          ? t(`navbar.desktop.links.${SECTION_KEYS[currentSectionId]}`)
+          : t("navbar.defaultSection")
       );
       const hideInSection = currentSectionId === "numbers" ||
         (currentSectionId === "que-hacemos" && window.innerWidth < 1600);
@@ -84,7 +89,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [t]);
 
   const handleNavClick = () => {
     // Only open the menu when it's closed
@@ -106,6 +111,8 @@ const Navbar = () => {
 
   return (
     <>
+    <LanguageSwitcher className="hidden lg:flex fixed top-[35px] right-[40px] z-50" />
+    <LanguageSwitcher className="flex lg:hidden fixed bottom-[28px] right-[24px] z-50" />
     <div
       className={`hidden lg:flex fixed bottom-[58px] left-[50%] translate-x-[-50%] z-50 transition-opacity duration-400 ease-in-out ${isHidden ? "opacity-0 pointer-events-none" : "opacity-100"}`}
     >
@@ -150,7 +157,7 @@ const Navbar = () => {
           className={`relative z-10 text-[14px] transition-colors duration-300`}
           style={{ color: isDarkText ? "#262535" : "white" }}
         >
-          {isOpen ? "Cerrar" : "Menú"}
+          {isOpen ? t("navbar.menu.close") : t("navbar.menu.open")}
         </span>
       </button>
       <div
@@ -178,7 +185,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Nosotros
+          {t("navbar.desktop.links.quienesSomos")}
         </a>
         <a
           href="#que-hacemos"
@@ -189,7 +196,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Qué hacemos
+          {t("navbar.desktop.links.queHacemos")}
         </a>
         <a
           href="#como-trabajamos"
@@ -200,7 +207,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Cómo trabajamos
+          {t("navbar.desktop.links.comoTrabajamos")}
         </a>
         <a
           href="#clientes"
@@ -211,7 +218,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Clientes
+          {t("navbar.desktop.links.clientes")}
         </a>
         <a
           href="#proyectos-destacados"
@@ -222,7 +229,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Proyectos destacados
+          {t("navbar.desktop.links.proyectosDestacados")}
         </a>
         <a
           href="#cultura"
@@ -233,7 +240,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Cultura
+          {t("navbar.desktop.links.cultura")}
         </a>
         <a
           href="#trabaja-con-nosotros"
@@ -244,7 +251,7 @@ const Navbar = () => {
               : "opacity-0 max-w-0 overflow-hidden"
           }`}
         >
-          Trabajá con nosotros
+          {t("navbar.desktop.links.trabajaConNosotros")}
         </a>
       </div>
     </motion.nav>

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Logo from "../../svg/logo";
 import ArrowButton from "../ui/ArrowButton";
 import RevealByLine from "../ui/RevealByLine";
@@ -7,7 +8,11 @@ import FadeInAnimation from "../ui/FadeInAnimation";
 // import RevealByLine from "../ui/RevealByLine";
 
 const Hero = ({ onAnimationComplete }) => {
+  const { t } = useTranslation();
   const [animationState, setAnimationState] = useState("initial");
+  const industries = t("hero.industries", { returnObjects: true });
+  // Reemplaza el primer espacio por un espacio no separable ( ) para que la primera palabra no quede huérfana
+  const titleLine2 = t("hero.title.line2").replace(" ", " ");
 
   useEffect(() => {
     // Secuencia de animaciones
@@ -94,7 +99,7 @@ const Hero = ({ onAnimationComplete }) => {
             height="auto"
           >
             <source src="/video/hero-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            {t("hero.videoFallback")}
           </motion.video>
 
           {/* Gradiente overlay */}
@@ -117,20 +122,20 @@ const Hero = ({ onAnimationComplete }) => {
               className="w-[150px] lg:w-[200px] lg:h-[44px]"
             />
             <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[133px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
-              Ingeniería con sentido
+              {t("hero.logoTagline")}
             </p>
           </motion.div>
 
-          <div className="absolute px-[12px] py-[40px] lg:px-[50px] top-0 left-0 w-full h-full flex flex-col justify-end gap-[32px] md:justify-center lg:gap-auto lg:flex-row lg:items-center lg:justify-between z-30">
+          <div className="absolute px-[12px] py-[40px] md:py-[20px] lg:py-[40px] lg:px-[50px] top-0 left-0 w-full h-full flex flex-col justify-end gap-[32px] md:justify-center lg:gap-auto lg:flex-row lg:items-center lg:justify-between z-30">
             <div className="flex flex-col gap-[32px] lg:gap-[50px] items-start h-full justify-center">
               <h2 className="font-muli text-[34px] smd:text-[60px] lg:text-[68px] font-semibold leading-[40px] smd:leading-[68px] lg:leading-[80px] tracking-[-1.7px] md:tracking-[-3px] lg:tracking-[-4.3px] text-secondary-000 w-full lg:w-full">
                 <RevealByLine
-                  text="Soluciones de Ingeniería"
+                  text={t("hero.title.line1")}
                   className="text-secondary-000"
                   delay={1.7}
                 />{" "}
                 <RevealByLine
-                  text="y&nbsp;Proyectos"
+                  text={titleLine2}
                   delay={1.8}
                   className="text-secondary-000"
                 />{" "}
@@ -149,10 +154,12 @@ const Hero = ({ onAnimationComplete }) => {
                 className="text-secondary-000 font-inter text-[18px] font-normal leading-[32px] tracking-[-0.56px] lg:pr-[100px]
                 "
               >
-                <li><span className="lg:text-[28px]">Petróleo y Gas</span> (Uptream / Midstream / Downstream)</li>
-                <li><span className="lg:text-[28px]">Energía</span> (Renovables / Nuclear / Hidrógeno)</li>
-                <li><span className="lg:text-[28px]">Química</span></li>
-                <li><span className="lg:text-[28px]">Minería</span></li>
+                {industries.map((industry, index) => (
+                  <li key={index}>
+                    <span className="lg:text-[28px]">{industry.label}</span>
+                    {industry.detail ? ` ${industry.detail}` : ""}
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>

@@ -1,5 +1,354 @@
 {
-    "welcome": "Bienvenido a mi sitio",
-    "about": "Sobre nosotros",
-    "change_language": "Cambiar idioma"
+  "navbar": {
+    "menu": {
+      "open": "Menú",
+      "close": "Cerrar"
+    },
+    "defaultSection": "SPARK",
+    "desktop": {
+      "links": {
+        "quienesSomos": "Nosotros",
+        "queHacemos": "Qué hacemos",
+        "comoTrabajamos": "Cómo trabajamos",
+        "clientes": "Clientes",
+        "proyectosDestacados": "Proyectos destacados",
+        "cultura": "Cultura",
+        "trabajaConNosotros": "Trabajá con nosotros"
+      }
+    },
+    "mobile": {
+      "links": {
+        "quienesSomos": "Quiénes somos",
+        "queHacemos": "Qué hacemos",
+        "comoTrabajamos": "Cómo trabajamos",
+        "clientes": "Clientes",
+        "proyectosDestacados": "Proyectos destacados",
+        "cultura": "Cultura",
+        "trabajaConNosotros": "Trabajá con nosotros"
+      }
+    }
+  },
+
+  "hero": {
+    "logoTagline": "Ingeniería con sentido",
+    "title": {
+      "line1": "Soluciones de Ingeniería",
+      "line2": "y Proyectos"
+    },
+    "industries": [
+      { "label": "Petróleo y Gas", "detail": "(Uptream / Midstream / Downstream)" },
+      { "label": "Energía", "detail": "(Renovables / Nuclear / Hidrógeno)" },
+      { "label": "Química", "detail": "" },
+      { "label": "Minería", "detail": "" }
+    ],
+    "videoFallback": "Tu navegador no soporta la reproducción de video."
+  },
+
+  "quienesSomos": {
+    "sectionLabel": "Nosotros",
+    "heading": "Pensamos, diseñamos, construimos, y operamos instalaciones industriales alineadas con criterios de eficiencia y optimizadas conforme a las necesidades de cada contexto."
+  },
+
+  "queHacemos": {
+    "sectionLabel": "Qué hacemos",
+    "columns": {
+      "ingenieriaYConstruccion": {
+        "title": "Ingeniería y construcción",
+        "items": [
+          {
+            "label": "Ingeniería [E]",
+            "text": "Desarrollamos Ingeniería en todas sus fases. Ingeniería Conceptual, Básica, y de Detalle. Estudios Especiales, Estimación de Costos, y Evaluación de Proyectos."
+          },
+          {
+            "label": "Plantas y Equipos Modulares [EP]",
+            "text": "Diseñamos y Fabricamos Plantas de Procesos y Equipos Modulares."
+          },
+          {
+            "label": "Plantas Llave en Mano [EPC]",
+            "text": "Diseñamos, Fabricamos y Construimos Plantas de Procesos Llave en Mano."
+          },
+          {
+            "label": "Gestión de Proyectos [EPCm / OE]",
+            "text": "Realizamos la Gestión Integral de Proyectos. Ingeniería de Propiedad, Gestión de Suministros, Gestión Contractual, Gestión de Calidad, Oficina Técnica y Supervisión."
+          }
+        ]
+      },
+      "serviciosPetroleros": {
+        "title": "Servicios petroleros",
+        "items": [
+          {
+            "label": "Operación y Mantenimiento [O&M]",
+            "text": "Realizamos Servicios de Operación de Plantas de Proceso para terceros. Soporte Técnico a Operaciones. Precomisionado, Comisionado, y Puesta en Marcha."
+          },
+          {
+            "label": "Well Testing",
+            "text": "Servicio de medición y análisis de las variables asociadas a la producción de pozos."
+          },
+          {
+            "label": "Servicios de Procesamiento de Gas y Petróleo",
+            "text": "Realizamos Servicios de Procesamientos de Gas y Petróleo para terceros con equipos propios."
+          }
+        ]
+      },
+      "midstream": {
+        "title": "Midstream",
+        "items": [
+          {
+            "label": "Procesamiento y Comercialización de LGN y GLP",
+            "text": "Procesamos corrientes de LGN (Líquidos del Gas Natural) y GLP (Gas Licuado de Petróleo) para su puesta en valor comercial y posterior comercialización."
+          }
+        ],
+        "cta": "Midstream"
+      }
+    }
+  },
+
+  "comoTrabajamos": {
+    "sectionLabel": "Cómo trabajamos",
+    "intro": "Nos comprometemos con los objetivos de cada Proyecto haciendo propia la mirada del negocio, nuestra filosofia:",
+    "philosophy": "Engineering for Bussines",
+    "paragraphs": [
+      "Desarrollamos e integramos tecnologías de procesos complejos garantizando la solución más adecuada para cada Proyecto.",
+      "Aplicamos el conocimiento y la capacidad de análisis para la solución de cada desafío.",
+      "Mantenemos un alto grado de independencia de proveedores (agnósticos tecnológicos).",
+      "Trabajamos conforme a los estándares de cada industria y cada operador. Nos adaptamos al contexto de cada Proyecto."
+    ],
+    "cards": [
+      {
+        "title": "Instalaciones de Superficie",
+        "description": "Pozos | Pads | Captación | Separación Primaria | Almacenaje y Transferencia | Bombeo Multifásico | Ensayo de Pozos"
+      },
+      {
+        "title": "Tratamiento de Gas y Condensados",
+        "description": "Ajuste de Punto de Rocío | Remoción de Gases Acidos | Remoción de Mercurio | Recuperación y Fraccionamiento de NGL, LPG y Gasolinas | Licuefacción LNGs"
+      },
+      {
+        "title": "Tratamiento de Petróleo",
+        "description": "Estabilización | Deshidratación | Desalado | Remoción de Contaminantes"
+      },
+      {
+        "title": "Tratamiento de Agua de Producción",
+        "description": "Tratamiento Secundario | Tratamiento Terciario | Almacenaje y Reinyección | Separación de Sólidos | Recuperación de Hidrocarburos"
+      },
+      {
+        "title": "Transporte",
+        "description": "Gasoductos, Oleoductos, Poliductos | Trampas Receptoras-Lanzadoras | Estaciones de Compresión | Estaciones de Bombeo | Estaciones Reguladoras | Estaciones de Almacenaje"
+      },
+      {
+        "title": "Unidades de Refinación",
+        "description": "Destilación Atmosférica y Vacío | Fraccionamiento | Hidrotratamiento | Remoción de Gases Acidos"
+      },
+      {
+        "title": "Servicios Auxiliares",
+        "description": "Generación de Energía Eléctrica | Circuitos de Vapor | Circuito de Fluidos Térmicos | Agua de Enfriamiento | Circuitos de Refrigeración | Aire de Instrumentos / Servicios | Nitrógeno | Sistemas de Drenajes | Sistemas de Venteos | Sistemas de Lucha contra Incendio"
+      },
+      {
+        "title": "Generación Eléctrica",
+        "description": "Centrales Térmicas | Turbogeneradores | Motogeneradores | Unidades de Recuperación | Ciclos Combinados | Cogeneración | Electrificación de Yacimientos"
+      },
+      {
+        "title": "Minería de Litio",
+        "description": "Pozos y Piletas | Concentración de Salmuera | Extracción Directa | Planta de Carbonato de Litio"
+      }
+    ]
+  },
+
+  "numbers": {
+    "stats": [
+      { "value": 350, "prefix": "+", "suffix": "", "text": "proyectos ejecutados" },
+      { "value": 170, "prefix": "+", "suffix": "", "text": "profesionales" },
+      { "value": 250, "prefix": "", "suffix": "k", "text": "h/año de Ingeniería" }
+    ]
+  },
+
+  "clientes": {
+    "sectionLabel": "Clientes",
+    "headingDesktop": {
+      "line1": "Nuestra mayor garantía: Empresas líderes",
+      "line2": "de la energía eligen a SPARK."
+    },
+    "headingMobile": {
+      "line1": "Empresas líderes",
+      "line2": "que confían en Spark"
+    }
+  },
+
+  "proyectosDestacados": {
+    "sectionLabel": "Proyectos Destacados",
+    "heading": "Proyectos que generan valor",
+    "projects": [
+      {
+        "category": "Ingeniería conceptual",
+        "title": "Gathering LNG - ENI",
+        "description": "Red de gathering del gas que se inyectará el proyecto lng. Caudal: 60 mmscmd",
+        "year": "2025"
+      },
+      {
+        "category": "Ingeniería conceptual",
+        "title": "Argentina LNG - Pretratamiento",
+        "description": "Planta de pre-tratamiento de gas de 25 mmscmd",
+        "year": "2023"
+      },
+      {
+        "category": "Ingeniería conceptual",
+        "title": "Oleoducto Vaca Muerta Sur",
+        "description": "Oleoducto VMOS incluyendo las estaciones de bombeo",
+        "year": "2022"
+      },
+      {
+        "category": "Ingeniería conceptual",
+        "title": "CPF Bajada de Añelo",
+        "description": "Planta de tratamiento de petróleo crudo 40.000 bbl/d y gas 120 MSCMD",
+        "year": "2025"
+      },
+      {
+        "category": "Ingeniería básica extendida",
+        "title": "Planta de extracción de LPG Tratayen",
+        "description": "Planta de tratamiento de gas de 24 mmscmd",
+        "year": "2022-2024"
+      },
+      {
+        "category": "Ingeniería básica extendida",
+        "title": "Gasoducto dedicado LNG",
+        "description": "Gasoducto 480km - 36 pulgadas + estación de compresión 70.000 hp",
+        "year": "2025"
+      },
+      {
+        "category": "Ingeniería básica extendida",
+        "title": "Planta de tratamiento de gas La Calera fase 1.5",
+        "description": "Planta de tratamiento de gas La Calera fase 1.5",
+        "year": "2023"
+      },
+      {
+        "category": "Ingeniería y construcción EPC",
+        "title": "Planta tratamiento de crudo Mata Mora",
+        "description": "Planta de tratamiento de crudo Mata Mora - 20.000 bbl/d",
+        "year": "2025"
+      },
+      {
+        "category": "Ingeniería y construcción EPC",
+        "title": "Planta tratamiento de gas Mata Mora",
+        "description": "Planta de tratamiento de gas Mata Mora - 250.000 mscd",
+        "year": "2022-2023"
+      },
+      {
+        "category": "Ingeniería y construcción EPC",
+        "title": "Fraccionadora Sargento Vidal",
+        "description": "Planta de fraccionamiento, Condensados (2.000 TN/M) con producción de Gasolina y LPG",
+        "year": "2025-2026"
+      },
+      {
+        "category": "Ingeniería y construcción EPC",
+        "title": "Upgrade batería Loma Jarillosa",
+        "description": "Ampliación de la Batería de Crudo hasta una producción de 10.000 Bbl/d",
+        "year": "2026"
+      },
+      {
+        "category": "Operación y mantenimiento",
+        "title": "Planta tratamiento de gas Mata Mora",
+        "description": "Planta de tratamiento de gas Mata Mora - 250.000 mscd",
+        "year": "2022-2025"
+      },
+      {
+        "category": "Operación y mantenimiento",
+        "title": "Fraccionadora Sargento Vidal",
+        "description": "Planta de fraccionamiento, condensados (2.000 tn/m) con producción de gasolina y LPG",
+        "year": "En ejecución"
+      },
+      {
+        "category": "Owner engineering",
+        "title": "Proyecto expansión planta Bahía Blanca",
+        "description": "Equipo de 45 profesionales al Servicio del Owner Engineering de la Ingeniería, Calidad, Seguridad, Fabricación de Equipos, Planificación, Supervisión en Campo y Oficina Técnica",
+        "year": "2023-2026"
+      }
+    ]
+  },
+
+  "cultura": {
+    "sectionLabel": "Cultura",
+    "heading": "Excelencia técnica, trabajo colaborativo y respeto por las personas.",
+    "certificationsLabel": "Certificaciones",
+    "sustainabilityPolicyButton": "Política de Sostenibilidad",
+    "valuesLabel": "Nuestros valores",
+    "values": [
+      {
+        "title": "Pasión y Compromiso",
+        "description": "Cumplimos con los compromisos que asumimos generando confianza y relaciones de largo plazo con nuestros Clientes."
+      },
+      {
+        "title": "Confiabilidad e Innovación",
+        "description": "Buscamos pensar \"Out of the box\" para traer nuevas soluciones a nuestros Clientes. Nos sentimos cómodos trabajando desde una hoja en blanco."
+      },
+      {
+        "title": "Agilidad",
+        "description": "Hacemos las cosas con dinamismo y velocidad bajo los más altos estándares de calidad, seguridad y cuidado del medio ambiente."
+      },
+      {
+        "title": "Trabajo en Equipo",
+        "description": "Sabemos que la máxima performance se logra sólo potenciando el trabajo colaborativo en equipo."
+      },
+      {
+        "title": "Transparencia",
+        "description": "Partimos de la información interna y externa para comunicar en forma precisa los objetivos estratégicos definidos y cuál es el camino para lograrlos."
+      },
+      {
+        "title": "Honestidad",
+        "description": "Desarrollamos todas las actividades con honestidad en la relación con nuestros empleados, colaboradores, clientes y otras partes interesadas."
+      }
+    ]
+  },
+
+  "banner": {
+    "heading": "¿Querés trabajar con nosotros?",
+    "cta": "Unite al equipo"
+  },
+
+  "unite": {
+    "heading": "Sumate a crear la energía del futuro",
+    "cta": "Unite al equipo",
+    "cards": [
+      {
+        "title": "Desafíos y Aprendizaje",
+        "description": "Trabajamos en una industria que nos reta a innovar constantemente. Cada proyecto es una oportunidad para aprender, mejorar y crecer a través de la acción."
+      },
+      {
+        "title": "Trabajo Colaborativo",
+        "description": "Nos conectamos, compartimos conocimiento y trabajamos en red. La tecnología y la colaboración potencian los resultados y nos permiten hacerlo de forma ágil y digital."
+      },
+      {
+        "title": "Diversidad e Innovación",
+        "description": "La diversidad impulsa nuestra creatividad. Valoramos las distintas miradas y experiencias, porque de su encuentro surgen las mejores ideas."
+      },
+      {
+        "title": "Own the Business",
+        "description": "Nos apasiona lo que hacemos y entendemos el impacto de nuestro trabajo. En Spark cada persona conoce el negocio y contribuye a construir una visión integral."
+      },
+      {
+        "title": "Trabajo Flexible (Work & Life Balance)",
+        "description": "Trabajo Flexible (Work & Life Balance)"
+      }
+    ]
+  },
+
+  "footer": {
+    "tagline": "Ingeniería con sentido",
+    "links": {
+      "quienesSomos": "Quiénes somos",
+      "queHacemos": "Qué hacemos",
+      "comoTrabajamos": "Cómo trabajamos",
+      "clientes": "Clientes",
+      "proyectosDestacados": "Proyectos destacados",
+      "cultura": "Cultura"
+    },
+    "contact": {
+      "phone": "(+54) 11 2271 1825",
+      "email": "info@sparkgy.com"
+    },
+    "addresses": [
+      "Serrano 669, C1414 DEM, Ciudad de Buenos Aires, Argentina",
+      "Brentana 35, Cipoletti, Rio Negro"
+    ],
+    "termsAndConditions": "Términos y condiciones",
+    "copyright": "2025 Spark Todos los derechos reservados"
   }
+}

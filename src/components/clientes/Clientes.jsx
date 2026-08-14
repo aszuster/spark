@@ -1,6 +1,7 @@
 // import { LetterRevealTest } from "../ui/LetterRevealTest";
 import SectionLabel from "../ui/SectionLabel";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import ArrowDown from "../../svg/ArrowDown";
 import Marquee from "./Marquee";
 import { Logos } from "./Logos";
@@ -12,6 +13,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const Clientes = () => {
+  const { t } = useTranslation();
   const [hoveredLogoId, setHoveredLogoId] = useState(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
@@ -23,12 +25,12 @@ const Clientes = () => {
           <div className="pt-[80px] pb-[115px]">
             <div className="flex flex-col gap-[22px] pl-[28px] pb-[60px]">
               <SectionLabel
-                text="Clientes"
+                text={t("clientes.sectionLabel")}
                 className="bg-[#dddddd]/24! backdrop-blur-sm! text-secondary-000! glassBorder"
               />
               <h3 className="font-muli text-[34px] leading-[44px]  text-secondary-500 w-[800px]">
-                Nuestra mayor garantía: Empresas líderes  <br />
-                de la energía eligen a SPARK.
+                {t("clientes.headingDesktop.line1")}  <br />
+                {t("clientes.headingDesktop.line2")}
               </h3>
             </div>
             <div className="w-full h-full">
@@ -94,12 +96,12 @@ const Clientes = () => {
           {/* Header */}
           <div className="flex flex-col gap-[22px] px-[24px] mb-[40px]">
             <SectionLabel
-              text="Clientes"
+              text={t("clientes.sectionLabel")}
               className="bg-[#dddddd]/24! backdrop-blur-sm! text-secondary-000! glassBorder"
             />
             <h3 className="font-muli text-[24px] leading-[28px] tracking-[-1.2px] text-secondary-500 w-full">
-              Empresas líderes <br />
-              que confían en Spark
+              {t("clientes.headingMobile.line1")} <br />
+              {t("clientes.headingMobile.line2")}
             </h3>
           </div>
 

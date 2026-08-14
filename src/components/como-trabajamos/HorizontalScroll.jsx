@@ -1,5 +1,6 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import SectionLabel from "../ui/SectionLabel";
 import ArrowDown from "../../svg/ArrowDown";
 
@@ -42,6 +43,8 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card, index }) => {
+  const { t } = useTranslation();
+
   // Función para calcular el delay basado en el índice
   const getDelay = () => {
     // En pantallas xxl, las primeras 4 cards tienen stagger
@@ -89,10 +92,10 @@ const Card = ({ card, index }) => {
       <div className="absolute inset-0 z-20 flex items-end justify-center pb-[24px] px-[16px] pt-[16px]">
         <div className="bg-secondary-000 text-p-blue-500 pb-[24px] px-[16px] pt-[16px] rounded-[12px]">
           <p className="text-inter font-semibold text-[18px] leading-[20px] tracking-[-0.9px] mb-[16px]">
-            {card.title}
+            {t(`comoTrabajamos.cards.${index}.title`)}
           </p>
           <p className="text-inter font-normal text-[14px] leading-[20px] tracking-[-0.7px]">
-            {card.description}
+            {t(`comoTrabajamos.cards.${index}.description`)}
           </p>
         </div>
       </div>
@@ -100,70 +103,18 @@ const Card = ({ card, index }) => {
   );
 };
 
+// El texto (title/description) vive en comoTrabajamos.cards dentro de es.json / en.json,
+// en el mismo orden que este array. Acá solo queda la data no traducible (imagen e id).
 export const cards = [
-  {
-    url: "/img/como-trabajamos/01.webp",
-    title: "Instalaciones de Superficie",
-    description:
-      "Pozos | Pads | Captación | Separación Primaria | Almacenaje y Transferencia | Bombeo Multifásico | Ensayo de Pozos",
-    id: 1,
-  },
-  {
-    url: "/img/como-trabajamos/02.webp",
-    title: "Tratamiento de Gas y Condensados",
-    description:
-      "Ajuste de Punto de Rocío | Remoción de Gases Acidos | Remoción de Mercurio | Recuperación y Fraccionamiento de NGL, LPG y Gasolinas | Licuefacción LNGs",
-    id: 2,
-  },
-  {
-    url: "/img/como-trabajamos/03.webp",
-    title: "Tratamiento de Petróleo",
-    description:
-      "Estabilización | Deshidratación | Desalado | Remoción de Contaminantes",
-    id: 3,
-  },
-  {
-    url: "/img/como-trabajamos/04.webp",
-    title: "Tratamiento de Agua de Producción",
-    description:
-      "Tratamiento Secundario | Tratamiento Terciario | Almacenaje y Reinyección | Separación de Sólidos | Recuperación de Hidrocarburos",
-    id: 4,
-  },
-  {
-    url: "/img/como-trabajamos/05.webp",
-    title: "Transporte",
-    description:
-      "Gasoductos, Oleoductos, Poliductos | Trampas Receptoras-Lanzadoras | Estaciones de Compresión | Estaciones de Bombeo | Estaciones Reguladoras | Estaciones de Almacenaje",
-    id: 5,
-  },
-  {
-    url: "/img/como-trabajamos/06.webp",
-    title: "Unidades de Refinación",
-    description:
-      "Destilación Atmosférica y Vacío | Fraccionamiento | Hidrotratamiento | Remoción de Gases Acidos",
-    id: 6,
-  },
-  {
-    url: "/img/como-trabajamos/07.webp",
-    title: "Servicios Auxiliares",
-    description:
-      "Generación de Energía Eléctrica | Circuitos de Vapor | Circuito de Fluidos Térmicos | Agua de Enfriamiento | Circuitos de Refrigeración | Aire de Instrumentos / Servicios | Nitrógeno | Sistemas de Drenajes | Sistemas de Venteos | Sistemas de Lucha contra Incendio",
-    id: 7,
-  },
-  {
-    url: "/img/como-trabajamos/08.webp",
-    title: "Generación Eléctrica",
-    description:
-      "Centrales Térmicas | Turbogeneradores | Motogeneradores | Unidades de Recuperación | Ciclos Combinados | Cogeneración | Electrificación de Yacimientos",
-    id: 7,
-  },
-  {
-    url: "/img/como-trabajamos/09.webp",
-    title: "Minería de Litio",
-    description:
-      "Pozos y Piletas | Concentración de Salmuera | Extracción Directa | Planta de Carbonato de Litio",
-    id: 7,
-  },
+  { url: "/img/como-trabajamos/01.webp", id: 1 },
+  { url: "/img/como-trabajamos/02.webp", id: 2 },
+  { url: "/img/como-trabajamos/03.webp", id: 3 },
+  { url: "/img/como-trabajamos/04.webp", id: 4 },
+  { url: "/img/como-trabajamos/05.webp", id: 5 },
+  { url: "/img/como-trabajamos/06.webp", id: 6 },
+  { url: "/img/como-trabajamos/07.webp", id: 7 },
+  { url: "/img/como-trabajamos/08.webp", id: 8 },
+  { url: "/img/como-trabajamos/09.webp", id: 9 },
 ];
 
 export default HorizontalScrollCarousel;
