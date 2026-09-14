@@ -121,7 +121,7 @@ const Hero = ({ onAnimationComplete }) => {
               color="var(--color-secondary-000)"
               className="w-[150px] lg:w-[200px] lg:h-[44px]"
             />
-            <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[133px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
+            <p className="hidden md:block uppercase font-muli text-[20px] lg:text-[20px] w-[144px] font-normal leading-[24px] tracking-[-0.56px] text-secondary-000">
               {t("hero.logoTagline")}
             </p>
           </motion.div>
