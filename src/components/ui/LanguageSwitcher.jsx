@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-// Light background section IDs (same sections used in Navbar/NavbarMobile)
 const LIGHT_SECTIONS = [
   "quienes-somos",
   "que-hacemos",
@@ -9,13 +8,11 @@ const LIGHT_SECTIONS = [
   "proyectos-destacados",
 ];
 
-// All sections in order
 const ALL_SECTIONS = [
   "quienes-somos",
   "que-hacemos",
   "como-trabajamos",
   "clientes",
-  "numbers",
   "proyectos-destacados",
   "cultura",
   "trabaja-con-nosotros",
@@ -46,7 +43,15 @@ const LanguageSwitcher = ({ className = "" }) => {
         }
       }
 
-      setIsDarkText(isOverLightSection);
+      let isOverNumbers = false;
+      document.querySelectorAll(".numbers-section").forEach((section) => {
+        const sectionRect = section.getBoundingClientRect();
+        if (sectionRect.top < checkPoint && sectionRect.bottom > checkPoint) {
+          isOverNumbers = true;
+        }
+      });
+
+      setIsDarkText(isOverLightSection && !isOverNumbers);
     };
 
     handleScroll();

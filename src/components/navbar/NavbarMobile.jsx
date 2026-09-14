@@ -65,7 +65,17 @@ const NavbarMobile = () => {
         }
       }
 
-      setIsDarkText(isOverLightSection);
+      // Numbers vive anidado dentro de #proyectos-destacados con fondo oscuro:
+      // mientras el navbar pasa por ese tramo no debe tratarse como lightSection.
+      let isOverNumbers = false;
+      document.querySelectorAll(".numbers-section").forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < navbarBottom && rect.bottom > navbarBottom) {
+          isOverNumbers = true;
+        }
+      });
+
+      setIsDarkText(isOverLightSection && !isOverNumbers);
       setCurrentSection(
         currentSectionId
           ? t(`navbar.mobile.links.${SECTION_KEYS[currentSectionId]}`)

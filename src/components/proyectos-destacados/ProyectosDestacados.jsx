@@ -3,15 +3,16 @@ import ArrowButton from "../ui/ArrowButton";
 import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import Numbers from "../numbers/Numbers";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Chevron from "../../svg/Chevron";
 import Logo from "../../svg/logo";
+import { div } from "motion/react-client";
 
-// Data no traducible (imagen del proyecto + logo del cliente) en el mismo orden
-// que proyectosDestacados.projects en es.json / en.json.
+
 const projectsMeta = [
   { image: "01.jpg", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
   { image: "02.jpg", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
@@ -34,8 +35,8 @@ const ProyectosDestacados = () => {
   const projects = t("proyectosDestacados.projects", { returnObjects: true });
 
   return (
-    <section
-      id="proyectos-destacados"
+    <div id="proyectos-destacados">
+    <section  
       className="lg:min-h-screen w-full relative bg-secondary-200 md:pb-[120px] lg:pb-[80px]"
     >
       {/* <img
@@ -162,6 +163,8 @@ const ProyectosDestacados = () => {
         </div>
       </div>
     </section>
+    <Numbers/>
+    </div>
   );
 };
 
