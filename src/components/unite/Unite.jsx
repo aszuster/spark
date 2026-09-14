@@ -54,8 +54,8 @@ const Unite = () => {
         >
             {cards.map((card, index) => (
               <SwiperSlide key={`${cardIds[index]}-${index}`}>
-                <div className="w-[329px] h-[289px] p-[32px] flex flex-col justify-center gap-y-[16px] bg-[url('/img/blue-bg.png')] bg-[#0E0D29] bg-cover bg-blend-color-dodge rounded-[12px]">
-                  <p className={`text-inter font-semibold text-[28px] ${cardIds[index] === 5 ? "h-[100px]" : "h-[65px]"}  leading-[32px] tracking-[-5%] text-secondary-000`}>
+                <div className="w-[329px] h-[289px] p-[32px] flex flex-col justify-start gap-y-[16px] bg-[url('/img/blue-bg.png')] bg-[#0E0D29] bg-cover bg-blend-color-dodge rounded-[12px]">
+                  <p className={`text-inter font-semibold text-[28px] h-[65px] leading-[32px] tracking-[-5%] text-secondary-000`}>
                     {card.title}
                   </p>
                   <p className="text-inter text-[16px] leading-[20px] tracking-[-5%] text-secondary-000">
