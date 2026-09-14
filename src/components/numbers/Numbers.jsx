@@ -262,9 +262,8 @@ const Numbers = () => {
     <>
       {/* Desktop Version */}
       <section
-        id="numbers"
         ref={containerRef}
-        className="hidden lg:block h-[300vh] w-full relative bg-p-blue-600"
+        className="numbers-section hidden lg:block h-[300vh] w-full relative bg-p-blue-600"
       >
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
           {/* <img
@@ -485,7 +484,7 @@ const MobileNumbers = () => {
   const mobileStats = t("numbers.stats", { returnObjects: true });
 
   return (
-    <section className="lg:hidden w-full relative bg-p-blue-600 py-[90px] md:pt-[106px] px-[22px] overflow-hidden md:mb-[-1px]">
+    <section className="numbers-section lg:hidden w-full relative bg-p-blue-600 py-[90px] md:pt-[106px] px-[22px] overflow-hidden md:mb-[-1px]">
       <img
         src="/img/r.png"
         alt=""

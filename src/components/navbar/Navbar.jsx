@@ -5,7 +5,6 @@ import Menu from "../../svg/menu";
 import NavbarMobile from "./NavbarMobile";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
 
-// Mapea los IDs de sección del DOM a las claves usadas en navbar.desktop.links (es.json)
 const SECTION_KEYS = {
   "quienes-somos": "quienesSomos",
   "que-hacemos": "queHacemos",
@@ -29,10 +28,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get navbar position
-      const navbarBottom = window.innerHeight - 58; // navbar is at bottom-[58px]
+      const navbarBottom = window.innerHeight - 58; 
 
-      // Light background section IDs
       const lightSections = [
         "quienes-somos",
         "que-hacemos",
@@ -40,27 +37,24 @@ const Navbar = () => {
         "proyectos-destacados",
       ];
 
-      // All sections in order
       const allSections = [
         "quienes-somos",
         "que-hacemos",
         "como-trabajamos",
         "clientes",
-        "numbers",
         "proyectos-destacados",
         "cultura",
         "trabaja-con-nosotros",
       ];
 
-      // Check which section the navbar is over
+
       let isOverLightSection = false;
-      let currentSectionId = null; // default to null
+      let currentSectionId = null; 
 
       for (const sectionId of allSections) {
         const section = document.getElementById(sectionId);
         if (section) {
           const rect = section.getBoundingClientRect();
-          // Check if navbar intersects with this section
           if (rect.top < navbarBottom && rect.bottom > navbarBottom) {
             currentSectionId = sectionId;
             isOverLightSection = lightSections.includes(sectionId);
@@ -69,21 +63,28 @@ const Navbar = () => {
         }
       }
 
-      setIsDarkText(isOverLightSection);
+
+      let isOverNumbers = false;
+      document.querySelectorAll(".numbers-section").forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < navbarBottom && rect.bottom > navbarBottom) {
+          isOverNumbers = true;
+        }
+      });
+
+      setIsDarkText(isOverLightSection && !isOverNumbers);
       setCurrentSection(
         currentSectionId
           ? t(`navbar.desktop.links.${SECTION_KEYS[currentSectionId]}`)
           : t("navbar.defaultSection")
       );
-      const hideInSection = currentSectionId === "numbers" ||
-        (currentSectionId === "que-hacemos" && window.innerWidth < 1600);
+      const hideInSection =
+        currentSectionId === "que-hacemos" && window.innerWidth < 1600;
       setIsHidden(hideInSection);
     };
 
-    // Initial check
     handleScroll();
 
-    // Add scroll listener
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -92,7 +93,6 @@ const Navbar = () => {
   }, [t]);
 
   const handleNavClick = () => {
-    // Only open the menu when it's closed
     if (!isOpen) {
       setIsOpen(true);
     }
@@ -105,7 +105,7 @@ const Navbar = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // Close menu after clicking a link
+      setIsOpen(false); 
     }
   };
 

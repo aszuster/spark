@@ -6,7 +6,6 @@ import Hero from "./components/Hero/Hero";
 import QuienesSomos from "./components/quienes-somos/QuienesSomos";
 import QueHacemos from "./components/que-hacemos/QueHacemos";
 import ComoTrabajamos from "./components/como-trabajamos/ComoTrabajamos";
-import Numbers from "./components/numbers/Numbers";
 import Clientes from "./components/clientes/Clientes";
 import ProyectosDestacados from "./components/proyectos-destacados/ProyectosDestacados";
 import Cultura from "./components/cultura/Cultura";
@@ -86,7 +85,7 @@ function App() {
       <QueHacemos />
       <ComoTrabajamos />
       <ProyectosDestacados />
-      <Numbers />
+      {/* <Numbers /> */}
       <Clientes />
 
       <Cultura />
