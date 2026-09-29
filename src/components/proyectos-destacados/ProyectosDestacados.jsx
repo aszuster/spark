@@ -14,20 +14,20 @@ import { div } from "motion/react-client";
 
 
 const projectsMeta = [
-  { image: "01.jpg", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
-  { image: "02.jpg", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
-  { image: "03.jpg", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
-  { image: "05.jpg", logo: "shell.svg", logoClass: "w-[50px] h-auto absolute top-0 right-0" },
-  { image: "08.jpg", logo: "tgs.svg", logoClass: "w-[75px] h-auto" },
-  { image: "04.jpg", logo: "pan-american.svg", logoClass: "w-[100px] h-auto absolute top-[-5px] right-[-5px]" },
-  { image: "07.jpg", logo: "pluspetrol.png", logoClass: "w-[80px] h-auto absolute top-0 right-0" },
-  { image: "06.jpg", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
-  { image: "09.jpg", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
-  { image: "10.jpg", logo: "facilities-energy.svg", logoClass: "w-[70px] h-auto absolute top-0 right-0" },
-  { image: "12.jpg", logo: "geopark.png", logoClass: "w-[100px] h-auto absolute top-0 right-0" },
-  { image: "09.jpg", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
-  { image: "13.jpg", logo: "facilities-energy.svg", logoClass: "w-[70px] h-auto absolute top-0 right-0" },
-  { image: "11.jpg", logo: "mega.png", logoClass: "w-[100px] h-auto absolute top-[-10px] right-0" },
+  { image: "01.webp", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
+  { image: "02.webp", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
+  { image: "03.webp", logo: "ypf.png", logoClass: "w-[75px] h-auto absolute top-0 right-0" },
+  { image: "05.webp", logo: "shell.svg", logoClass: "w-[50px] h-auto absolute top-0 right-0" },
+  { image: "08.webp", logo: "tgs.svg", logoClass: "w-[75px] h-auto" },
+  { image: "04.webp", logo: "pan-american.svg", logoClass: "w-[100px] h-auto absolute top-[-5px] right-[-5px]" },
+  { image: "07.webp", logo: "pluspetrol.png", logoClass: "w-[80px] h-auto absolute top-0 right-0" },
+  { image: "06.webp", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
+  { image: "09.webp", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
+  { image: "10.webp", logo: "facilities-energy.svg", logoClass: "w-[70px] h-auto absolute top-0 right-0" },
+  { image: "12.webp", logo: "geopark.png", logoClass: "w-[100px] h-auto absolute top-0 right-0" },
+  { image: "09.webp", logo: "phoenix.png", logoClass: "w-[120px] h-auto absolute top-0 right-0" },
+  { image: "13.webp", logo: "facilities-energy.svg", logoClass: "w-[70px] h-auto absolute top-0 right-0" },
+  { image: "11.webp", logo: "mega.png", logoClass: "w-[100px] h-auto absolute top-[-10px] right-0" },
 ];
 
 const ProyectosDestacados = () => {
@@ -112,6 +112,7 @@ const ProyectosDestacados = () => {
                       <img
                         src={`/img/proyectos-destacados/${meta.image}`}
                         alt=""
+                        loading="lazy"
                       />
                     </div>
                     <div className="bg-secondary-000 rounded-[16px] md:rounded-[20px] w-full md:w-full h-auto">

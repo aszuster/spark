@@ -94,7 +94,7 @@ const Hero = ({ onAnimationComplete }) => {
             loop
             muted
             playsInline
-            poster="/img/hero-fallback.png"
+            poster="/img/hero-fallback.webp"
             width="100%"
             height="auto"
           >
