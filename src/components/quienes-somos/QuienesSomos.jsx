@@ -3,9 +3,31 @@ import SectionLabel from "../ui/SectionLabel";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ArrowDown from "../../svg/ArrowDown";
+import { useEffect, useRef, useState } from "react";
 
 const QuienesSomos = () => {
   const { t } = useTranslation();
+  const videoRef = useRef(null);
+  const [loadVideo, setLoadVideo] = useState(false);
+
+  // El video solo se descarga en pantallas >= md (en mobile está oculto)
+  // y cuando la sección está cerca del viewport
+  useEffect(() => {
+    if (!window.matchMedia("(min-width: 769px)").matches) return;
+    const el = videoRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   return (
     <div id="quienes-somos" className="h-[725px] md:h-[655px] lg:h-screen overflow-hidden">
       {/* <div>
@@ -82,13 +104,15 @@ const QuienesSomos = () => {
           <div className="hidden md:block relative bg-secondary-000 h-full flex-shrink-0">
             <div className="absolute md:right-[-200px] md:top-[50px] lg:right-[0px] lg:top-auto lg:bottom-[0px] xxl:bottom-[0px] md:w-[472px] md:h-[605px] lg:w-[460px] lg:h-[698px] xxl:w-[577px] xxl:h-[876px] mask-[url(/img/quienes-somos/s.svg)] mask-center mask-no-repeat mask-size-contain">
               <video
+                ref={videoRef}
                 autoPlay
                 muted
                 loop
+                playsInline
+                preload="none"
+                src={loadVideo ? "/video/quienes-somos.mp4" : undefined}
                 className="h-full w-full object-cover object-center"
-              >
-                <source src="/video/quienes-somos.mp4" type="video/mp4" />
-              </video>
+              />
               <div 
                 className="absolute inset-0 pointer-events-none"
                 style={{

@@ -60,12 +60,12 @@ const Cultura = () => {
         w-full lg:w-[1062px] absolute left-[50%] 
         translate-x-[-50%] bottom-[20px] md:top-[50%] md:translate-x-0 md:left-auto md:right-[-32px] 
         md:translate-y-[-50%] rounded-[40px] md:rounded-l-[80px] md:rounded-r-none 
-        bg-[url('/img/cultura/background.png')] bg-cover bg-center flex items-center md:justify-center 
+        bg-[url('/img/cultura/background.webp')] bg-cover bg-center flex items-center md:justify-center 
         justify-start xxl:justify-start lg:right-[-32px] lg:px-[118px]"
         >
           <div className="relative">
-            <div className="absolute top-[-480px] md:top-[-280px] left-[50%] translate-x-[-50%] md:left-auto md:translate-x-0  bg-[url('/img/cultura/group-1.jpg')] bg-center bg-cover w-[406px] h-[250px] rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-[30px] overflow-hidden"></div>
-            <div className="absolute top-[-250px] md:top-[-180px] left-[50%] translate-x-[-50%] md:left-auto md:translate-x-0 md:right-[-80px] bg-[url('/img/cultura/group-2.jpg')] bg-center bg-cover w-[400px] lg:w-[521px] h-[215px] rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-[30px] overflow-hidden"></div>
+            <div className="absolute top-[-480px] md:top-[-280px] left-[50%] translate-x-[-50%] md:left-auto md:translate-x-0  bg-[url('/img/cultura/group-1.webp')] bg-center bg-cover w-[406px] h-[250px] rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-[30px] overflow-hidden"></div>
+            <div className="absolute top-[-250px] md:top-[-180px] left-[50%] translate-x-[-50%] md:left-auto md:translate-x-0 md:right-[-80px] bg-[url('/img/cultura/group-2.webp')] bg-center bg-cover w-[400px] lg:w-[521px] h-[215px] rounded-tl-[60px] rounded-tr-[30px] rounded-br-[60px] rounded-bl-[30px] overflow-hidden"></div>
             <div className="bg-secondary-000 px-[8px] py-[6px] rounded-[6px] w-auto mb-[50px] max-w-[160px]">
               <p className="text-[14px] text-p-blue-500 font-inter uppercase">
                 {t("cultura.valuesLabel")}
